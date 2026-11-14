@@ -299,22 +299,22 @@ Create a central configuration or content file for information such as:
 
 #### 3.2 Establish content approval rules
 
-- [ ] Separate confirmed information from unconfirmed information.
-- [ ] Mark client-provided details as pending confirmation.
-- [ ] Do not publish unconfirmed qualifications or experience.
-- [ ] Do not invent employers, positions, dates, achievements, or professional skills.
-- [ ] Do not create fictional testimonials.
-- [ ] Do not create fictional metrics or years of experience.
-- [ ] Do not expose private contact information without approval.
+- [x] Separate confirmed information from unconfirmed information.
+- [x] Mark client-provided details as pending confirmation.
+- [x] Do not publish unconfirmed qualifications or experience.
+- [x] Do not invent employers, positions, dates, achievements, or professional skills.
+- [x] Do not create fictional testimonials.
+- [x] Do not create fictional metrics or years of experience.
+- [x] Do not expose private contact information without approval.
 
 The information currently supplied about Neema's education and professional background must be confirmed directly before being presented as verified credentials.
 
 #### 3.3 Prepare content placeholders
 
-- [ ] Create clearly identifiable content fields for missing information.
-- [ ] Use development-only placeholders where necessary.
-- [ ] Ensure unfinished or unapproved content does not appear on the production website.
-- [ ] Avoid visible Lorem Ipsum or fabricated sample content.
+- [x] Create clearly identifiable content fields for missing information.
+- [x] Use development-only placeholders where necessary.
+- [x] Ensure unfinished or unapproved content does not appear on the production website.
+- [x] Avoid visible Lorem Ipsum or fabricated sample content.
 
 ### Deliverables
 
@@ -338,30 +338,30 @@ The information currently supplied about Neema's education and professional back
 
 #### 4.1 Hero section
 
-- [ ] Introduce Neema using her approved professional name.
-- [ ] Add an approved professional headline.
-- [ ] Add a concise introduction.
-- [ ] Add a professional portrait if supplied and approved.
-- [ ] Add a primary contact call-to-action.
-- [ ] Add a secondary action, such as viewing her profile or services.
+- [x] Introduce Neema using her approved professional name.
+- [x] Add an approved professional headline.
+- [x] Add a concise introduction.
+- [x] Add a professional portrait if supplied and approved.
+- [x] Add a primary contact call-to-action.
+- [x] Add a secondary action, such as viewing her profile or services.
 
 The hero must communicate who Neema is and what she does without exaggerating her experience.
 
 #### 4.2 About section
 
-- [ ] Present her approved biography.
-- [ ] Introduce her educational background.
-- [ ] Present her professional interests and perspective.
-- [ ] Highlight approved values and career direction.
-- [ ] Use clear paragraphs and readable typography.
-- [ ] Avoid unnecessary repetition.
+- [x] Present her approved biography.
+- [x] Introduce her educational background.
+- [x] Present her professional interests and perspective.
+- [x] Highlight approved values and career direction.
+- [x] Use clear paragraphs and readable typography.
+- [x] Avoid unnecessary repetition.
 
 #### 4.3 Professional profile presentation
 
-- [ ] Add relevant approved professional highlights.
-- [ ] Add a LinkedIn link where appropriate.
-- [ ] Ensure all links work.
-- [ ] Add appropriate image alternative text.
+- [x] Add relevant approved professional highlights.
+- [x] Add a LinkedIn link where appropriate.
+- [x] Ensure all links work.
+- [x] Add appropriate image alternative text.
 
 ### Deliverables
 
