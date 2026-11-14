@@ -55,6 +55,13 @@ export interface ContactInfo {
     url: string;
     status: ConfirmationStatus;
   };
+  booking?: {
+    googleCalendarUrl: string;
+    calendlyUrl: string;
+    preferredUrl: string;
+    label: string;
+    status: ConfirmationStatus;
+  };
 }
 
 export interface ProfileData {

@@ -333,6 +333,13 @@ export const profileData: ProfileData = {
     linkedin: {
       url: "https://www.linkedin.com/in/elisabeth-zihalirwa/",
       status: "confirmed"
+    },
+    booking: {
+      googleCalendarUrl: "https://calendar.app.google/h4YgNK5MA3hAZw1S9",
+      calendlyUrl: "https://calendly.com/lucianna-neema/30min",
+      preferredUrl: "https://calendar.app.google/h4YgNK5MA3hAZw1S9",
+      label: "Book a Consultation",
+      status: "confirmed"
     }
   }
 };
