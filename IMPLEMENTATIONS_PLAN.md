@@ -492,15 +492,15 @@ The implementation must define a consistent slug strategy based on filenames.
 
 #### 6.3 Markdown processing
 
-- [ ] Select a maintained Markdown parser.
-- [ ] Parse Markdown files on the server.
-- [ ] Validate frontmatter with a schema validator such as Zod.
-- [ ] Convert Markdown to safe HTML or React elements.
-- [ ] Support headings, paragraphs, lists, links, blockquotes, and code blocks.
-- [ ] Support images with appropriate alternative text.
-- [ ] Apply syntax highlighting if needed.
-- [ ] Avoid unsafe raw HTML.
-- [ ] Do not use executable MDX unless a clear requirement is approved.
+- [x] Select a maintained Markdown parser.
+- [x] Parse Markdown files on the server.
+- [x] Validate frontmatter with a schema validator such as Zod.
+- [x] Convert Markdown to safe HTML or React elements.
+- [x] Support headings, paragraphs, lists, links, blockquotes, and code blocks.
+- [x] Support images with appropriate alternative text.
+- [x] Apply syntax highlighting if needed.
+- [x] Avoid unsafe raw HTML.
+- [x] Do not use executable MDX unless a clear requirement is approved.
 
 The content loader must handle missing files, invalid metadata, and duplicate slugs safely.
 
@@ -508,42 +508,42 @@ The content loader must handle missing files, invalid metadata, and duplicate sl
 
 Create `/blog`.
 
-- [ ] Display published articles.
-- [ ] Sort articles by publication date, newest first.
-- [ ] Display title, date, description, and tags.
-- [ ] Display a cover image when available.
-- [ ] Make each article link to its detail page.
-- [ ] Provide an appropriate empty state when there are no published posts.
+- [x] Display published articles.
+- [x] Sort articles by publication date, newest first.
+- [x] Display title, date, description, and tags.
+- [x] Display a cover image when available.
+- [x] Make each article link to its detail page.
+- [x] Provide an appropriate empty state when there are no published posts.
 
 #### 6.5 Individual article page
 
 Create `/blog/[slug]`.
 
-- [ ] Load the article by slug.
-- [ ] Display title and description.
-- [ ] Display publication date.
-- [ ] Display article content.
-- [ ] Display tags.
-- [ ] Add navigation back to the blog.
-- [ ] Handle unknown slugs with a proper not-found page.
-- [ ] Generate page metadata dynamically.
+- [x] Load the article by slug.
+- [x] Display title and description.
+- [x] Display publication date.
+- [x] Display article content.
+- [x] Display tags.
+- [x] Add navigation back to the blog.
+- [x] Handle unknown slugs with a proper not-found page.
+- [x] Generate page metadata dynamically.
 
 #### 6.6 Draft handling
 
-- [ ] Exclude unpublished articles from production.
-- [ ] Do not expose drafts through RSS or sitemap.
-- [ ] Ensure draft content cannot be accessed through predictable public routes.
-- [ ] Keep publication behavior consistent between listing pages and individual pages.
+- [x] Exclude unpublished articles from production.
+- [x] Do not expose drafts through RSS or sitemap.
+- [x] Ensure draft content cannot be accessed through predictable public routes.
+- [x] Keep publication behavior consistent between listing pages and individual pages.
 
 #### 6.7 Blog discoverability
 
-- [ ] Generate an RSS feed.
-- [ ] Include published articles in the sitemap.
-- [ ] Add canonical URLs.
-- [ ] Add article metadata.
-- [ ] Add Open Graph metadata.
-- [ ] Consider dynamic Open Graph images.
-- [ ] Add reading-time information if useful.
+- [x] Generate an RSS feed.
+- [x] Include published articles in the sitemap.
+- [x] Add canonical URLs.
+- [x] Add article metadata.
+- [x] Add Open Graph metadata.
+- [x] Consider dynamic Open Graph images.
+- [x] Add reading-time information if useful.
 
 #### 6.8 Documentation
 
