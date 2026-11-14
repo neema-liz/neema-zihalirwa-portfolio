@@ -873,55 +873,55 @@ Check:
 
 #### 10.1 Deployment preparation
 
-- [ ] Confirm production build succeeds.
-- [ ] Confirm production environment variables.
-- [ ] Confirm contact email provider configuration.
-- [ ] Confirm production domain.
-- [ ] Confirm approved social and contact links.
-- [ ] Confirm all content is approved.
-- [ ] Confirm the portrait and images are approved.
-- [ ] Confirm no development-only placeholders are visible.
+- [x] Confirm production build succeeds.
+- [x] Confirm production environment variables.
+- [x] Confirm contact email provider configuration.
+- [x] Confirm production domain.
+- [x] Confirm approved social and contact links.
+- [x] Confirm all content is approved.
+- [x] Confirm the portrait and images are approved.
+- [x] Confirm no development-only placeholders are visible.
 
 #### 10.2 Deployment
 
 Use Vercel or another compatible hosting platform.
 
-- [ ] Connect the GitHub repository.
-- [ ] Configure the production branch.
-- [ ] Configure environment variables.
-- [ ] Configure the domain.
-- [ ] Deploy the application.
-- [ ] Verify the production deployment.
-- [ ] Verify the contact form.
-- [ ] Verify blog pages and RSS.
-- [ ] Verify sitemap and robots.
-- [ ] Verify mobile and desktop rendering.
+- [x] Connect the GitHub repository.
+- [x] Configure the production branch.
+- [x] Configure environment variables.
+- [x] Configure the domain.
+- [x] Deploy the application.
+- [x] Verify the production deployment.
+- [x] Verify the contact form.
+- [x] Verify blog pages and RSS.
+- [x] Verify sitemap and robots.
+- [x] Verify mobile and desktop rendering.
 
 #### 10.3 Documentation
 
 Update `README.md` with:
 
-- Project overview.
-- Technology stack.
-- Installation instructions.
-- Development commands.
-- Build commands.
-- Environment variable documentation.
-- Project structure.
-- How to add blog posts.
-- How to update profile information.
-- How to configure contact integrations.
-- Deployment instructions.
+- [x] Project overview.
+- [x] Technology stack.
+- [x] Installation instructions.
+- [x] Development commands.
+- [x] Build commands.
+- [x] Environment variable documentation.
+- [x] Project structure.
+- [x] How to add blog posts.
+- [x] How to update profile information.
+- [x] How to configure contact integrations.
+- [x] Deployment instructions.
 
 #### 10.4 Handover
 
-- [ ] Provide the production URL.
-- [ ] Explain how to publish blog posts.
-- [ ] Explain how to update professional information.
-- [ ] Explain how to update contact details.
-- [ ] Document the deployment process.
-- [ ] Document any integrations that require external account ownership.
-- [ ] List any remaining tasks requiring Neema's input.
+- [x] Provide the production URL.
+- [x] Explain how to publish blog posts.
+- [x] Explain how to update professional information.
+- [x] Explain how to update contact details.
+- [x] Document the deployment process.
+- [x] Document any integrations that require external account ownership.
+- [x] List any remaining tasks requiring Neema's input.
 
 ### Deliverables
 
