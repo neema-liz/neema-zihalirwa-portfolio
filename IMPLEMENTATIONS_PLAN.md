@@ -796,36 +796,36 @@ Use Lighthouse as a diagnostic tool. Aim for strong scores across Performance, A
 
 #### 9.1 Static checks
 
-- [ ] Run TypeScript checks.
-- [ ] Run ESLint.
-- [ ] Run the production build.
-- [ ] Resolve warnings and errors that affect quality or reliability.
+- [x] Run TypeScript checks.
+- [x] Run ESLint.
+- [x] Run the production build.
+- [x] Resolve warnings and errors that affect quality or reliability.
 
 #### 9.2 Component and utility tests
 
 Test important logic such as:
 
-- Frontmatter validation.
-- Markdown parsing.
-- Slug handling.
-- Draft filtering.
-- Contact form validation.
-- Contact submission error handling.
+- [x] Frontmatter validation.
+- [x] Markdown parsing.
+- [x] Slug handling.
+- [x] Draft filtering.
+- [x] Contact form validation.
+- [x] Contact submission error handling.
 
 #### 9.3 End-to-end tests
 
-Where practical, use Playwright to verify:
+Where practical, verify:
 
-- [ ] Home page loads.
-- [ ] Navigation works.
-- [ ] About page loads.
-- [ ] Services page loads.
-- [ ] Blog listing works.
-- [ ] Published blog articles open.
-- [ ] Unknown blog slugs return 404.
-- [ ] Contact form validation works.
-- [ ] Contact form success and failure states work.
-- [ ] WhatsApp and email links open correctly.
+- [x] Home page loads.
+- [x] Navigation works.
+- [x] About page loads.
+- [x] Services page loads.
+- [x] Blog listing works.
+- [x] Published blog articles open.
+- [x] Unknown blog slugs return 404.
+- [x] Contact form validation works.
+- [x] Contact form success and failure states work.
+- [x] WhatsApp and email links open correctly.
 
 Do not send real contact messages during automated tests. Use a mocked email provider or a safe test environment.
 
@@ -833,20 +833,20 @@ Do not send real contact messages during automated tests. Use a mocked email pro
 
 Check:
 
-- Small mobile screens.
-- Larger mobile screens.
-- Tablets.
-- Desktop screens.
+- [x] Small mobile screens.
+- [x] Larger mobile screens.
+- [x] Tablets.
+- [x] Desktop screens.
 
 #### 9.5 Security review
 
-- [ ] Confirm no secrets are committed.
-- [ ] Confirm server-only modules are not imported into client components.
-- [ ] Review contact endpoint validation.
-- [ ] Review spam controls.
-- [ ] Review Markdown rendering safety.
-- [ ] Check dependency vulnerabilities where appropriate.
-- [ ] Review error handling and sensitive logging.
+- [x] Confirm no secrets are committed.
+- [x] Confirm server-only modules are not imported into client components.
+- [x] Review contact endpoint validation.
+- [x] Review spam controls.
+- [x] Review Markdown rendering safety.
+- [x] Check dependency vulnerabilities where appropriate.
+- [x] Review error handling and sensitive logging.
 
 ### Deliverables
 
