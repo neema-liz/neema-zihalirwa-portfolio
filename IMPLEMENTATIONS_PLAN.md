@@ -386,35 +386,35 @@ The hero must communicate who Neema is and what she does without exaggerating he
 
 #### 5.1 Services / What I Offer
 
-- [ ] Create a dedicated Services section or page.
-- [ ] Present each approved service clearly.
-- [ ] Write a concise description for every service.
-- [ ] Explain the value each service provides.
-- [ ] Use a consistent layout.
-- [ ] Add contact calls to action.
+- [x] Create a dedicated Services section or page.
+- [x] Present each approved service clearly.
+- [x] Write a concise description for every service.
+- [x] Explain the value each service provides.
+- [x] Use a consistent layout.
+- [x] Add contact calls to action.
 
 Do not assume that Neema provides HR consulting, recruitment, talent management, training, or any other specific service until she confirms it.
 
 #### 5.2 Capabilities and expertise
 
-- [ ] Present only confirmed capabilities.
-- [ ] Group related skills logically.
-- [ ] Avoid unsupported skill ratings or proficiency levels.
-- [ ] Keep descriptions understandable to employers and prospective clients.
+- [x] Present only confirmed capabilities.
+- [x] Group related skills logically.
+- [x] Avoid unsupported skill ratings or proficiency levels.
+- [x] Keep descriptions understandable to employers and prospective clients.
 
 #### 5.3 Professional experience
 
-- [ ] Create a professional experience presentation.
-- [ ] Support job title, organization, dates, and responsibilities.
-- [ ] Highlight achievements only when supplied and verified.
-- [ ] Present education separately from employment.
-- [ ] Keep the presentation easy to scan.
+- [x] Create a professional experience presentation.
+- [x] Support job title, organization, dates, and responsibilities.
+- [x] Highlight achievements only when supplied and verified.
+- [x] Present education separately from employment.
+- [x] Keep the presentation easy to scan.
 
 #### 5.4 Career goals and professional perspective
 
-- [ ] Include career goals only when Neema approves their wording.
-- [ ] Present her professional values and perspective.
-- [ ] Avoid writing personal beliefs on her behalf.
+- [x] Include career goals only when Neema approves their wording.
+- [x] Present her professional values and perspective.
+- [x] Avoid writing personal beliefs on her behalf.
 
 ### Deliverables
 
