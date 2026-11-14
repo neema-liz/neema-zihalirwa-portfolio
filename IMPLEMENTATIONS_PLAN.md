@@ -69,18 +69,18 @@ The recommended Next.js defaults were selected.
 
 ### Tasks
 
-- [ ] Inspect the repository structure.
-- [ ] Inspect `package.json` and identify installed dependencies.
-- [ ] Inspect `tsconfig.json`.
-- [ ] Inspect `eslint.config.mjs`.
-- [ ] Inspect `next.config.ts`.
-- [ ] Inspect the existing `app/` directory.
-- [ ] Inspect `app/globals.css` and the root layout.
-- [ ] Inspect the existing `AGENTS.md`, if present.
-- [ ] Verify the application runs using `pnpm dev`.
-- [ ] Verify TypeScript compilation.
-- [ ] Verify ESLint runs successfully.
-- [ ] Identify existing generated components and styles that can be reused or replaced.
+- [x] Inspect the repository structure.
+- [x] Inspect `package.json` and identify installed dependencies.
+- [x] Inspect `tsconfig.json`.
+- [x] Inspect `eslint.config.mjs`.
+- [x] Inspect `next.config.ts`.
+- [x] Inspect the existing `app/` directory.
+- [x] Inspect `app/globals.css` and the root layout.
+- [x] Inspect the existing `AGENTS.md`, if present.
+- [x] Verify the application runs using `pnpm dev`.
+- [x] Verify TypeScript compilation.
+- [x] Verify ESLint runs successfully.
+- [x] Identify existing generated components and styles that can be reused or replaced.
 
 ### Deliverables
 
@@ -166,25 +166,25 @@ This is a proposed structure, not a requirement to create empty folders. Add dir
 
 #### 1.2 Establish code conventions
 
-- [ ] Use TypeScript for all application code.
-- [ ] Keep strict TypeScript checking enabled.
-- [ ] Use clear and descriptive names.
-- [ ] Separate reusable components from route-specific components.
-- [ ] Keep business logic out of presentation components.
-- [ ] Prefer Server Components by default.
-- [ ] Use Client Components only when browser interactivity requires them.
-- [ ] Avoid unnecessary global state.
-- [ ] Avoid oversized components and duplicated logic.
-- [ ] Use semantic HTML.
-- [ ] Keep secrets and server-only logic out of client bundles.
+- [x] Use TypeScript for all application code.
+- [x] Keep strict TypeScript checking enabled.
+- [x] Use clear and descriptive names.
+- [x] Separate reusable components from route-specific components.
+- [x] Keep business logic out of presentation components.
+- [x] Prefer Server Components by default.
+- [x] Use Client Components only when browser interactivity requires them.
+- [x] Avoid unnecessary global state.
+- [x] Avoid oversized components and duplicated logic.
+- [x] Use semantic HTML.
+- [x] Keep secrets and server-only logic out of client bundles.
 
 #### 1.3 Configure development quality tools
 
-- [ ] Review the existing ESLint configuration.
-- [ ] Add formatting tooling only if justified.
-- [ ] Establish consistent import organization.
-- [ ] Ensure TypeScript and lint checks are available through scripts.
-- [ ] Add a basic test setup when needed.
+- [x] Review the existing ESLint configuration.
+- [x] Add formatting tooling only if justified.
+- [x] Establish consistent import organization.
+- [x] Ensure TypeScript and lint checks are available through scripts.
+- [x] Add a basic test setup when needed.
 
 ### Deliverables
 
