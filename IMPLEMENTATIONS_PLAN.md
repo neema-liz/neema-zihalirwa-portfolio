@@ -725,45 +725,45 @@ Important:
 
 #### 8.1 SEO
 
-- [ ] Define global site metadata.
-- [ ] Define page-specific titles and descriptions.
-- [ ] Generate canonical URLs.
-- [ ] Add Open Graph metadata.
-- [ ] Add social sharing metadata.
-- [ ] Generate `sitemap.xml`.
-- [ ] Generate `robots.txt`.
-- [ ] Ensure blog posts have unique metadata.
-- [ ] Add structured data only where accurate and appropriate.
-- [ ] Use meaningful URLs.
-- [ ] Ensure published content is indexable.
-- [ ] Prevent drafts and private routes from being indexed.
+- [x] Define global site metadata.
+- [x] Define page-specific titles and descriptions.
+- [x] Generate canonical URLs.
+- [x] Add Open Graph metadata.
+- [x] Add social sharing metadata.
+- [x] Generate `sitemap.xml`.
+- [x] Generate `robots.txt`.
+- [x] Ensure blog posts have unique metadata.
+- [x] Add structured data only where accurate and appropriate.
+- [x] Use meaningful URLs.
+- [x] Ensure published content is indexable.
+- [x] Prevent drafts and private routes from being indexed.
 
 #### 8.2 Accessibility
 
-- [ ] Use semantic HTML.
-- [ ] Ensure keyboard navigation works.
-- [ ] Provide visible focus states.
-- [ ] Provide accessible labels for form fields.
-- [ ] Use meaningful alternative text for images.
-- [ ] Check color contrast.
-- [ ] Ensure buttons and links have understandable names.
-- [ ] Avoid communicating important information through color alone.
-- [ ] Respect reduced-motion preferences.
-- [ ] Check navigation and forms with a keyboard.
+- [x] Use semantic HTML.
+- [x] Ensure keyboard navigation works.
+- [x] Provide visible focus states.
+- [x] Provide accessible labels for form fields.
+- [x] Use meaningful alternative text for images.
+- [x] Check color contrast.
+- [x] Ensure buttons and links have understandable names.
+- [x] Avoid communicating important information through color alone.
+- [x] Respect reduced-motion preferences.
+- [x] Check navigation and forms with a keyboard.
 
 Aim for WCAG 2.2 AA where practical.
 
 #### 8.3 Performance
 
-- [ ] Use Next.js Image for optimized images.
-- [ ] Avoid unnecessarily large image assets.
-- [ ] Use efficient font loading.
-- [ ] Minimize unnecessary client-side JavaScript.
-- [ ] Avoid unnecessary dependencies.
-- [ ] Use server rendering or static generation where appropriate.
-- [ ] Check page loading behavior.
-- [ ] Avoid layout shifts.
-- [ ] Optimize the portrait and blog cover images.
+- [x] Use Next.js Image for optimized images.
+- [x] Avoid unnecessarily large image assets.
+- [x] Use efficient font loading.
+- [x] Minimize unnecessary client-side JavaScript.
+- [x] Avoid unnecessary dependencies.
+- [x] Use server rendering or static generation where appropriate.
+- [x] Check page loading behavior.
+- [x] Avoid layout shifts.
+- [x] Optimize the portrait and blog cover images.
 
 #### 8.4 Quality checks
 
