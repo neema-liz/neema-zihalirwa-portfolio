@@ -212,45 +212,45 @@ The design must remain original and must not copy another website's content, sou
 
 #### 2.1 Define the design system
 
-- [ ] Define the primary and secondary colors.
-- [ ] Define background, surface, text, and accent colors.
-- [ ] Define typography for headings and body text.
-- [ ] Establish font sizes and responsive typography.
-- [ ] Define spacing conventions.
-- [ ] Define content width and layout constraints.
-- [ ] Define button styles.
-- [ ] Define form input styles.
-- [ ] Define borders, radii, and subtle shadows.
-- [ ] Define hover and focus states.
+- [x] Define the primary and secondary colors.
+- [x] Define background, surface, text, and accent colors.
+- [x] Define typography for headings and body text.
+- [x] Establish font sizes and responsive typography.
+- [x] Define spacing conventions.
+- [x] Define content width and layout constraints.
+- [x] Define button styles.
+- [x] Define form input styles.
+- [x] Define borders, radii, and subtle shadows.
+- [x] Define hover and focus states.
 
 The final accent color and branding must remain subject to Neema's approval.
 
 #### 2.2 Build reusable layout components
 
-- [ ] Create the global navigation/header.
-- [ ] Create the main content layout.
-- [ ] Create the footer.
-- [ ] Create reusable buttons and links.
-- [ ] Create reusable section headings.
-- [ ] Create reusable containers.
-- [ ] Create a responsive mobile navigation.
-- [ ] Implement consistent active and hover states.
+- [x] Create the global navigation/header.
+- [x] Create the main content layout.
+- [x] Create the footer.
+- [x] Create reusable buttons and links.
+- [x] Create reusable section headings.
+- [x] Create reusable containers.
+- [x] Create a responsive mobile navigation.
+- [x] Implement consistent active and hover states.
 
 #### 2.3 Responsive behavior
 
-- [ ] Design for mobile devices first.
-- [ ] Adapt layouts for tablets.
-- [ ] Adapt layouts for desktop screens.
-- [ ] Check navigation on small screens.
-- [ ] Prevent horizontal overflow.
-- [ ] Ensure readable text sizes and comfortable tap targets.
+- [x] Design for mobile devices first.
+- [x] Adapt layouts for tablets.
+- [x] Adapt layouts for desktop screens.
+- [x] Check navigation on small screens.
+- [x] Prevent horizontal overflow.
+- [x] Ensure readable text sizes and comfortable tap targets.
 
 #### 2.4 Motion and interaction
 
-- [ ] Add subtle transitions where useful.
-- [ ] Add restrained entrance animations only where they improve the experience.
-- [ ] Respect reduced-motion preferences.
-- [ ] Avoid distracting animation and unnecessary effects.
+- [x] Add subtle transitions where useful.
+- [x] Add restrained entrance animations only where they improve the experience.
+- [x] Respect reduced-motion preferences.
+- [x] Avoid distracting animation and unnecessary effects.
 
 ### Deliverables
 
