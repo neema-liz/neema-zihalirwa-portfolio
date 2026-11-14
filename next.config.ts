@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   experimental: {
     agentFeedback: true,
     turbopackPluginRuntimeStrategy: "workerThreads",
+    cpus: 1,
   },
   cacheComponents: true,
   partialPrefetching: true,
