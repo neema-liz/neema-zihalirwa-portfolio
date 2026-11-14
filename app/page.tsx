@@ -1,9 +1,14 @@
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AffiliationsBar } from "@/components/sections/AffiliationsBar";
 import { AboutSection } from "@/components/sections/AboutSection";
+import { ExperienceSection } from "@/components/sections/ExperienceSection";
+import { CapabilitiesSection } from "@/components/sections/CapabilitiesSection";
+import { ServicesSection } from "@/components/sections/ServicesSection";
 import { profileData } from "@/config/profile";
 
 export default function Home() {
+  const booking = profileData.contact.booking;
+
   return (
     <div className="bg-[#F7F4EE] text-[#2A2421] selection:bg-[#E4DDD6] selection:text-[#2A2421]">
       {/* 1. Hero Section (Emily Trenouth layout with neema-portrait-01) */}
@@ -15,99 +20,16 @@ export default function Home() {
       {/* 3. About Section (12-column grid with neema-portrait-02 and Simone Breker core philosophy) */}
       <AboutSection />
 
-      {/* 4. Services Section (Emily's Numbered Hairline Ledger + Simone's Deliverables) */}
-      <section id="services" className="py-24 md:py-32 border-t border-[#E4DDD6]">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8">
-          {/* Header 12-Col Split */}
-          <div className="grid md:grid-cols-12 gap-12 mb-16">
-            <div className="md:col-span-4">
-              <p className="text-xs font-medium tracking-[0.3em] uppercase text-[#736660]">
-                Services
-              </p>
-            </div>
-            <div className="md:col-span-8">
-              <h2 className="font-serif text-3xl md:text-5xl font-light text-[#2A2421] leading-snug mb-4">
-                How I can help
-              </h2>
-              <p className="text-sm text-[#736660] leading-relaxed max-w-xl font-sans">
-                Whether you need structured recruitment support, onboarding coordination,
-                or reliable HR administration &mdash; I bring organized, dependable execution
-                to every engagement.
-              </p>
-            </div>
-          </div>
+      {/* 4. Experience Section (DTTASA & KaziEasy verified career timeline) */}
+      <ExperienceSection />
 
-          {/* Numbered Ledger */}
-          <div className="border-b border-[#E4DDD6]">
-            {profileData.services.map((service, index) => {
-              const numberStr = String(index + 1).padStart(2, "0");
-              return (
-                <div
-                  key={service.id}
-                  className="group grid md:grid-cols-12 gap-6 py-10 border-t border-[#E4DDD6] hover:bg-[#EEE9DE]/40 transition-colors px-4 -mx-4"
-                >
-                  {/* Number */}
-                  <div className="md:col-span-1">
-                    <span className="text-xs text-[#736660] font-mono">{numberStr}</span>
-                  </div>
+      {/* 5. Capabilities Section (Categorized competencies & languages) */}
+      <CapabilitiesSection />
 
-                  {/* Title & Headline */}
-                  <div className="md:col-span-4">
-                    <h3 className="font-serif text-xl sm:text-2xl text-[#2A2421] font-normal leading-snug">
-                      {service.title}
-                    </h3>
-                    <p className="text-xs text-[#C75D38] mt-1.5 font-sans font-medium">
-                      {service.headline}
-                    </p>
-                  </div>
+      {/* 6. Services Section (Emily's Numbered Hairline Ledger + Google Meet / Calendly booking) */}
+      <ServicesSection />
 
-                  {/* Description & Deliverables */}
-                  <div className="md:col-span-7">
-                    <p className="text-sm text-[#736660] leading-relaxed font-sans mb-4">
-                      {service.detailedDescription || service.shortDescription}
-                    </p>
-
-                    {service.deliverables && (
-                      <div className="flex flex-wrap gap-2 pt-2">
-                        {service.deliverables.map((del) => (
-                          <span
-                            key={del}
-                            className="text-[11px] tracking-wide uppercase px-2.5 py-1 bg-[#FAF8F5] border border-[#E4DDD6] text-[#736660]"
-                          >
-                            {del}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Service Actions */}
-          <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-6">
-            <a
-              href={`mailto:${profileData.contact.email.value}?subject=Consultation%20Enquiry`}
-              className="inline-flex items-center text-xs font-medium tracking-[0.15em] uppercase bg-[#C75D38] text-[#FAF8F5] px-8 py-4 hover:opacity-90 transition-opacity"
-            >
-              Enquire about working together
-            </a>
-            {profileData.contact.whatsapp.phoneNumber && (
-              <a
-                href={`https://wa.me/${profileData.contact.whatsapp.phoneNumber.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(profileData.contact.whatsapp.defaultPrefilledMessage)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-xs font-medium tracking-[0.15em] uppercase border border-[#2A2421] text-[#2A2421] px-8 py-4 hover:bg-[#2A2421] hover:text-[#FAF8F5] transition-colors"
-              >
-                Chat on WhatsApp &rarr;
-              </a>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Contact Section (Emily's Exact Underlined Contact Pattern) */}
+      {/* 7. Contact Section (Direct email, WhatsApp & Booking Touchpoints) */}
       <section id="contact" className="py-24 md:py-32 border-t border-[#E4DDD6]">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <div className="grid md:grid-cols-12 gap-12">
@@ -128,7 +50,7 @@ export default function Home() {
                 interdisciplinary collaboration &mdash; I would love to hear from you.
               </p>
 
-              <div className="flex flex-col sm:flex-row flex-wrap gap-8 font-sans">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-8 font-sans mb-12">
                 <a
                   href={`mailto:${profileData.contact.email.value}?subject=Professional%20Enquiry`}
                   className="text-xs font-medium tracking-[0.15em] uppercase border-b border-[#2A2421] pb-1 hover:opacity-60 transition-opacity"
@@ -156,6 +78,35 @@ export default function Home() {
                   LinkedIn &rarr;
                 </a>
               </div>
+
+              {/* Direct Booking Strip */}
+              {booking?.googleCalendarUrl && (
+                <div className="pt-8 border-t border-[#E4DDD6] max-w-md">
+                  <p className="text-[11px] uppercase tracking-[0.2em] text-[#736660] mb-3">
+                    Direct Calendar Booking
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <a
+                      href={booking.googleCalendarUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs font-medium tracking-[0.15em] uppercase bg-[#2A2421] text-[#FAF8F5] px-6 py-3 hover:bg-[#C75D38] transition-colors"
+                    >
+                      Google Meet Call &rarr;
+                    </a>
+                    {booking.calendlyUrl && (
+                      <a
+                        href={booking.calendlyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-medium tracking-[0.15em] uppercase border border-[#2A2421] text-[#2A2421] px-6 py-3 hover:bg-[#2A2421] hover:text-[#FAF8F5] transition-colors"
+                      >
+                        Calendly &rarr;
+                      </a>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
