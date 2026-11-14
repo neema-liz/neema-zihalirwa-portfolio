@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   experimental: {
     agentFeedback: true,
+    turbopackPluginRuntimeStrategy: "workerThreads",
   },
   cacheComponents: true,
   partialPrefetching: true,
@@ -11,7 +12,6 @@ const nextConfig: NextConfig = {
     rules: {
       "*.css": {
         loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
       },
     },
   },
