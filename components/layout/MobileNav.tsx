@@ -60,19 +60,19 @@ export function MobileNav() {
         </div>
       </button>
 
-      {/* Backdrop */}
+      {/* Frosted Glass Backdrop (Blurs the underlying website) */}
       {isOpen && (
         <div
-          className="fixed inset-0 z-40 bg-[#2A2421]/20 backdrop-blur-xs transition-opacity"
+          className="fixed inset-0 z-40 bg-[#2A2421]/30 backdrop-blur-md transition-opacity duration-300"
           onClick={() => setIsOpen(false)}
           aria-hidden="true"
         />
       )}
 
-      {/* Slide-over panel */}
+      {/* Frosted Slide-Over Panel */}
       <div
         className={cn(
-          "fixed inset-y-0 right-0 z-40 w-full max-w-xs bg-[#F7F4EE] px-8 py-20 shadow-xl transition-transform duration-300 ease-in-out border-l border-[#E4DDD6] flex flex-col justify-between",
+          "fixed inset-y-0 right-0 z-40 w-full max-w-xs bg-[#F7F4EE]/95 backdrop-blur-xl px-8 py-20 shadow-2xl transition-transform duration-300 ease-in-out border-l border-[#E4DDD6] flex flex-col justify-between",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
@@ -100,10 +100,6 @@ export function MobileNav() {
           >
             Get in touch
           </a>
-
-          <p className="text-[11px] text-[#736660] text-center uppercase tracking-wider">
-            Neema Elisabeth &copy; 2026
-          </p>
         </div>
       </div>
     </div>
