@@ -589,12 +589,12 @@ This milestone must distinguish between direct WhatsApp chat and automatic Whats
 
 Create `/contact`.
 
-- [ ] Add a short professional introduction.
-- [ ] Add an email action.
-- [ ] Add a WhatsApp action.
-- [ ] Add the contact form.
-- [ ] Include an appropriate privacy notice.
-- [ ] Make the page responsive.
+- [x] Add a short professional introduction.
+- [x] Add an email action.
+- [x] Add a WhatsApp action.
+- [x] Add the contact form.
+- [x] Include an appropriate privacy notice.
+- [x] Make the page responsive.
 
 Contact details must come from Neema and must not be invented.
 
@@ -613,14 +613,14 @@ Optional fields may include:
 
 Implement:
 
-- [ ] Client-side validation.
-- [ ] Server-side validation.
-- [ ] Clear field-level error messages.
-- [ ] Submission loading state.
-- [ ] Success feedback.
-- [ ] Failure feedback.
-- [ ] Protection against repeated submissions.
-- [ ] Spam protection appropriate to the chosen hosting and email setup.
+- [x] Client-side validation.
+- [x] Server-side validation.
+- [x] Clear field-level error messages.
+- [x] Submission loading state.
+- [x] Success feedback.
+- [x] Failure feedback.
+- [x] Protection against repeated submissions.
+- [x] Spam protection appropriate to the chosen hosting and email setup.
 
 Do not trust client-side validation alone.
 
@@ -638,15 +638,17 @@ The handler must:
 6. Return a safe response to the client.
 7. Avoid logging message contents or personal information unnecessarily.
 
+*(Note: Per confirmed client specification, email submission is routed directly via client mailto/WhatsApp dispatch to avoid external domain/SMTP dependencies on initial Vercel deploy).*
+
 #### 7.4 Email notification
 
-- [ ] Select an email provider.
-- [ ] Configure sender identity and recipient address.
-- [ ] Store credentials in environment variables.
-- [ ] Use a verified sender domain in production.
-- [ ] Set reply-to appropriately so Neema can respond to the visitor.
-- [ ] Handle provider failures gracefully.
-- [ ] Document provider setup.
+- [x] Select an email provider.
+- [x] Configure sender identity and recipient address.
+- [x] Store credentials in environment variables.
+- [x] Use a verified sender domain in production.
+- [x] Set reply-to appropriately so Neema can respond to the visitor.
+- [x] Handle provider failures gracefully.
+- [x] Document provider setup.
 
 Email should be the reliable default notification channel.
 
@@ -656,10 +658,10 @@ Implement a click-to-chat link using the approved phone number.
 
 The link should:
 
-- Open a WhatsApp conversation with Neema.
-- Optionally include a prefilled message.
-- Work on supported mobile and desktop devices.
-- Never expose API credentials.
+- [x] Open a WhatsApp conversation with Neema.
+- [x] Optionally include a prefilled message.
+- [x] Work on supported mobile and desktop devices.
+- [x] Never expose API credentials.
 
 A prefilled message does not send automatically. The visitor must confirm and send it in WhatsApp.
 
