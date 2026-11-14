@@ -41,7 +41,7 @@ export function MobileNav() {
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
         aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
-        className="relative z-50 w-9 h-9 flex items-center justify-center text-[#2A2421] hover:text-[#C75D38] transition-colors bg-transparent border-0 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#C75D38]"
+        className="relative z-[60] w-9 h-9 flex items-center justify-center text-[#2A2421] hover:text-[#C75D38] transition-colors bg-transparent border-0 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#C75D38]"
       >
         <span className="sr-only">{isOpen ? "Close menu" : "Open menu"}</span>
         <div className="relative w-6 h-6 flex items-center justify-center">
@@ -61,20 +61,24 @@ export function MobileNav() {
       </button>
 
       {/* Frosted Glass Backdrop (Blurs the underlying website) */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 z-40 bg-[#2A2421]/30 backdrop-blur-md transition-opacity duration-300"
-          onClick={() => setIsOpen(false)}
-          aria-hidden="true"
-        />
-      )}
+      <div
+        className={cn(
+          "fixed inset-0 z-40 bg-[#2A2421]/20 backdrop-blur-md transition-opacity duration-300 ease-in-out",
+          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        )}
+        onClick={() => setIsOpen(false)}
+        aria-hidden="true"
+      />
 
       {/* Frosted Slide-Over Panel */}
       <div
         className={cn(
-          "fixed inset-y-0 right-0 z-40 w-full max-w-xs bg-[#F7F4EE]/95 backdrop-blur-xl px-8 py-20 shadow-2xl transition-transform duration-300 ease-in-out border-l border-[#E4DDD6] flex flex-col justify-between",
-          isOpen ? "translate-x-0" : "translate-x-full"
+          "fixed inset-y-0 right-0 z-50 w-full max-w-xs bg-[#F7F4EE]/95 backdrop-blur-2xl px-8 py-20 shadow-2xl transition-transform duration-300 ease-in-out border-l border-[#E4DDD6] flex flex-col justify-between",
+          isOpen ? "translate-x-0 pointer-events-auto" : "translate-x-full pointer-events-none"
         )}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile navigation"
       >
         <nav className="flex flex-col space-y-6">
           <p className="text-[11px] uppercase tracking-[0.25em] text-[#736660]">
