@@ -1,29 +1,64 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-serif: "Georgia", "Cambria", "Times New Roman", Times, serif;
+  /* Warm Parchment / Linen Palette (Inspired by Emily Trenouth) */
+  --background: #f7f4ee;       /* Warm linen canvas (hsl(35, 30%, 95%)) */
+  --foreground: #2a2421;       /* Deep warm espresso (hsl(20, 10%, 15%)) */
+  --card: #eee9de;             /* Soft parchment surface (hsl(35, 25%, 92%)) */
+  --card-foreground: #2a2421;
+  --muted: #e7e0d5;            /* Muted surface */
+  --muted-foreground: #736660;  /* Warm stone text (hsl(20, 8%, 42%)) */
+  --border: #e4ddd6;           /* Fine hairline rule (hsl(30, 15%, 88%)) */
+  --primary: #c75d38;          /* Warm terracotta / burnt sienna (hsl(16, 55%, 52%)) */
+  --primary-foreground: #faf8f5;
+  --accent: #1e3a34;           /* Deep botanical forest accent */
+  --accent-foreground: #faf8f5;
+
+  /* Typography Stacks */
+  --font-serif: "Lora", "Georgia", "Cambria", "Times New Roman", Times, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
   --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background);
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* Warm text selection */
+::selection {
+  background-color: #e4ddd6;
+  color: #2a2421;
+}
+
+/* Focus outline accessibility */
+:focus-visible {
+  outline: 1.5px solid var(--primary);
+  outline-offset: 2px;
+}
