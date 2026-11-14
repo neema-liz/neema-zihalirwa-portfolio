@@ -1,89 +1,156 @@
-# Neema Zihalirwa Elisabeth — Professional Portfolio
+# Neema Zihalirwa Elisabeth — Professional Portfolio & HR Platform
 
-Professional personal portfolio and HR insights platform for **Neema Zihalirwa Elisabeth**, an HR professional with an academic foundation in International Relations and pedagogy.
-
----
-
-## 1. Technology Stack
-
-- **Framework**: Next.js 16 (App Router with Turbopack)
-- **UI Library**: React 19 (Server Components by default)
-- **Styling**: Tailwind CSS v4 (`@tailwindcss/turbopack`)
-- **Language**: TypeScript 5 (Strict mode)
-- **Package Manager**: pnpm
+A bespoke, production-ready personal portfolio and professional blog platform for **Neema Zihalirwa Elisabeth**, a Human Resources Professional with an academic foundation in International Relations and General Pedagogy.
 
 ---
 
-## 2. Architecture & Code Conventions
+## 1. Design & Positioning Philosophy
 
-### Directory Layout
+The website's visual identity and user experience adhere strictly to authentic editorial design principles:
+
+- **Visual Architecture & Restraint**: Inspired by the warm linen aesthetic of [Emily Trenouth](https://www.emilytrenouth.com/) featuring warm parchment canvases (`#F7F4EE`), deep espresso typography (`#2A2421`), fine hairline ledgers (`#E4DDD6`), and terracotta accents (`#C75D38`).
+- **HR Problem-to-Outcome Framework**: Inspired by [Simone Breker](https://simonebreker.com/), communicating concrete deliverables, recruitment workflows, and organizational onboarding systems rather than generic corporate slogans.
+- **Zero-Fabrication Rule**: Every credential, academic institution (ULK, ISP/Goma), and employment entry (DTTASA, KaziEasy) is verified in `config/profile.ts`.
+- **Direct Touchpoint Architecture**: Tailored for initial deployment without custom domain or complex SMTP requirements. Features direct email, WhatsApp click-to-chat, and discovery call bookings via **Google Meet** and **Calendly**.
+
+---
+
+## 2. Technology Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router, Turbopack, Cache Components)
+- **UI Library**: [React 19](https://react.dev/) (Server Components by default)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) with `@tailwindcss/turbopack`
+- **Markdown & Frontmatter**: `gray-matter`, `marked`, and `zod` schema validation
+- **Testing**: Node 22 native test runner (`node --test --experimental-strip-types`)
+- **Type Safety**: TypeScript 5 in strict mode
+- **Package Manager**: `pnpm` v11
+
+---
+
+## 3. Directory Layout
 
 ```text
 neema-zihalirwa-portfolio/
-├── app/                  # Next.js App Router (pages, layouts, routes)
-├── components/           # Reusable UI & presentation components
-│   ├── layout/           # Header, navigation, footer
-│   ├── sections/         # Hero, about, services, experience sections
-│   └── ui/               # Base primitive UI elements (buttons, cards, badges)
-├── config/               # Site configuration and profile data
-│   ├── site.ts           # Site-wide constants, navigation, metadata
-│   └── profile.ts        # Centralized professional data with status validation
-├── content/              # Git-backed Markdown content
-│   └── blog/             # Articles written in Markdown with frontmatter
-├── lib/                  # Shared utilities and helpers
-│   └── utils.ts          # Class-merging (cn helper)
-├── public/               # Static assets
-│   └── images/
-│       └── portraits/    # Professional portrait photography
-├── types/                # TypeScript type definitions
-├── .env.example          # Environment variables template
-└── IMPLEMENTATIONS_PLAN.md # Implementation roadmap and milestones
+├── app/
+│   ├── about/page.tsx               # Dedicated /about narrative & philosophy
+│   ├── blog/
+│   │   ├── [slug]/page.tsx          # Dynamic article page (SSG + JSON-LD)
+│   │   └── page.tsx                 # Blog archive & topic filter
+│   ├── contact/page.tsx             # Contact channels & interactive composer
+│   ├── services/page.tsx            # Confirmed services & consultation booking
+│   ├── robots.ts                    # Dynamic robots.txt
+│   ├── sitemap.ts                   # Dynamic sitemap.xml
+│   ├── rss.xml/route.ts             # RSS 2.0 XML feed endpoint
+│   ├── layout.tsx                   # Root layout, metadata & Schema.org Person JSON-LD
+│   └── page.tsx                     # Editorial Home Page
+├── components/
+│   ├── blog/                        # BlogCard and ProseContent components
+│   ├── contact/                     # ContactChannels, ContactComposer, CopyEmailButton
+│   ├── layout/                      # Header, MobileNav, Footer
+│   ├── sections/                    # HeroSection, AboutSection, ServicesSection, etc.
+│   ├── seo/                         # Schema.org JsonLdPerson & JsonLdBlogPost
+│   └── ui/                          # Button, Badge, Container, SectionHeading
+├── config/
+│   ├── profile.ts                   # Single source of truth for Neema's verified data
+│   └── site.ts                      # Navigation links, metadata, and site constants
+├── content/
+│   └── blog/                        # Git-backed Markdown essays (.md)
+├── docs/
+│   ├── BLOG_AUTHORING_GUIDE.md      # Content creator publishing guide
+│   └── HANDOVER_SUMMARY.md          # Comprehensive client handover package
+├── lib/
+│   ├── blog.ts                      # Markdown parser, Zod validation & slug resolution
+│   └── utils.ts                     # Tailwind class merger (cn helper)
+├── public/
+│   └── images/portraits/            # High-resolution professional portrait photography
+├── tests/
+│   ├── blog.test.ts                 # Automated tests for frontmatter, reading time, slugs
+│   └── contact.test.ts              # Automated tests for contact channels & URI encoding
+├── types/                           # TypeScript interfaces and schemas
+└── IMPLEMENTATIONS_PLAN.md          # 10-milestone engineering roadmap
 ```
-
-### Key Engineering Rules
-
-1. **Server Components by Default**:
-   - Every page, layout, and presentation component is a Server Component unless interactive browser state is strictly required (`useState`, `useEffect`, event handlers).
-   - Interactive components must be isolated to small client leaves (e.g., mobile menu toggle, contact form) with an explicit `"use client"` directive.
-
-2. **Zero-Fabrication Data Rule**:
-   - No employment history, certifications, client testimonials, or credentials may be invented.
-   - All profile entries in `config/profile.ts` must use `status: "confirmed" | "pending"`.
-   - Only entries marked `"confirmed"` are exposed to production views via accessor functions.
-
-3. **Styling & Design Direction**:
-   - Clean, minimalist aesthetic inspired by Emily Trenouth's visual identity (generous whitespace, editorial serif headings, legible sans-serif body).
-   - Tailwind utility classes composed via the `cn(...)` helper.
 
 ---
 
-## 3. Development & Verification Commands
+## 4. Development & Verification Commands
 
 ```bash
-# Start local development server
+# Start local development server (Turbopack)
 pnpm dev
 
-# Static type check
+# Run automated unit tests (Node 22 native runner)
+pnpm test
+
+# Run TypeScript static type check
 pnpm type-check
 
-# ESLint check
+# Run ESLint check
 pnpm lint
 
-# Production build with Turbopack
+# Run optimized production build
 pnpm build
 
-# Run production server
+# Start production server locally
 pnpm start
 ```
 
 ---
 
-## 4. Environment Configuration
+## 5. Content Management (Publishing Blog Posts)
 
-Copy `.env.example` to `.env.local` to configure local variables:
+The blog operates entirely via Git-backed Markdown files stored in `content/blog/`. No database, external CMS, or authentication service is required.
 
-```bash
-cp .env.example .env.local
-```
+To publish a new essay:
+1. Create a `.md` file in `content/blog/my-article-slug.md`.
+2. Add the required frontmatter:
+   ```yaml
+   ---
+   title: "Your Article Title Here"
+   description: "A short 1-2 sentence overview of the article."
+   date: "2026-11-15"
+   author: "Neema Zihalirwa Elisabeth"
+   tags:
+     - Human Resources
+     - Pedagogy
+   published: true
+   ---
+   ```
+3. Write your content in standard Markdown.
+4. Commit and push to GitHub:
+   ```bash
+   git add content/blog/my-article-slug.md
+   git commit -m "feat(blog): publish essay on pedagogy in HR"
+   git push origin main
+   ```
 
-Never commit `.env` or `.env.local` files to Git.
+*Setting `published: false` marks the post as a draft, automatically hiding it from the website, sitemap, and RSS feed.*
+
+For more details, see [`docs/BLOG_AUTHORING_GUIDE.md`](./docs/BLOG_AUTHORING_GUIDE.md).
+
+---
+
+## 6. Updating Profile & Contact Details
+
+All biographical information, career history, education, and contact channels are centralized in [`config/profile.ts`](./config/profile.ts):
+
+- **Consultation Links**:
+  - Google Meet: `https://calendar.app.google/h4YgNK5MA3hAZw1S9`
+  - Calendly: `https://calendly.com/lucianna-neema/30min`
+- **Direct Email**: `lucianna.neema@gmail.com`
+- **Direct WhatsApp**: `+250796164579`
+
+Editing this file immediately updates all associated sections across the Home page, About page, Services page, Contact page, Footer, and Schema.org structured data.
+
+---
+
+## 7. Deployment to Vercel
+
+1. Push this repository to GitHub.
+2. Sign in to [Vercel](https://vercel.com) and click **"Add New..." > "Project"**.
+3. Import the `neema-zihalirwa-portfolio` repository.
+4. Framework Preset: **Next.js** (detected automatically).
+5. Environment Variables:
+   - `NEXT_PUBLIC_SITE_URL`: `https://neemazihalirwa.com` (or your temporary Vercel preview domain).
+6. Click **Deploy**.
+
+For detailed client handover information, see [`docs/HANDOVER_SUMMARY.md`](./docs/HANDOVER_SUMMARY.md).
