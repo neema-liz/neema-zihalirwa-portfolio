@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug, getAdjacentPosts, formatDate } from "@/lib/blog";
 import { ProseContent } from "@/components/blog/ProseContent";
+import { JsonLdBlogPost } from "@/components/seo/JsonLdBlogPost";
 import { profileData } from "@/config/profile";
 
 interface PageProps {
@@ -53,6 +54,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <div className="pt-12 pb-24">
+      <JsonLdBlogPost post={post} />
       <article className="max-w-3xl mx-auto px-6 sm:px-8">
         {/* Breadcrumb Back Link */}
         <div className="mb-10">
