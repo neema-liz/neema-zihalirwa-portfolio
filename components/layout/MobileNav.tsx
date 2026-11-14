@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { profileData } from "@/config/profile";
 import { cn } from "@/lib/utils";
@@ -34,14 +35,29 @@ export function MobileNav() {
 
   return (
     <div className="md:hidden">
+      {/* Minimalist Transparent Icon Toggle Button */}
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
-        aria-label="Toggle navigation menu"
-        className="text-xs uppercase tracking-[0.15em] text-[#2A2421] py-1 px-2 border border-[#E4DDD6] hover:bg-[#EEE9DE] transition-colors"
+        aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+        className="relative z-50 w-9 h-9 flex items-center justify-center text-[#2A2421] hover:text-[#C75D38] transition-colors bg-transparent border-0 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#C75D38]"
       >
-        {isOpen ? "Close" : "Menu"}
+        <span className="sr-only">{isOpen ? "Close menu" : "Open menu"}</span>
+        <div className="relative w-6 h-6 flex items-center justify-center">
+          <Menu
+            className={cn(
+              "w-6 h-6 absolute transition-all duration-300 ease-in-out",
+              isOpen ? "opacity-0 rotate-90 scale-75 pointer-events-none" : "opacity-100 rotate-0 scale-100"
+            )}
+          />
+          <X
+            className={cn(
+              "w-6 h-6 absolute transition-all duration-300 ease-in-out",
+              isOpen ? "opacity-100 rotate-0 scale-100" : "opacity-0 -rotate-90 scale-75 pointer-events-none"
+            )}
+          />
+        </div>
       </button>
 
       {/* Backdrop */}
@@ -86,7 +102,7 @@ export function MobileNav() {
           </a>
 
           <p className="text-[11px] text-[#736660] text-center uppercase tracking-wider">
-            Neema Zihalirwa &copy; 2026
+            Neema Elisabeth &copy; 2026
           </p>
         </div>
       </div>
