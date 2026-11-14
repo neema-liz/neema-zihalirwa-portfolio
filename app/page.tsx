@@ -1,177 +1,21 @@
-import Image from "next/image";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { AffiliationsBar } from "@/components/sections/AffiliationsBar";
+import { AboutSection } from "@/components/sections/AboutSection";
 import { profileData } from "@/config/profile";
 
 export default function Home() {
   return (
     <div className="bg-[#F7F4EE] text-[#2A2421] selection:bg-[#E4DDD6] selection:text-[#2A2421]">
-      {/* =========================================================================
-          HERO SECTION (Directly inspired by Emily Trenouth's editorial Hero)
-      ========================================================================= */}
-      <section className="min-h-screen flex items-center pt-28 pb-16 md:pb-24">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 w-full">
-          <div className="grid md:grid-cols-12 gap-12 md:gap-16 items-center">
-            {/* Left Column: Headline & Narrative */}
-            <div className="md:col-span-7">
-              <p className="text-xs font-medium tracking-[0.3em] uppercase text-[#736660] mb-8">
-                Human Resources &middot; Talent &middot; People Operations
-              </p>
+      {/* 1. Hero Section (Emily Trenouth layout with neema-portrait-01) */}
+      <HeroSection />
 
-              <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-[#2A2421] leading-[0.95] mb-10">
-                Neema
-                <br />
-                <em className="font-light italic text-[#C75D38]">Zihalirwa</em>
-              </h1>
+      {/* 2. Affiliations & Institutional Engagements */}
+      <AffiliationsBar />
 
-              <p className="max-w-md text-sm text-[#736660] leading-relaxed mb-12 font-sans">
-                Human Resources Professional with an academic foundation in International
-                Relations and General Pedagogy. Dedicated to structured recruitment,
-                talent onboarding, and people-centric organizational development.
-              </p>
+      {/* 3. About Section (12-column grid with neema-portrait-02 and Simone Breker core philosophy) */}
+      <AboutSection />
 
-              <div className="flex flex-wrap gap-6 items-center">
-                <a
-                  href={`mailto:${profileData.contact.email.value}?subject=Professional%20Enquiry`}
-                  className="text-xs font-medium tracking-[0.15em] uppercase bg-[#C75D38] text-[#FAF8F5] px-7 py-3.5 hover:opacity-90 transition-opacity"
-                >
-                  Work with me
-                </a>
-                <a
-                  href="#about"
-                  className="text-xs font-medium tracking-[0.15em] uppercase text-[#736660] hover:text-[#2A2421] transition-colors"
-                >
-                  Learn more &darr;
-                </a>
-              </div>
-            </div>
-
-            {/* Right Column: Architectural 3:4 Portrait */}
-            <div className="md:col-span-5">
-              <div className="aspect-[3/4] overflow-hidden bg-[#EEE9DE] border border-[#E4DDD6]">
-                <Image
-                  src="/images/portraits/neema-portrait-01.jpg"
-                  alt="Neema Zihalirwa Elisabeth — Human Resources Professional"
-                  width={900}
-                  height={1200}
-                  priority
-                  className="w-full h-full object-cover object-top hover:scale-[1.01] transition-transform duration-700 ease-out"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================================
-          AFFILIATIONS & ENGAGEMENTS (Quiet, elegant editorial logo strip)
-      ========================================================================= */}
-      <section className="py-16 border-t border-[#E4DDD6]">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8">
-          <p className="text-xs font-medium tracking-[0.3em] uppercase text-[#736660] text-center mb-10">
-            Selected Affiliations &middot; Institutions &middot; Engagements
-          </p>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-            <span className="font-serif text-base sm:text-lg text-[#2A2421]/60 hover:text-[#2A2421] transition-colors cursor-default text-center">
-              DTTASA Association
-            </span>
-            <span className="font-serif text-base sm:text-lg text-[#2A2421]/60 hover:text-[#2A2421] transition-colors cursor-default text-center">
-              KaziEasy Rwanda
-            </span>
-            <span className="font-serif text-base sm:text-lg text-[#2A2421]/60 hover:text-[#2A2421] transition-colors cursor-default text-center">
-              Kigali Independent Univ. (ULK)
-            </span>
-            <span className="font-serif text-base sm:text-lg text-[#2A2421]/60 hover:text-[#2A2421] transition-colors cursor-default text-center">
-              Himbi Institute
-            </span>
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================================
-          ABOUT SECTION (12-Column Asymmetrical Grid)
-      ========================================================================= */}
-      <section id="about" className="py-24 md:py-32 border-t border-[#E4DDD6]">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8">
-          <div className="grid md:grid-cols-12 gap-12 mb-20">
-            {/* Left 4 Cols: Section Eyebrow */}
-            <div className="md:col-span-4">
-              <p className="text-xs font-medium tracking-[0.3em] uppercase text-[#736660]">
-                About
-              </p>
-            </div>
-
-            {/* Right 8 Cols: Editorial Story */}
-            <div className="md:col-span-8">
-              <h2 className="font-serif text-3xl md:text-4xl font-light text-[#2A2421] leading-snug mb-8">
-                Building stronger organizations through people, purpose, and structured HR practice.
-              </h2>
-
-              <p className="text-sm text-[#736660] leading-relaxed mb-6 max-w-xl font-sans">
-                Neema Zihalirwa Elisabeth is a Human Resources Professional passionate
-                about people, organizational development, and creating effective workplace
-                environments. Holding a Bachelor&apos;s Honours degree in International Relations
-                from Kigali Independent University and a State Diploma in General Pedagogy
-                from Himbi Institute, she brings an interdisciplinary perspective to people
-                management, cross-cultural communication, and organizational coordination.
-              </p>
-
-              <p className="text-sm text-[#736660] leading-relaxed mb-6 max-w-xl font-sans">
-                Her practical HR experience includes working with Diaspora Together Trust
-                and Support Association (DTTASA), where she contributes to recruitment,
-                candidate screening, interview coordination, volunteer onboarding, and HR
-                documentation across multiple time zones.
-              </p>
-
-              <p className="text-sm text-[#736660] leading-relaxed mb-8 max-w-xl font-sans">
-                Beyond traditional HR, Neema coordinates operational activities and competitor
-                research with KaziEasy in Rwanda, supporting emerging micro and small
-                enterprises with structured operational processes.
-              </p>
-
-              {/* Simone Breker-inspired Core Philosophy Pull-Quote */}
-              <div className="my-10 p-6 sm:p-8 bg-[#EEE9DE]/60 border-l-2 border-[#C75D38] max-w-xl">
-                <p className="font-serif text-lg italic text-[#2A2421] leading-relaxed mb-2">
-                  &ldquo;Great hires don&apos;t happen through speed alone. They happen when
-                  role requirements, human capability, and organizational culture actually
-                  align.&rdquo;
-                </p>
-                <p className="text-xs uppercase tracking-[0.15em] text-[#736660] font-sans">
-                  Neema Zihalirwa Elisabeth &mdash; HR Philosophy
-                </p>
-              </div>
-
-              {/* Education Cards (Clean Hairline Grid) */}
-              <div className="grid sm:grid-cols-2 gap-6 pt-6 border-t border-[#E4DDD6] max-w-xl">
-                <div>
-                  <p className="text-[11px] uppercase tracking-[0.2em] text-[#736660] mb-1">
-                    2023 &ndash; 2026 &middot; Kigali, Rwanda
-                  </p>
-                  <h3 className="font-serif text-base text-[#2A2421] font-medium">
-                    Bachelor&apos;s Honours in International Relations
-                  </h3>
-                  <p className="text-xs text-[#736660] mt-1">
-                    Kigali Independent University (ULK)
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-[11px] uppercase tracking-[0.2em] text-[#736660] mb-1">
-                    2017 &ndash; 2020 &middot; Goma, DRC
-                  </p>
-                  <h3 className="font-serif text-base text-[#2A2421] font-medium">
-                    State Diploma in General Pedagogy
-                  </h3>
-                  <p className="text-xs text-[#736660] mt-1">Himbi Institute</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================================
-          SERVICES SECTION (Emily's Numbered Hairline Ledger + Simone's Deliverables)
-      ========================================================================= */}
+      {/* 4. Services Section (Emily's Numbered Hairline Ledger + Simone's Deliverables) */}
       <section id="services" className="py-24 md:py-32 border-t border-[#E4DDD6]">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           {/* Header 12-Col Split */}
@@ -263,9 +107,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* =========================================================================
-          CONTACT SECTION (Emily's Exact Underlined Contact Pattern)
-      ========================================================================= */}
+      {/* 5. Contact Section (Emily's Exact Underlined Contact Pattern) */}
       <section id="contact" className="py-24 md:py-32 border-t border-[#E4DDD6]">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <div className="grid md:grid-cols-12 gap-12">
