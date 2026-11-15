@@ -1,36 +1,33 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { profileData } from "@/config/profile";
 import { cn } from "@/lib/utils";
 
 export function HeroSection() {
-  const [isScrolling, setIsScrolling] = useState(false);
+  const [isOver80PercentVisible, setIsOver80PercentVisible] = useState(true);
+  const imageContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout | null = null;
+    const target = imageContainerRef.current;
+    if (!target) return;
 
-    const handleScroll = () => {
-      setIsScrolling(true);
-
-      if (timeoutId) {
-        clearTimeout(timeoutId);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Beyond 80% visibility in viewport: no grayscale (full color)
+        // Under 80% visibility (not 80% on view): grayscale applied
+        setIsOver80PercentVisible(entry.intersectionRatio >= 0.8);
+      },
+      {
+        threshold: [0, 0.2, 0.4, 0.6, 0.8, 1.0],
       }
+    );
 
-      // Revert to full color 180ms after scrolling stops
-      timeoutId = setTimeout(() => {
-        setIsScrolling(false);
-      }, 180);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    observer.observe(target);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
+      observer.disconnect();
     };
   }, []);
 
@@ -79,7 +76,10 @@ export function HeroSection() {
 
           {/* Right: Larger Professional Portrait */}
           <div className="md:col-span-6">
-            <div className="relative w-full aspect-[4/5] lg:aspect-[3/4] overflow-hidden bg-[#EEE9DE] border border-[#E4DDD6]">
+            <div
+              ref={imageContainerRef}
+              className="relative w-full aspect-[4/5] lg:aspect-[3/4] overflow-hidden bg-[#EEE9DE] border border-[#E4DDD6]"
+            >
               <Image
                 src="/images/portraits/neema-portrait-01.jpg"
                 alt="Neema Zihalirwa Elisabeth — Human Resources Professional"
@@ -87,11 +87,11 @@ export function HeroSection() {
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className={cn(
-                  "object-cover object-top hover:scale-[1.02] transition-[filter,transform] duration-500 ease-out",
-                  isScrolling ? "grayscale" : "grayscale-0"
+                  "object-cover object-top hover:scale-[1.02] transition-[filter,transform] duration-700 ease-out",
+                  isOver80PercentVisible ? "grayscale-0" : "grayscale"
                 )}
                 style={{
-                  filter: isScrolling ? "grayscale(100%)" : "grayscale(0%)",
+                  filter: isOver80PercentVisible ? "grayscale(0%)" : "grayscale(100%)",
                 }}
               />
             </div>
