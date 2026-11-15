@@ -21,6 +21,25 @@ export const profileData: ProfileData = {
   shortBio:
     "A Human Resources Professional with practical experience in recruitment, talent acquisition, onboarding, volunteer management, HR administration, and organizational coordination. With an academic background in International Relations and General Pedagogy, she brings an interdisciplinary perspective to people management, organizational development, and cross-cultural collaboration.",
 
+  hero: {
+    eyebrow: "Human Resources · Talent · People Operations",
+    firstName: "Neema",
+    lastName: "Elisabeth",
+    bio: "Human Resources Professional with an academic foundation in International Relations and General Pedagogy. Dedicated to structured recruitment, talent onboarding, and people-centric organizational development.",
+    primaryCta: {
+      label: "Work with me",
+      subject: "Professional Enquiry",
+    },
+    secondaryCta: {
+      label: "Explore Profile",
+      href: "#about",
+    },
+    portrait: {
+      src: "/images/portraits/neema-portrait-01.jpg",
+      alt: "Neema Zihalirwa Elisabeth — Human Resources Professional",
+    },
+  },
+
   expandedBio: [
     "Neema Zihalirwa Elisabeth is a Human Resources Professional passionate about people, organizational development, and creating effective workplace environments. She holds a Bachelor's Honours degree in International Relations from Kigali Independent University and a State Diploma in General Pedagogy from Himbi Institute. Her interdisciplinary academic background provides a foundation in communication, education, international affairs, and human development.",
 

@@ -64,11 +64,31 @@ export interface ContactInfo {
   };
 }
 
+export interface HeroConfig {
+  eyebrow: string;
+  firstName: string;
+  lastName: string;
+  bio: string;
+  primaryCta: {
+    label: string;
+    subject: string;
+  };
+  secondaryCta: {
+    label: string;
+    href: string;
+  };
+  portrait: {
+    src: string;
+    alt: string;
+  };
+}
+
 export interface ProfileData {
   fullName: string;
   professionalTitle: string;
   tagline: string;
   shortBio: string;
+  hero: HeroConfig;
   expandedBio: string[];
   values: {
     title: string;

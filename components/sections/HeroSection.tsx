@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 export function HeroSection() {
   const [isOver80PercentVisible, setIsOver80PercentVisible] = useState(true);
   const imageContainerRef = useRef<HTMLDivElement>(null);
+  const { hero } = profileData;
 
   useEffect(() => {
     const target = imageContainerRef.current;
@@ -39,37 +40,34 @@ export function HeroSection() {
           {/* Left: Editorial Headline & Narrative */}
           <div className="md:col-span-6">
             <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#736660] mb-8">
-              Human Resources &middot; Talent &middot; People Operations
+              {hero.eyebrow}
             </p>
 
             <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-[#2A2421] leading-[0.95] mb-10">
-              Neema
+              {hero.firstName}
               <br />
               <em className="font-light italic text-[#C75D38]">
-                Elisabeth
+                {hero.lastName}
               </em>
             </h1>
 
             <p className="max-w-md text-sm md:text-base text-[#736660] leading-relaxed mb-12 font-sans">
-              Human Resources Professional with an academic foundation in
-              International Relations and General Pedagogy. Dedicated to
-              structured recruitment, talent onboarding, and people-centric
-              organizational development.
+              {hero.bio}
             </p>
 
             <div className="flex flex-wrap gap-6 items-center">
               <a
-                href={`mailto:${profileData.contact.email.value}?subject=Professional%20Enquiry`}
+                href={`mailto:${profileData.contact.email.value}?subject=${encodeURIComponent(hero.primaryCta.subject)}`}
                 className="text-xs font-medium tracking-[0.15em] uppercase bg-[#C75D38] text-[#FAF8F5] px-7 py-3.5 hover:opacity-90 transition-opacity"
               >
-                Work with me
+                {hero.primaryCta.label}
               </a>
 
               <a
-                href="#about"
+                href={hero.secondaryCta.href}
                 className="text-xs font-medium tracking-[0.15em] uppercase text-[#736660] hover:text-[#2A2421] transition-colors"
               >
-                Explore Profile &darr;
+                {hero.secondaryCta.label} &darr;
               </a>
             </div>
           </div>
@@ -81,8 +79,8 @@ export function HeroSection() {
               className="relative w-full aspect-[4/5] lg:aspect-[3/4] overflow-hidden bg-[#EEE9DE] border border-[#E4DDD6]"
             >
               <Image
-                src="/images/portraits/neema-portrait-01.jpg"
-                alt="Neema Zihalirwa Elisabeth — Human Resources Professional"
+                src={hero.portrait.src}
+                alt={hero.portrait.alt}
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
