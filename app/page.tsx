@@ -5,6 +5,7 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { CapabilitiesSection } from "@/components/sections/CapabilitiesSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
+import { ClientStoriesSection } from "@/components/sections/ClientStoriesSection";
 import { BlogCard } from "@/components/blog/BlogCard";
 import { getAllPosts } from "@/lib/blog";
 import { profileData } from "@/config/profile";
@@ -33,7 +34,10 @@ export default function Home() {
       {/* 6. Services Section (Emily's Numbered Hairline Ledger + Google Meet / Calendly booking) */}
       <ServicesSection />
 
-      {/* 7. Selected Essays & Writing */}
+      {/* 7. Client Stories Teaser Section */}
+      <ClientStoriesSection />
+
+      {/* 8. Selected Essays & Writing */}
       {latestPosts.length > 0 && (
         <section id="writing" className="py-24 md:py-32 border-t border-[#E4DDD6]">
           <div className="max-w-6xl mx-auto px-6 sm:px-8">

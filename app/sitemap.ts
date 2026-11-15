@@ -37,6 +37,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/client-stories`,
+      lastModified: new Date("2026-11-14T00:00:00Z"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified: new Date("2026-11-14T00:00:00Z"),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/imprint`,
+      lastModified: new Date("2026-11-14T00:00:00Z"),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/legal-notice`,
+      lastModified: new Date("2026-11-14T00:00:00Z"),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
   ];
 
   const blogRoutes: MetadataRoute.Sitemap = posts.map((post) => ({

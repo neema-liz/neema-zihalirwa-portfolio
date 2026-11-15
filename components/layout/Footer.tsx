@@ -1,48 +1,163 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
-import { siteConfig } from "@/config/site";
+import { ArrowUp } from "lucide-react";
+import { profileData } from "@/config/profile";
 
 export function Footer() {
   const currentYear = 2026;
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <footer className="py-12 md:py-16 border-t border-[#E4DDD6] bg-[#F7F4EE] text-[#2A2421]">
-      <div className="max-w-6xl mx-auto px-6 sm:px-8">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-12">
+    <footer className="pt-20 pb-12 border-t border-[#E4DDD6] bg-[#F7F4EE] text-[#2A2421]">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+        {/* 4-Column Editorial Links Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 lg:gap-16 mb-20">
+          {/* Col 1: Navigate */}
           <div>
-            <Link
-              href="/"
-              className="font-serif text-lg tracking-tight text-[#2A2421] hover:opacity-80 transition-opacity"
-            >
-              Neema Zihalirwa Elisabeth
-            </Link>
-            <p className="text-xs text-[#736660] mt-1 font-sans">
-              Human Resources Professional &middot; Kigali, Rwanda
-            </p>
+            <h3 className="font-serif italic text-2xl font-light text-[#2A2421] mb-6">
+              Navigate
+            </h3>
+            <ul className="space-y-3.5 text-sm sm:text-base font-sans text-[#2A2421]">
+              <li>
+                <Link
+                  href="/"
+                  className="hover:text-[#C75D38] transition-colors"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="hover:text-[#C75D38] transition-colors"
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="hover:text-[#C75D38] transition-colors"
+                >
+                  Writing
+                </Link>
+              </li>
+            </ul>
           </div>
 
-          {/* Social Links */}
-          <div className="flex flex-wrap gap-6 text-xs uppercase tracking-[0.12em] text-[#736660]">
-            {siteConfig.socialLinks
-              .filter((s) => s.status === "confirmed")
-              .map((social) => (
+          {/* Col 2: Empty Title (Aligned with Navigate) */}
+          <div>
+            <div className="h-8 mb-6 hidden md:block" aria-hidden="true" />
+            <ul className="space-y-3.5 text-sm sm:text-base font-sans text-[#2A2421]">
+              <li>
+                <Link
+                  href="/client-stories"
+                  className="hover:text-[#C75D38] transition-colors"
+                >
+                  Client Stories
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="hover:text-[#C75D38] transition-colors"
+                >
+                  About Me
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="hover:text-[#C75D38] transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Col 3: Socials */}
+          <div>
+            <h3 className="font-serif italic text-2xl font-light text-[#2A2421] mb-6">
+              Socials
+            </h3>
+            <ul className="space-y-3.5 text-sm sm:text-base font-sans text-[#2A2421]">
+              <li>
                 <a
-                  key={social.platform}
-                  href={social.url}
+                  href={profileData.contact.linkedin.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#2A2421] border-b border-transparent hover:border-[#2A2421] pb-0.5 transition-all"
+                  className="hover:text-[#C75D38] transition-colors"
                 >
-                  {social.platform}
+                  LinkedIn
                 </a>
-              ))}
+              </li>
+              {profileData.contact.whatsapp.phoneNumber && (
+                <li>
+                  <a
+                    href={`https://wa.me/${profileData.contact.whatsapp.phoneNumber.replace(/[^0-9]/g, "")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#C75D38] transition-colors"
+                  >
+                    WhatsApp
+                  </a>
+                </li>
+              )}
+            </ul>
+          </div>
+
+          {/* Col 4: Legal */}
+          <div>
+            <h3 className="font-serif italic text-2xl font-light text-[#2A2421] mb-6">
+              Legal
+            </h3>
+            <ul className="space-y-3.5 text-sm sm:text-base font-sans text-[#2A2421]">
+              <li>
+                <Link
+                  href="/privacy"
+                  className="hover:text-[#C75D38] transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/imprint"
+                  className="hover:text-[#C75D38] transition-colors"
+                >
+                  Imprint
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/legal-notice"
+                  className="hover:text-[#C75D38] transition-colors"
+                >
+                  Legal Notice
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 
-        {/* Bottom copyright line */}
-        <div className="pt-8 border-t border-[#E4DDD6]/70 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] uppercase tracking-wider text-[#736660]">
-          <span>&copy; {currentYear} Neema Zihalirwa Elisabeth. All rights reserved.</span>
-          <span>Designed with care</span>
+        {/* Bottom Row: Scroll to top & Editorial Copyright */}
+        <div className="pt-8 border-t border-[#E4DDD6] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div/>
+          {/* Copyright & Location Strip */}
+          <div className="text-xs text-[#736660] font-sans tracking-wide">
+            <span>&copy; {currentYear} Neema Zihalirwa Elisabeth</span>
+            <span className="mx-2 text-[#E4DDD6]"></span>
+            <span>Human Resources &amp; Talent Operations</span>
+          </div>
         </div>
       </div>
     </footer>
