@@ -43,8 +43,8 @@ export function WritingSection() {
                 Some of my ideas in writing
               </h2>
               <p className="text-sm sm:text-base text-[#736660] leading-relaxed max-w-lg font-sans">
-                I enjoy writing about people, workplace culture, and what helps teams thrive together. 
-                Here are a few recent notes and reflections.
+                I enjoy writing about ideas that inspire me — from people and work, 
+                to personal reflections and thoughts on everyday life.
               </p>
             </div>
             <Link

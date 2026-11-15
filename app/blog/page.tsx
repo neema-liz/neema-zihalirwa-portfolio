@@ -6,7 +6,7 @@ import { BlogListClient } from "@/components/blog/BlogListClient";
 export const metadata: Metadata = {
   title: "Writing & Thoughts — Neema Zihalirwa Elisabeth",
   description:
-    "Ideas, notes, and practical thoughts on people operations, workplace culture, talent, and organizational growth.",
+    "A personal space for thoughts, ideas, and reflections on people, work, learning, and everyday life.",
 };
 
 export default function BlogIndexPage() {
@@ -35,11 +35,11 @@ export default function BlogIndexPage() {
 
           <div className="md:col-span-8">
             <h1 className="font-serif text-3xl md:text-5xl font-light text-[#2A2421] leading-tight mb-4">
-              Ideas, notes &amp; reflections on people at work.
+              Thoughts, ideas &amp; reflections.
             </h1>
             <p className="text-sm sm:text-base text-[#736660] leading-relaxed max-w-xl font-sans">
-              I write about what I observe and learn in human resources — how teams communicate,
-              how people grow in their roles, and what helps organizations build a healthy, supportive culture.
+              A personal space where I share what I&apos;m learning, observing, and thinking about —
+              from people and work, to personal growth, curious ideas, and reflections on life.
             </p>
           </div>
         </div>

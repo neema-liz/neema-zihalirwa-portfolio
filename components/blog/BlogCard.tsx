@@ -33,7 +33,7 @@ export function BlogCard({ post, index }: BlogCardProps) {
   return (
     <div className="group grid grid-cols-12 gap-4 sm:gap-6 lg:gap-8 items-stretch">
       {/* Left: Boxed Card */}
-      <article className="col-span-9 sm:col-span-10 lg:col-span-11 p-6 sm:p-8 md:p-10 border border-[#E4DDD6] bg-[#EEE9DE]/25 hover:bg-[#EEE9DE]/50 hover:border-[#2A2421]/40 transition-all duration-300 flex flex-col justify-between">
+      <article className="col-span-9 sm:col-span-10 lg:col-span-11 p-6 sm:p-8 md:p-10 border-none bg-transparent hover:bg-[#EEE9DE]/10 hover:border-none transition-all duration-300 flex flex-col justify-between">
         <div>
           {/* Top row: Number ledger & Minimalist Topic / Reading time (No bulky badges) */}
           <div className="flex items-center justify-between gap-4 mb-4">
