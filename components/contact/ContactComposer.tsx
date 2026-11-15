@@ -6,6 +6,7 @@ import { profileData } from "@/config/profile";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface FormValues {
   name: string;
@@ -15,6 +16,9 @@ interface FormValues {
 }
 
 export function ContactComposer() {
+  const { t } = useLanguage();
+  const f = t.contactPage.form;
+
   const [submitted, setSubmitted] = useState<"email" | "whatsapp" | null>(null);
   const [generalError, setGeneralError] = useState<string | null>(null);
 
@@ -37,15 +41,15 @@ export function ContactComposer() {
 
   const dispatchEmail = (values: FormValues) => {
     if (!values.name.trim()) {
-      setGeneralError("Please enter your name.");
+      setGeneralError(f.errName);
       return;
     }
     if (!values.email.trim() || !values.email.includes("@")) {
-      setGeneralError("Please provide a valid email address so I can reply to you.");
+      setGeneralError(f.errEmail);
       return;
     }
     if (!values.message.trim()) {
-      setGeneralError("Please enter your message.");
+      setGeneralError(f.errMessage);
       return;
     }
 
@@ -77,11 +81,11 @@ Sent via Neema Zihalirwa Portfolio (neemazihalirwa.com)`;
     const values = form.state.values;
 
     if (!values.name.trim()) {
-      setGeneralError("Please enter your name.");
+      setGeneralError(f.errName);
       return;
     }
     if (!values.message.trim()) {
-      setGeneralError("Please enter a short message describing what you'd like to discuss.");
+      setGeneralError(f.errWaMessage);
       return;
     }
 
@@ -119,9 +123,9 @@ ${values.message.trim()}`;
 
       {submitted === "email" && (
         <div className="p-4 bg-[#EEE9DE]/60 border-l-2 border-[#2A2421] text-xs sm:text-sm text-[#2A2421] leading-relaxed">
-          <p className="font-medium">Draft opened in your email client.</p>
+          <p className="font-medium">{f.emailSuccessTitle}</p>
           <p className="text-[#736660] mt-1">
-            If your app didn&apos;t open automatically, write directly to{" "}
+            {f.emailSuccessDesc}{" "}
             <a href={`mailto:${recipientEmail}`} className="text-[#C75D38] underline">
               {recipientEmail}
             </a>.
@@ -131,9 +135,9 @@ ${values.message.trim()}`;
 
       {submitted === "whatsapp" && (
         <div className="p-4 bg-[#EEE9DE]/60 border-l-2 border-[#2A2421] text-xs sm:text-sm text-[#2A2421] leading-relaxed">
-          <p className="font-medium">WhatsApp chat initiated.</p>
+          <p className="font-medium">{f.waSuccessTitle}</p>
           <p className="text-[#736660] mt-1">
-            Looking forward to speaking with you!
+            {f.waSuccessDesc}
           </p>
         </div>
       )}
@@ -145,7 +149,7 @@ ${values.message.trim()}`;
           children={(field) => (
             <div className="space-y-2">
               <Label htmlFor={field.name}>
-                Your Name <span className="text-[#C75D38]">*</span>
+                {f.nameLabel} <span className="text-[#C75D38]">*</span>
               </Label>
               <Input
                 id={field.name}
@@ -153,7 +157,7 @@ ${values.message.trim()}`;
                 value={field.state.value}
                 onBlur={field.handleBlur}
                 onChange={(e) => field.handleChange(e.target.value)}
-                placeholder="e.g. Marie Claire"
+                placeholder={f.namePlaceholder}
               />
             </div>
           )}
@@ -164,9 +168,9 @@ ${values.message.trim()}`;
           children={(field) => (
             <div className="space-y-2">
               <Label htmlFor={field.name}>
-                Your Email{" "}
+                {f.emailLabel}{" "}
                 <span className="text-[#736660]/60 font-normal lowercase">
-                  (for email replies)
+                  {f.emailNote}
                 </span>
               </Label>
               <Input
@@ -176,7 +180,7 @@ ${values.message.trim()}`;
                 value={field.state.value}
                 onBlur={field.handleBlur}
                 onChange={(e) => field.handleChange(e.target.value)}
-                placeholder="e.g. marie@organization.org"
+                placeholder={f.emailPlaceholder}
               />
             </div>
           )}
@@ -189,7 +193,7 @@ ${values.message.trim()}`;
         children={(field) => (
           <div className="space-y-2">
             <Label htmlFor={field.name}>
-              Subject <span className="text-[#736660]/60 font-normal">(Optional)</span>
+              {f.subjectLabel} <span className="text-[#736660]/60 font-normal">{f.subjectNote}</span>
             </Label>
             <Input
               id={field.name}
@@ -197,7 +201,7 @@ ${values.message.trim()}`;
               value={field.state.value}
               onBlur={field.handleBlur}
               onChange={(e) => field.handleChange(e.target.value)}
-              placeholder="e.g. Recruitment support, Onboarding advisory, or Consultation"
+              placeholder={f.subjectPlaceholder}
             />
           </div>
         )}
@@ -209,7 +213,7 @@ ${values.message.trim()}`;
         children={(field) => (
           <div className="space-y-2">
             <Label htmlFor={field.name}>
-              Your Message <span className="text-[#C75D38]">*</span>
+              {f.messageLabel} <span className="text-[#C75D38]">*</span>
             </Label>
             <Textarea
               id={field.name}
@@ -218,7 +222,7 @@ ${values.message.trim()}`;
               value={field.state.value}
               onBlur={field.handleBlur}
               onChange={(e) => field.handleChange(e.target.value)}
-              placeholder="Tell me a bit about what you are working on or what you'd like to discuss..."
+              placeholder={f.messagePlaceholder}
             />
           </div>
         )}
@@ -230,7 +234,7 @@ ${values.message.trim()}`;
           type="submit"
           className="inline-flex items-center justify-center text-xs font-medium tracking-[0.15em] uppercase bg-[#2A2421] text-[#FAF8F5] px-8 py-4 hover:bg-[#C75D38] transition-colors cursor-pointer"
         >
-          Send via Email &rarr;
+          {f.sendEmail}
         </button>
 
         <button
@@ -238,7 +242,7 @@ ${values.message.trim()}`;
           onClick={dispatchWhatsApp}
           className="inline-flex items-center justify-center text-xs font-medium tracking-[0.15em] uppercase border border-[#2A2421] text-[#2A2421] px-8 py-4 hover:bg-[#2A2421] hover:text-[#FAF8F5] transition-colors cursor-pointer"
         >
-          Send via WhatsApp &rarr;
+          {f.sendWhatsApp}
         </button>
       </div>
     </form>
