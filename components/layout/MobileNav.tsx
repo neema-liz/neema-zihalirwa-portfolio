@@ -78,7 +78,7 @@ export function MobileNav() {
             {/* Frosted Glass Backdrop (Blurs the underlying website) */}
             <div
               className={cn(
-                "fixed inset-0 bg-[#2A2421]/25 backdrop-blur-md transition-opacity duration-300 ease-in-out",
+                "fixed inset-0 bg-[#2A2421]/2 backdrop-blur-xs transition-opacity duration-300 ease-in-out",
                 isOpen ? "opacity-100" : "opacity-0"
               )}
               onClick={() => setIsOpen(false)}
