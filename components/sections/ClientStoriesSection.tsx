@@ -9,6 +9,9 @@ export function ClientStoriesSection() {
         {/* Minimalist Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16 pb-6 border-b border-[#E4DDD6]">
           <div>
+            <p className="text-xs font-mono tracking-[0.25em] uppercase text-[#C75D38] mb-2">
+              Client Stories
+            </p>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-[#2A2421] leading-tight">
               Work with organizations
             </h2>

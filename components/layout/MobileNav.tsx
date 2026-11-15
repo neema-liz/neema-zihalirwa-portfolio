@@ -109,16 +109,48 @@ export function MobileNav() {
                 <p className="text-[11px] uppercase tracking-[0.25em] text-[#736660]">
                   Navigation
                 </p>
-                {siteConfig.navItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setIsOpen(false)}
-                    className="font-serif text-2xl font-light text-[#2A2421] hover:italic hover:text-[#C75D38] transition-all"
-                  >
-                    {item.title}
-                  </Link>
-                ))}
+                <Link
+                  href="/"
+                  onClick={() => setIsOpen(false)}
+                  className="font-serif text-2xl font-light text-[#2A2421] hover:italic hover:text-[#C75D38] transition-all"
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/about"
+                  onClick={() => setIsOpen(false)}
+                  className="font-serif text-2xl font-light text-[#2A2421] hover:italic hover:text-[#C75D38] transition-all"
+                >
+                  About
+                </Link>
+                <Link
+                  href="/services"
+                  onClick={() => setIsOpen(false)}
+                  className="font-serif text-2xl font-light text-[#2A2421] hover:italic hover:text-[#C75D38] transition-all"
+                >
+                  Services
+                </Link>
+                <Link
+                  href="/client-stories"
+                  onClick={() => setIsOpen(false)}
+                  className="font-serif text-2xl font-light text-[#2A2421] hover:italic hover:text-[#C75D38] transition-all"
+                >
+                  Client Stories
+                </Link>
+                <Link
+                  href="/blog"
+                  onClick={() => setIsOpen(false)}
+                  className="font-serif text-2xl font-light text-[#2A2421] hover:italic hover:text-[#C75D38] transition-all"
+                >
+                  Writing
+                </Link>
+                <Link
+                  href="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="font-serif text-2xl font-light text-[#2A2421] hover:italic hover:text-[#C75D38] transition-all"
+                >
+                  Contact
+                </Link>
               </nav>
 
               <div className="pt-8 border-t border-[#E4DDD6] space-y-4">

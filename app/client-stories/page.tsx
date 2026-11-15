@@ -5,166 +5,134 @@ import { clientStories } from "@/config/stories";
 import { profileData } from "@/config/profile";
 
 export const metadata: Metadata = {
-  title: "Client Stories & Engagements — Neema Zihalirwa Elisabeth",
+  title: "Client Stories — Neema Zihalirwa Elisabeth",
   description:
-    "Explore case studies and real-world outcomes across recruitment workflows, onboarding pedagogy, and operational coordination by Neema Zihalirwa Elisabeth.",
+    "Real stories of collaboration, structured recruitment, and operational impact across organizations Neema Zihalirwa Elisabeth has worked with.",
 };
 
 export default function ClientStoriesPage() {
   const booking = profileData.contact.booking;
 
   return (
-    <main className="min-h-screen pt-24 md:pt-32 pb-28 md:pb-36 bg-[#F7F4EE] text-[#2A2421]">
-      <div className="max-w-5xl mx-auto px-6 sm:px-8">
-        {/* Editorial Page Header with Generous Breathing Room */}
-        <div className="mb-20 md:mb-28 border-b border-[#E4DDD6] pb-14">
-          <p className="text-xs font-medium tracking-[0.3em] uppercase text-[#736660] mb-3">
-            Case Studies &amp; Outcomes
+    <main className="min-h-screen pt-28 md:pt-36 pb-28 md:pb-36 bg-[#F7F4EE] text-[#2A2421]">
+      <div className="max-w-6xl mx-auto px-6 sm:px-10">
+        {/* Wide & Eye-Catching Editorial Page Header */}
+        <div className="mb-24 md:mb-36 border-b border-[#E4DDD6] pb-16 md:pb-24">
+          <p className="text-xs font-mono tracking-[0.3em] uppercase text-[#C75D38] mb-4">
+            Client Stories
           </p>
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-light text-[#2A2421] leading-[1.1] mb-6">
-            Client Stories &amp; Engagements
+          <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-light text-[#2A2421] leading-[1.08] tracking-tight mb-8">
+            How I help teams build structure, hire with care, and grow.
           </h1>
-          <p className="text-base sm:text-lg text-[#736660] font-sans max-w-2xl leading-relaxed">
-            Every organization faces distinct people and operational challenges. Here is an open look at 
-            the situations I encountered, how we collaborated, and the tangible results delivered.
+          <p className="text-base sm:text-xl text-[#736660] font-sans max-w-2xl leading-relaxed">
+            Real stories of collaboration with organizations I&apos;ve worked with &mdash; the challenges 
+            we encountered, how we collaborated, and the lasting impact created.
           </p>
         </div>
 
-        {/* Stories Flow — Structured Case by Case */}
-        <div className="space-y-24 md:space-y-36">
-          {clientStories.map((story, index) => {
-            const numberStr = String(index + 1).padStart(2, "0");
-
+        {/* Stories Flow — Dynamic Vertical Narrative (No Grids, No Side-by-Side) */}
+        <div className="space-y-32 md:space-y-38">
+          {clientStories.map((story) => {
             return (
               <article
                 key={story.id}
                 id={story.slug}
-                className="scroll-mt-28 border-b border-[#E4DDD6] pb-24 md:pb-32 last:border-b-0"
+                className="scroll-mt-28 border-b border-[#E4DDD6] pb-24 md:pb-36 last:border-b-0"
               >
-                {/* Case Sub-header: Number & Meta */}
-                <div className="flex flex-wrap items-center justify-between gap-4 mb-4 text-xs font-mono text-[#736660]">
-                  <span className="text-[#C75D38] font-medium tracking-widest uppercase">
-                    Case {numberStr}
-                  </span>
-                  <div className="flex items-center gap-2 text-[11px] uppercase tracking-wider">
-                    <span>{story.client}</span>
-                    {story.period && (
-                      <>
-                        <span>&middot;</span>
-                        <span>{story.period}</span>
-                      </>
-                    )}
-                  </div>
+                {/* Story Meta Header */}
+                <div className="mb-6">
+                  <p className="text-xs font-mono uppercase tracking-[0.12em] text-[#C75D38] mb-3">
+                    {story.role}
+                  </p>
+                  <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-[#2A2421] leading-[1.15] max-w-4xl">
+                    {story.title}
+                  </h2>
                 </div>
 
-                {/* What I Did Title */}
-                <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-[#2A2421] font-light leading-snug mb-12">
-                  {story.title}
-                </h2>
-
-                {/* Structured Flow: Situation & Collaboration (Two-Column Editorial Grid) */}
-                <div className="grid md:grid-cols-2 gap-10 lg:gap-14 mb-14">
-                  {/* Situation */}
-                  <div className="space-y-3">
-                    <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-[#736660] border-b border-[#E4DDD6] pb-2">
+                {/* Dynamic Narrative Blocks: TEXT on Left + Indented Pure PARAGRAPH Below (Cardless Editorial) */}
+                <div className="space-y-16 md:space-y-20 mt-16">
+                  {/* 1. Situation */}
+                  <div className="space-y-4">
+                    <p className="text-xs font-mono uppercase tracking-[0.3em] text-[#C75D38] font-medium">
                       Situation
-                    </h3>
-                    <p className="text-sm sm:text-base text-[#3D3531] leading-relaxed font-sans pt-1">
+                    </p>
+                    <p className="md:ml-12 lg:ml-20 font-serif text-lg sm:text-xl font-light text-[#2A2421] leading-[1.9] max-w-4xl">
                       {story.situation}
                     </p>
                   </div>
 
-                  {/* Collaboration */}
-                  <div className="space-y-3">
-                    <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-[#736660] border-b border-[#E4DDD6] pb-2">
+                  {/* 2. Collaboration */}
+                  <div className="space-y-4">
+                    <p className="text-xs font-mono uppercase tracking-[0.3em] text-[#C75D38] font-medium">
                       Collaboration
-                    </h3>
-                    <p className="text-sm sm:text-base text-[#3D3531] leading-relaxed font-sans pt-1">
+                    </p>
+                    <p className="md:ml-12 lg:ml-20 font-serif text-lg sm:text-xl font-light text-[#2A2421] leading-[1.9] max-w-4xl">
                       {story.collaboration}
                     </p>
                   </div>
-                </div>
 
-                {/* Impact: Concrete Measurable Outcomes */}
-                <div className="bg-[#EEE9DE]/25 border border-[#E4DDD6] p-8 sm:p-10 mb-12">
-                  <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-[#736660] mb-5">
-                    Impact &amp; Results
-                  </h3>
-                  <ul className="space-y-3.5">
-                    {story.impact.map((item, idx) => (
-                      <li
-                        key={idx}
-                        className="flex items-start gap-3 text-sm sm:text-base text-[#2A2421] font-sans leading-relaxed"
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#C75D38] mt-2.5 shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Focus Areas & Tools Used Ledger */}
-                <div className="grid sm:grid-cols-2 gap-8 pt-4">
-                  {/* Focus Areas */}
-                  <div>
-                    <h4 className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#736660] mb-3">
-                      Focus Areas
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {story.focusAreas.map((area) => (
-                        <span
-                          key={area}
-                          className="text-xs font-sans text-[#2A2421] py-1 px-3 border border-[#E4DDD6] bg-[#FAF8F5]"
-                        >
-                          {area}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Tools Used */}
-                  <div>
-                    <h4 className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#736660] mb-3">
-                      Tools Used
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {story.toolsUsed.map((tool) => (
-                        <span
-                          key={tool}
-                          className="text-xs font-mono text-[#736660] py-1 px-3 border border-[#E4DDD6] bg-[#FAF8F5]"
-                        >
-                          {tool}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Optional Quote / Testimonial if present */}
-                {story.quote && (
-                  <div className="mt-10 p-6 sm:p-8 border-l-2 border-[#C75D38] bg-[#EEE9DE]/20 font-serif italic text-base sm:text-lg text-[#2A2421]">
-                    <p>&ldquo;{story.quote.text}&rdquo;</p>
-                    <p className="text-xs font-sans not-italic text-[#736660] mt-3 uppercase tracking-wider">
-                      &mdash; {story.quote.attribution}
+                  {/* 3. Impact */}
+                  <div className="space-y-4">
+                    <p className="text-xs font-mono uppercase tracking-[0.3em] text-[#C75D38] font-medium">
+                      Impact
                     </p>
+                    <ul className="md:ml-12 lg:ml-20 space-y-4 sm:space-y-5 max-w-4xl">
+                      {story.impact.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-3.5 font-serif text-base sm:text-lg font-light text-[#2A2421] leading-[1.85]">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#C75D38] mt-3 shrink-0" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                )}
+
+                  {/* 4. Focus Areas & Tools Used (Zero Badges, Pure Clean Typography) */}
+                  <div className="space-y-4">
+                    <p className="text-xs font-mono uppercase tracking-[0.3em] text-[#736660] font-medium">
+                      Details
+                    </p>
+                    <div className="md:ml-12 lg:ml-20 space-y-3 text-xs sm:text-sm font-mono text-[#736660] max-w-4xl pt-2 leading-[1.8]">
+                      <div>
+                        <span className="text-[#2A2421] font-medium uppercase tracking-wider mr-2 font-sans">
+                          Focus areas:
+                        </span>
+                        <span>{story.focusAreas.join(" · ")}</span>
+                      </div>
+                      <div>
+                        <span className="text-[#2A2421] font-medium uppercase tracking-wider mr-2 font-sans">
+                          Tools used:
+                        </span>
+                        <span>{story.toolsUsed.join(" · ")}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Optional Quote / Reflection */}
+                  {story.quote && (
+                    <div className="md:ml-12 lg:ml-20 pl-6 border-l-2 border-[#C75D38] font-serif italic text-lg sm:text-2xl text-[#2A2421] font-light leading-[1.85] py-2 max-w-3xl">
+                      <p>&ldquo;{story.quote.text}&rdquo;</p>
+                      <p className="text-xs font-sans not-italic text-[#736660] mt-3 uppercase tracking-wider font-mono">
+                        &mdash; {story.quote.attribution}
+                      </p>
+                    </div>
+                  )}
+                </div>
               </article>
             );
           })}
         </div>
 
         {/* Closing Invitation Section: "Let's talk about your story." */}
-        <section className="mt-28 md:mt-36 pt-16 md:pt-20 border-t border-[#E4DDD6] text-center max-w-3xl mx-auto">
-          <p className="text-xs font-medium tracking-[0.3em] uppercase text-[#736660] mb-3">
-            Start a Collaboration
+        <section className="mt-32 md:mt-28 pt-20 border-t border-[#E4DDD6] text-center max-w-5xl mx-auto">
+          <p className="text-xs font-mono tracking-[0.25em] uppercase text-[#736660] mb-4">
+            Start a Conversation
           </p>
 
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-[#2A2421] leading-tight mb-6">
             Let&apos;s talk about your story.
           </h2>
 
-          <p className="text-sm sm:text-base text-[#736660] leading-relaxed max-w-xl mx-auto mb-10 font-sans">
+          <p className="text-sm sm:text-base text-[#736660] leading-[1.9] max-w-5xl mx-auto mb-10 font-sans">
             Whether you are looking to structure your recruitment pipeline, design an onboarding pathway 
             for incoming volunteers, or need hands-on HR coordination on a contract or project basis &mdash; 
             I would love to hear what you are building. Let&apos;s connect to discuss how we can create a clear, 
