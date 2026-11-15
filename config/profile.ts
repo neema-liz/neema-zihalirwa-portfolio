@@ -283,56 +283,60 @@ export const profileData: ProfileData = {
     {
       category: "Human Resources and Talent Acquisition",
       skills: [
-        { name: "Recruitment Coordination", status: "confirmed" },
-        { name: "CV Review and Candidate Screening", status: "confirmed" },
-        { name: "Candidate Shortlisting", status: "confirmed" },
-        { name: "Interview Coordination", status: "confirmed" },
-        { name: "Candidate Communication", status: "confirmed" },
-        { name: "Onboarding Support", status: "confirmed" },
-        { name: "Volunteer Management", status: "confirmed" },
-        { name: "HR Documentation", status: "confirmed" },
-        { name: "Volunteer Relations", status: "confirmed" }
+        { name: "End-to-End Recruitment Coordination", status: "confirmed" },
+        { name: "CV Review & Structured Screening", status: "confirmed" },
+        { name: "Candidate Shortlisting & Evaluation", status: "confirmed" },
+        { name: "Interview Scheduling & Coordination", status: "confirmed" },
+        { name: "Candidate Communication & Experience", status: "confirmed" },
+        { name: "Structured Onboarding Design", status: "confirmed" },
+        { name: "Volunteer Program Management", status: "confirmed" },
+        { name: "HR Policy Documentation", status: "confirmed" },
+        { name: "Volunteer Relations & Engagement", status: "confirmed" }
       ]
     },
     {
       category: "HR Administration and Operations",
       skills: [
-        { name: "HR Record Management", status: "confirmed" },
-        { name: "Recruitment Tracking", status: "confirmed" },
-        { name: "Administrative Coordination", status: "confirmed" },
-        { name: "Documentation and Reporting", status: "confirmed" },
-        { name: "Operational Coordination", status: "confirmed" },
-        { name: "Market and Competitor Research", status: "confirmed" }
+        { name: "Personnel Record Organization", status: "confirmed" },
+        { name: "Recruitment Pipeline Tracking", status: "confirmed" },
+        { name: "Administrative Workflow Coordination", status: "confirmed" },
+        { name: "HR Documentation & Audit Readiness", status: "confirmed" },
+        { name: "Operational Process Improvement", status: "confirmed" },
+        { name: "Market & Talent Research", status: "confirmed" }
       ]
     },
     {
-      category: "People Development and Communication",
+      category: "Soft Skills and People Leadership",
       skills: [
-        { name: "Interpersonal Communication", status: "confirmed" },
-        { name: "Cross-Cultural Communication", status: "confirmed" },
-        { name: "Conflict Management", status: "confirmed" },
-        { name: "Team Collaboration", status: "confirmed" },
-        { name: "Learning and Development Foundations", status: "confirmed" },
-        { name: "Professional Ethics and Confidentiality", status: "confirmed" }
+        { name: "Empathetic & Active Listening", status: "confirmed" },
+        { name: "Cross-Cultural Mediation & Diplomacy", status: "confirmed" },
+        { name: "Adult Learning & Pedagogical Guidance", status: "confirmed" },
+        { name: "Professional Ethics & Confidentiality", status: "confirmed" },
+        { name: "Constructive Feedback & Conflict Resolution", status: "confirmed" },
+        { name: "Collaborative Team Facilitation", status: "confirmed" },
+        { name: "Adaptability in Fast-Paced Remote Settings", status: "confirmed" }
       ]
     },
     {
-      category: "Digital and Analytical Skills",
+      category: "Digital Tools and HR Systems",
       skills: [
-        { name: "Microsoft Office", status: "confirmed" },
-        { name: "Google Workspace", status: "confirmed" },
-        { name: "SPSS", status: "confirmed" },
-        { name: "Microsoft Access", status: "confirmed" },
-        { name: "HR Data Management", status: "confirmed" },
-        { name: "Recruitment Tracking and Reporting", status: "confirmed" }
+        { name: "Applicant Tracking Systems (ATS / Greenhouse / Lever / Workable)", status: "confirmed" },
+        { name: "HRIS Platforms (BambooHR / Deel)", status: "confirmed" },
+        { name: "LinkedIn Recruiter & Candidate Sourcing", status: "confirmed" },
+        { name: "Google Workspace (Docs, Sheets, Forms, Drive)", status: "confirmed" },
+        { name: "Microsoft 365 (Excel, Word, PowerPoint, Access)", status: "confirmed" },
+        { name: "Slack & Remote Team Communication", status: "confirmed" },
+        { name: "Notion & Internal Process Wikis", status: "confirmed" },
+        { name: "SPSS Statistical Data Analysis", status: "confirmed" },
+        { name: "HR Data Management & Reporting Dashboards", status: "confirmed" }
       ]
     },
     {
       category: "Languages",
       skills: [
-        { name: "English – C2", status: "confirmed" },
-        { name: "French", status: "confirmed" },
-        { name: "Swahili", status: "confirmed" }
+        { name: "English – C2 (Full Professional & Academic Fluency)", status: "confirmed" },
+        { name: "French – Native / Bilingual Professional Working Proficiency", status: "confirmed" },
+        { name: "Swahili – Native Regional Lingua Franca & Cultural Fluency", status: "confirmed" }
       ]
     }
   ],

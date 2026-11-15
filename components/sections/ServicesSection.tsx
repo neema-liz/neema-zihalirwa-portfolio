@@ -1,69 +1,81 @@
 import React from "react";
+import Link from "next/link";
 import { profileData } from "@/config/profile";
 
 export function ServicesSection() {
-  const booking = profileData.contact.booking;
+  // Select the top 3 core high-value pillars for the minimalist homepage view
+  const featuredServices = profileData.services.slice(0, 3);
 
   return (
-    <section id="services" className="py-24 md:py-32 border-t border-[#E4DDD6]">
+    <section id="services" className="py-24 md:py-32 border-t border-[#E4DDD6] bg-[#F7F4EE]">
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         {/* Header 12-Col Split */}
-        <div className="grid md:grid-cols-12 gap-12 mb-16">
+        <div className="grid md:grid-cols-12 gap-8 lg:gap-12 mb-16 items-end">
           <div className="md:col-span-4">
-            <p className="text-xs font-medium tracking-[0.3em] uppercase text-[#736660]">
-              Services
+            <p className="text-xs font-medium tracking-[0.3em] uppercase text-[#736660] mb-2">
+              Services &amp; Engagement
             </p>
           </div>
-          <div className="md:col-span-8">
-            <h2 className="font-serif text-3xl md:text-5xl font-light text-[#2A2421] leading-snug mb-4">
-              How I can help
-            </h2>
-            <p className="text-sm text-[#736660] leading-relaxed max-w-xl font-sans">
-              Whether you need structured recruitment support, onboarding coordination,
-              or dependable HR administration &mdash; I bring organized, accountable execution
-              to every engagement.
-            </p>
+          <div className="md:col-span-8 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+            <div>
+              <h2 className="font-serif text-3xl md:text-5xl font-light text-[#2A2421] leading-tight mb-3">
+                How I support organizations &amp; leaders
+              </h2>
+              <p className="text-sm sm:text-base text-[#736660] leading-relaxed max-w-xl font-sans">
+                Bringing structured recruitment, educational pedagogy in onboarding, and dependable 
+                HR administration to every team &mdash; ensuring people operations run with clarity, 
+                care, and accountability.
+              </p>
+            </div>
+            <Link
+              href="/services"
+              className="text-xs font-medium tracking-[0.15em] uppercase border-b border-[#2A2421] pb-1 hover:text-[#C75D38] hover:border-[#C75D38] transition-colors whitespace-nowrap self-start sm:self-auto shrink-0"
+            >
+              All services &rarr;
+            </Link>
           </div>
         </div>
 
-        {/* Numbered Hairline Ledger */}
+        {/* Minimalist Numbered Hairline Ledger (3 Core Pillars) */}
         <div className="border-b border-[#E4DDD6]">
-          {profileData.services.map((service, index) => {
+          {featuredServices.map((service, index) => {
             const numberStr = String(index + 1).padStart(2, "0");
+
             return (
               <div
                 key={service.id}
-                className="group grid md:grid-cols-12 gap-6 py-10 border-t border-[#E4DDD6] hover:bg-[#EEE9DE]/40 transition-colors px-4 -mx-4"
+                className="group grid md:grid-cols-12 gap-6 py-10 sm:py-12 border-t border-[#E4DDD6] hover:bg-[#EEE9DE]/25 transition-colors px-4 -mx-4"
               >
                 {/* Number */}
                 <div className="md:col-span-1">
-                  <span className="text-xs text-[#736660] font-mono">{numberStr}</span>
+                  <span className="font-mono text-xs sm:text-sm text-[#736660] group-hover:text-[#C75D38] transition-colors font-medium">
+                    {numberStr}
+                  </span>
                 </div>
 
-                {/* Title & Headline */}
-                <div className="md:col-span-4">
-                  <h3 className="font-serif text-xl sm:text-2xl text-[#2A2421] font-normal leading-snug">
+                {/* Title & Core Headline */}
+                <div className="md:col-span-4 pr-4">
+                  <h3 className="font-serif text-xl sm:text-2xl text-[#2A2421] font-light leading-snug mb-2 group-hover:text-[#C75D38] transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-xs text-[#C75D38] mt-1.5 font-sans font-medium">
+                  <p className="text-xs text-[#C75D38] font-sans font-medium leading-relaxed">
                     {service.headline}
                   </p>
                 </div>
 
-                {/* Description & Deliverables */}
-                <div className="md:col-span-7">
-                  <p className="text-sm text-[#736660] leading-relaxed font-sans mb-4">
-                    {service.detailedDescription || service.shortDescription}
+                {/* Value Add & Minimalist Deliverables (No Heavy Badges) */}
+                <div className="md:col-span-7 flex flex-col justify-between">
+                  <p className="text-xs sm:text-sm text-[#736660] leading-relaxed font-sans mb-4">
+                    {service.shortDescription}
                   </p>
 
+                  {/* Minimalist Deliverables as clean inline tags */}
                   {service.deliverables && (
-                    <div className="flex flex-wrap gap-2 pt-2">
-                      {service.deliverables.map((del) => (
-                        <span
-                          key={del}
-                          className="text-[11px] tracking-wide uppercase px-2.5 py-1 bg-[#FAF8F5] border border-[#E4DDD6] text-[#736660]"
-                        >
-                          {del}
+                    <div className="pt-2 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs font-mono text-[#736660]">
+                      <span className="text-[10px] uppercase tracking-wider text-[#736660]">Focus:</span>
+                      {service.deliverables.slice(0, 4).map((del, i, arr) => (
+                        <span key={del} className="text-[#2A2421]">
+                          {del}{i < arr.length - 1 && <span className="text-[#E4DDD6] ml-3">&middot;</span>}
                         </span>
                       ))}
                     </div>
@@ -74,36 +86,17 @@ export function ServicesSection() {
           })}
         </div>
 
-        {/* Direct Action Touchpoints with Google Meet & Calendly */}
-        <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-5">
-          {booking?.googleCalendarUrl && (
-            <a
-              href={booking.googleCalendarUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-xs font-medium tracking-[0.15em] uppercase bg-[#C75D38] text-[#FAF8F5] px-8 py-4 hover:opacity-90 transition-opacity"
-            >
-              Book a Call (Google Meet) &rarr;
-            </a>
-          )}
-
-          {booking?.calendlyUrl && (
-            <a
-              href={booking.calendlyUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-xs font-medium tracking-[0.15em] uppercase border border-[#2A2421] text-[#2A2421] px-8 py-4 hover:bg-[#2A2421] hover:text-[#FAF8F5] transition-colors"
-            >
-              Or via Calendly &rarr;
-            </a>
-          )}
-
-          <a
-            href={`mailto:${profileData.contact.email.value}?subject=Consultation%20Enquiry`}
-            className="inline-flex items-center text-xs font-medium tracking-[0.15em] uppercase text-[#736660] hover:text-[#2A2421] transition-colors py-2 px-4"
+        {/* Minimalist Footnote / Invitation to Services Page */}
+        <div className="mt-14 pt-8 border-t border-[#E4DDD6] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <p className="text-xs sm:text-sm text-[#736660] font-sans max-w-md">
+            Looking for customized consulting, interview coordination, or end-to-end HR documentation?
+          </p>
+          <Link
+            href="/services"
+            className="inline-flex items-center text-xs font-medium tracking-[0.15em] uppercase bg-[#2A2421] text-[#FAF8F5] px-6 py-3.5 hover:bg-[#C75D38] transition-colors self-start sm:self-auto shrink-0"
           >
-            Email Enquiry &darr;
-          </a>
+            View All Services &amp; Capabilities &rarr;
+          </Link>
         </div>
       </div>
     </section>
