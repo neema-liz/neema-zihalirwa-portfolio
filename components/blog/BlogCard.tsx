@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { BlogPostMetadata } from "@/lib/blog";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface BlogCardProps {
   post: BlogPostMetadata;
@@ -10,24 +13,30 @@ interface BlogCardProps {
 /**
  * Formats YYYY-MM-DD into a clean, human-readable date for the timeline axis
  */
-function formatShortDate(dateString: string): string {
+function formatShortDate(dateString: string, lang: string): string {
   if (!dateString) return "";
   const parts = dateString.split("-");
   if (parts.length !== 3) return dateString;
   const [yearStr, monthStr, dayStr] = parts;
-  const monthNames = [
+  const enMonths = [
     "Jan", "Feb", "Mar", "Apr", "May", "Jun",
     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
   ];
+  const frMonths = [
+    "Jan", "Fév", "Mar", "Avr", "Mai", "Juin",
+    "Juil", "Août", "Sep", "Oct", "Nov", "Déc"
+  ];
+  const months = lang === "fr" ? frMonths : enMonths;
   const mIndex = parseInt(monthStr, 10) - 1;
-  const month = monthNames[mIndex] || monthStr;
+  const month = months[mIndex] || monthStr;
   const day = parseInt(dayStr, 10);
-  return `${month} ${day}, ${yearStr}`;
+  return lang === "fr" ? `${day} ${month} ${yearStr}` : `${month} ${day}, ${yearStr}`;
 }
 
 export function BlogCard({ post, index }: BlogCardProps) {
+  const { t, language } = useLanguage();
   const numberStr = String(index + 1).padStart(2, "0");
-  const formattedDate = formatShortDate(post.date);
+  const formattedDate = formatShortDate(post.date, language);
   const primaryTag = post.tags && post.tags.length > 0 ? post.tags[0] : null;
 
   return (
@@ -68,7 +77,7 @@ export function BlogCard({ post, index }: BlogCardProps) {
             href={`/blog/${post.slug}`}
             className="inline-flex items-center text-xs font-medium tracking-[0.15em] uppercase text-[#2A2421] group-hover:text-[#C75D38] transition-colors"
           >
-            Read thought &rarr;
+            {t.blogPage.list.readAction}
           </Link>
         </div>
       </article>

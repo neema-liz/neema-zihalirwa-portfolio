@@ -3,6 +3,7 @@
 import React, { useState, useMemo } from "react";
 import { BlogPostMetadata } from "@/lib/blog";
 import { BlogCard } from "@/components/blog/BlogCard";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface BlogListClientProps {
   posts: BlogPostMetadata[];
@@ -12,6 +13,9 @@ interface BlogListClientProps {
 const POSTS_PER_PAGE = 5;
 
 export function BlogListClient({ posts, tags }: BlogListClientProps) {
+  const { t } = useLanguage();
+  const listT = t.blogPage.list;
+
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -33,13 +37,17 @@ export function BlogListClient({ posts, tags }: BlogListClientProps) {
     setCurrentPage(1);
   };
 
+  const pageOfText = listT.pageOf
+    .replace("{current}", String(currentPage))
+    .replace("{total}", String(totalPages));
+
   return (
     <div>
       {/* Sleek Minimalist Topic Filter (No heavy border badges) */}
       {tags.length > 0 && (
         <div className="flex flex-wrap items-center gap-4 sm:gap-6 pb-6 border-b border-[#E4DDD6] mb-12 text-xs sm:text-sm font-sans">
           <span className="text-[11px] uppercase tracking-[0.2em] text-[#736660]">
-            Topics:
+            {listT.topics}
           </span>
 
           <button
@@ -50,7 +58,7 @@ export function BlogListClient({ posts, tags }: BlogListClientProps) {
                 : "text-[#736660] hover:text-[#2A2421]"
             }`}
           >
-            All <span className="font-mono text-[10px] text-[#736660]">({posts.length})</span>
+            {listT.all} <span className="font-mono text-[10px] text-[#736660]">({posts.length})</span>
           </button>
 
           {tags.map(({ tag, count }) => (
@@ -81,13 +89,13 @@ export function BlogListClient({ posts, tags }: BlogListClientProps) {
       ) : (
         <div className="py-20 text-center border border-[#E4DDD6] bg-[#EEE9DE]/20 p-8">
           <p className="text-sm text-[#736660] font-sans mb-4">
-            No articles found under &ldquo;{selectedTag}&rdquo;.
+            {listT.noArticles} &ldquo;{selectedTag}&rdquo;.
           </p>
           <button
             onClick={() => handleSelectTag(null)}
             className="text-xs uppercase tracking-[0.15em] font-medium text-[#2A2421] border-b border-[#2A2421] pb-0.5 hover:text-[#C75D38] hover:border-[#C75D38] transition-colors"
           >
-            Show all writing &rarr;
+            {listT.showAll}
           </button>
         </div>
       )}
@@ -103,11 +111,11 @@ export function BlogListClient({ posts, tags }: BlogListClientProps) {
             disabled={currentPage === 1}
             className="uppercase tracking-[0.15em] text-xs font-medium text-[#2A2421] disabled:opacity-25 disabled:cursor-not-allowed hover:text-[#C75D38] transition-colors"
           >
-            &larr; Newer
+            {listT.newer}
           </button>
 
           <span className="font-mono text-xs text-[#736660]">
-            Page {currentPage} of {totalPages}
+            {pageOfText}
           </span>
 
           <button
@@ -118,7 +126,7 @@ export function BlogListClient({ posts, tags }: BlogListClientProps) {
             disabled={currentPage === totalPages}
             className="uppercase tracking-[0.15em] text-xs font-medium text-[#2A2421] disabled:opacity-25 disabled:cursor-not-allowed hover:text-[#C75D38] transition-colors"
           >
-            Older &rarr;
+            {listT.older}
           </button>
         </div>
       )}
