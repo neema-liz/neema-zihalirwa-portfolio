@@ -7,7 +7,7 @@ import { MobileNav } from "@/components/layout/MobileNav";
 export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#F7F4EE]/85 backdrop-blur-md border-b border-[#E4DDD6]/60 transition-colors">
-      <div className="max-w-8xl mx-auto flex items-center justify-between py-5 px-6 sm:px-20">
+      <div className="max-w-8xl mx-auto flex items-center justify-between py-5 px-6 sm:px-10 lg:px-16 xl:px-20">
         {/* Brand / Name */}
         <Link
           href="/"

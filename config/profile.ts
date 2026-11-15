@@ -143,7 +143,7 @@ export const profileData: ProfileData = {
       role: "Lead Operations",
       organization: "KaziEasy",
       period: "2026 – Present",
-      location: "Rwanda",
+      location: "Hybrid / Regional",
       description:
         "Contributing to operational coordination and business development processes within an emerging technology-driven business serving micro and small enterprises.",
       responsibilities: [

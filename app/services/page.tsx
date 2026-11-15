@@ -17,7 +17,7 @@ export default function ServicesPage() {
   return (
     <div className="bg-[#F7F4EE] text-[#2A2421]">
       {/* 1. Hero Introduction with Remarkable Sized Portrait of Elisabeth */}
-      <section className="pt-20 md:pt-28 pb-16 md:pb-24 border-b border-[#E4DDD6]">
+      <section className="pt-28 md:pt-36 pb-16 md:pb-24 border-b border-[#E4DDD6]">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
           <div className="grid md:grid-cols-12 gap-10 lg:gap-16 items-center">
             {/* Left: Remarkable Portrait */}

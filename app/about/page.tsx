@@ -22,15 +22,15 @@ export default function AboutPage() {
             About Neema Zihalirwa Elisabeth
           </p>
 
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-light text-[#2A2421] leading-[1.1] mb-12 md:mb-16 max-w-4xl">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-light text-[#2A2421] leading-[1.1] mb-10 md:mb-16 max-w-4xl">
             People, pedagogy, and purpose in modern organizations.
           </h1>
 
           {/* Side-by-Side: Portrait (Left) + Opening Narrative (Right) */}
-          <div className="grid md:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <div className="grid md:grid-cols-12 gap-8 md:gap-10 lg:gap-14 items-center">
             {/* Left: Full Uncut Portrait in Wider Dimension */}
             <div className="md:col-span-6 lg:col-span-6">
-              <div className="relative aspect-[4/5] w-full max-w-lg mx-auto md:mx-0 overflow-hidden bg-[#EEE9DE]/40">
+              <div className="relative aspect-[4/5] w-full max-w-md mx-auto md:mx-0 overflow-hidden bg-[#EEE9DE]/40">
                 <Image
                   src="/images/portraits/neema-portrait-02.jpg"
                   alt="Neema Zihalirwa Elisabeth — Human Resources Professional"
@@ -40,7 +40,7 @@ export default function AboutPage() {
                   className="object-cover object-top filter grayscale-0 contrast-105 hover:grayscale-50 transition-all duration-700 ease-out"
                 />
               </div>
-              <p className="text-xs font-mono text-[#736660] mt-3">
+              <p className="text-xs font-mono text-[#736660] mt-3 text-center md:text-left">
                 Neema Zihalirwa Elisabeth
               </p>
             </div>

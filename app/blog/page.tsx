@@ -14,7 +14,7 @@ export default function BlogIndexPage() {
   const tags = getAllTags();
 
   return (
-    <div className="pt-20 md:pt-28 pb-28 md:pb-36 bg-[#F7F4EE]">
+    <div className="pt-28 md:pt-36 pb-28 md:pb-36 bg-[#F7F4EE]">
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         {/* Section Header: 12-Column Split */}
         <div className="grid md:grid-cols-12 gap-8 lg:gap-12 mb-16 items-end">

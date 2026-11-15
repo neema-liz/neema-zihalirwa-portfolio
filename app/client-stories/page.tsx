@@ -21,7 +21,7 @@ export default function ClientStoriesPage() {
           <p className="text-xs font-mono tracking-[0.3em] uppercase text-[#C75D38] mb-4">
             Client Stories
           </p>
-          <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-light text-[#2A2421] leading-[1.08] tracking-tight mb-8">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-[#2A2421] leading-[1.08] tracking-tight mb-8">
             How I help teams build structure, hire with care, and grow.
           </h1>
           <p className="text-base sm:text-xl text-[#736660] font-sans max-w-2xl leading-relaxed">

@@ -53,7 +53,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   const booking = profileData.contact.booking;
 
   return (
-    <div className="pt-16 pb-28 bg-[#F7F4EE]">
+    <div className="pt-28 md:pt-36 pb-28 bg-[#F7F4EE]">
       <JsonLdBlogPost post={post} />
       <article className="max-w-3xl mx-auto px-6 sm:px-8">
         {/* Breadcrumb Back Link */}

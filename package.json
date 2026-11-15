@@ -11,6 +11,7 @@
     "test": "node --test --experimental-strip-types tests/blog.test.ts tests/contact.test.ts"
   },
   "dependencies": {
+    "@tanstack/react-form": "^1.33.5",
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
     "lucide-react": "^1.72.0",

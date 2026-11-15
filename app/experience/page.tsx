@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Check } from "lucide-react";
 import { profileData } from "@/config/profile";
 
 export const metadata: Metadata = {
@@ -31,17 +32,17 @@ export default function ExperiencePage() {
             and cross-cultural communication.
           </p>
 
-          <div className="flex flex-wrap items-center gap-4 text-xs font-mono">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 text-xs font-mono">
             <a
               href="/documents/neema-zihalirwa-cv.pdf"
               download="Neema_Zihalirwa_Elisabeth_CV.pdf"
-              className="inline-flex items-center text-xs font-medium tracking-[0.15em] uppercase bg-[#2A2421] text-[#FAF8F5] px-6 py-3.5 hover:bg-[#C75D38] transition-colors"
+              className="inline-flex items-center justify-center text-xs font-medium tracking-[0.15em] uppercase bg-[#2A2421] text-[#FAF8F5] px-6 py-3.5 hover:bg-[#C75D38] transition-colors"
             >
               Download CV (PDF) &darr;
             </a>
             <Link
               href="/services"
-              className="inline-flex items-center text-xs font-medium tracking-[0.15em] uppercase border border-[#2A2421] text-[#2A2421] px-6 py-3.5 hover:bg-[#2A2421] hover:text-[#FAF8F5] transition-colors"
+              className="inline-flex items-center justify-center text-xs font-medium tracking-[0.15em] uppercase border border-[#2A2421] text-[#2A2421] px-6 py-3.5 hover:bg-[#2A2421] hover:text-[#FAF8F5] transition-colors"
             >
               View Services &amp; Capabilities &rarr;
             </Link>
@@ -112,7 +113,7 @@ export default function ExperiencePage() {
                             key={aIdx}
                             className="flex items-start gap-3 text-xs sm:text-sm text-[#2A2421] font-sans italic"
                           >
-                            <span className="text-[#C75D38] font-serif not-italic font-bold">&check;</span>
+                            <Check className="w-3.5 h-3.5 text-[#C75D38] shrink-0 mt-0.5" />
                             <span>&ldquo;{ach}&rdquo;</span>
                           </li>
                         ))}
