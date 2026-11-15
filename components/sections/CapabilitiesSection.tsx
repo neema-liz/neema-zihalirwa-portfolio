@@ -1,8 +1,128 @@
 import React from "react";
+import Link from "next/link";
 import { profileData } from "@/config/profile";
 
-export function CapabilitiesSection() {
-  // Extract standard capability groups vs languages for specialized presentation
+interface CapabilitiesSectionProps {
+  overview?: boolean;
+}
+
+export function CapabilitiesSection({ overview = false }: CapabilitiesSectionProps) {
+  // If rendered as an overview on the homepage: show high-level executive pillars
+  if (overview) {
+    return (
+      <section id="capabilities" className="py-24 md:py-32 border-t border-[#E4DDD6] bg-[#F7F4EE]">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8">
+          {/* Header 12-Col Split */}
+          <div className="grid md:grid-cols-12 gap-8 lg:gap-12 mb-16 items-end">
+            <div className="md:col-span-4">
+              <p className="text-xs font-medium tracking-[0.3em] uppercase text-[#736660] mb-2">
+                Capabilities &amp; Strengths
+              </p>
+            </div>
+            <div className="md:col-span-8 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+              <div>
+                <h2 className="font-serif text-3xl md:text-5xl font-light text-[#2A2421] leading-tight mb-3">
+                  A multidisciplinary foundation in people operations
+                </h2>
+                <p className="text-sm sm:text-base text-[#736660] leading-relaxed max-w-xl font-sans">
+                  Combining educational pedagogy, structured recruitment workflows, modern HR tech,
+                  and multilingual diplomacy to build healthy, productive teams.
+                </p>
+              </div>
+              <Link
+                href="/services#capabilities"
+                className="text-xs font-medium tracking-[0.15em] uppercase border-b border-[#2A2421] pb-1 hover:text-[#C75D38] hover:border-[#C75D38] transition-colors whitespace-nowrap self-start sm:self-auto shrink-0"
+              >
+                All tools &amp; skills &rarr;
+              </Link>
+            </div>
+          </div>
+
+          {/* 4 Clean Minimalist Overview Pillars */}
+          <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
+            {/* Pillar 1 */}
+            <div className="p-8 border border-[#E4DDD6] bg-[#EEE9DE]/25 hover:bg-[#EEE9DE]/40 transition-colors flex flex-col justify-between">
+              <div>
+                <span className="font-mono text-xs text-[#C75D38] block mb-2">01 / Talent Acquisition</span>
+                <h3 className="font-serif text-xl sm:text-2xl text-[#2A2421] font-light leading-snug mb-3">
+                  Structured Hiring &amp; Candidate Care
+                </h3>
+                <p className="text-xs sm:text-sm text-[#736660] leading-relaxed font-sans mb-4">
+                  End-to-end recruitment coordination, rigorous CV screening, objective shortlisting, and candidate communication across time zones.
+                </p>
+              </div>
+              <p className="text-[11px] font-mono uppercase tracking-wider text-[#736660] pt-4 border-t border-[#E4DDD6]/60">
+                Screening &middot; Sourcing &middot; Interviewing
+              </p>
+            </div>
+
+            {/* Pillar 2 */}
+            <div className="p-8 border border-[#E4DDD6] bg-[#EEE9DE]/25 hover:bg-[#EEE9DE]/40 transition-colors flex flex-col justify-between">
+              <div>
+                <span className="font-mono text-xs text-[#C75D38] block mb-2">02 / People &amp; Learning</span>
+                <h3 className="font-serif text-xl sm:text-2xl text-[#2A2421] font-light leading-snug mb-3">
+                  Onboarding Pedagogy &amp; Culture
+                </h3>
+                <p className="text-xs sm:text-sm text-[#736660] leading-relaxed font-sans mb-4">
+                  Applying adult learning psychology to scaffold new hire training and volunteer programs, accelerating ramp-up and boosting team retention.
+                </p>
+              </div>
+              <p className="text-[11px] font-mono uppercase tracking-wider text-[#736660] pt-4 border-t border-[#E4DDD6]/60">
+                Adult Learning &middot; Volunteer Ops &middot; Empathy
+              </p>
+            </div>
+
+            {/* Pillar 3 */}
+            <div className="p-8 border border-[#E4DDD6] bg-[#EEE9DE]/25 hover:bg-[#EEE9DE]/40 transition-colors flex flex-col justify-between">
+              <div>
+                <span className="font-mono text-xs text-[#C75D38] block mb-2">03 / Systems &amp; Analytics</span>
+                <h3 className="font-serif text-xl sm:text-2xl text-[#2A2421] font-light leading-snug mb-3">
+                  Modern HR Tech &amp; Data Operations
+                </h3>
+                <p className="text-xs sm:text-sm text-[#736660] leading-relaxed font-sans mb-4">
+                  Proficiency across modern ATS and HRIS platforms (Greenhouse, BambooHR, Deel), Google Workspace, advanced Excel modeling, and SPSS research analytics.
+                </p>
+              </div>
+              <p className="text-[11px] font-mono uppercase tracking-wider text-[#736660] pt-4 border-t border-[#E4DDD6]/60">
+                ATS / HRIS &middot; Google Workspace &middot; Excel &middot; SPSS
+              </p>
+            </div>
+
+            {/* Pillar 4 */}
+            <div className="p-8 border border-[#E4DDD6] bg-[#EEE9DE]/25 hover:bg-[#EEE9DE]/40 transition-colors flex flex-col justify-between">
+              <div>
+                <span className="font-mono text-xs text-[#C75D38] block mb-2">04 / Global Alignment</span>
+                <h3 className="font-serif text-xl sm:text-2xl text-[#2A2421] font-light leading-snug mb-3">
+                  Cross-Cultural &amp; Multilingual Fluency
+                </h3>
+                <p className="text-xs sm:text-sm text-[#736660] leading-relaxed font-sans mb-4">
+                  Academic foundation in International Relations combined with trilingual fluency (English C2, French native/bilingual, Swahili native) for pan-African and international diplomacy.
+                </p>
+              </div>
+              <p className="text-[11px] font-mono uppercase tracking-wider text-[#736660] pt-4 border-t border-[#E4DDD6]/60">
+                English (C2) &middot; French &middot; Swahili
+              </p>
+            </div>
+          </div>
+
+          {/* Minimalist Footnote Link */}
+          <div className="mt-12 text-center sm:text-left pt-6 border-t border-[#E4DDD6] flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span className="text-xs text-[#736660] font-sans">
+              Looking for a comprehensive list of all tools, documentation methods, and soft skills?
+            </span>
+            <Link
+              href="/services#capabilities"
+              className="text-xs font-medium tracking-[0.15em] uppercase text-[#2A2421] hover:text-[#C75D38] transition-colors"
+            >
+              View Full Competencies on Services Page &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Full detailed view (rendered on the Services page)
   const standardGroups = profileData.capabilities.filter(
     (g) => g.category.toLowerCase() !== "languages"
   );

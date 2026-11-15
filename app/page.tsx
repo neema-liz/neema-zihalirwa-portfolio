@@ -23,8 +23,8 @@ export default function Home() {
       {/* 4. Experience Section */}
       <ExperienceSection />
 
-      {/* 5. Capabilities Section */}
-      <CapabilitiesSection />
+      {/* 5. Capabilities Overview Section */}
+      <CapabilitiesSection overview={true} />
 
       {/* 6. Services Section */}
       <ServicesSection />
