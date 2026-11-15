@@ -3,48 +3,45 @@ import { publishedAffiliations } from "@/config/affiliations";
 
 export function AffiliationsBar() {
   return (
-    <section className="border-y border-[#E4DDD6] py-8 sm:py-10 bg-[#F7F4EE]">
+    <section className="py-20 border-t border-[#E4DDD6] bg-[#F7F4EE]">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 lg:gap-12">
-          {/* Subtle Minimalist Eyebrow */}
-          <div className="flex items-center gap-3 shrink-0">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C75D38]" />
-            <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-[#736660]">
-              Involvements &amp; Affiliations
-            </p>
-          </div>
 
-          {/* Organizations Row */}
-          <div className="flex flex-wrap items-center justify-between sm:justify-start lg:justify-end gap-x-8 sm:gap-x-12 lg:gap-x-14 gap-y-4">
-            {publishedAffiliations.map((org) => {
-              const content = (
-                <span className="font-serif text-lg sm:text-xl lg:text-2xl font-light text-[#2A2421] group-hover:text-[#C75D38] transition-colors duration-300">
+        {/* Section Heading */}
+        <div className="text-center mb-14">
+          <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-[#736660] mb-3">
+            Involvements &amp; Affiliations
+          </p>
+
+          <h2 className="font-serif text-3xl sm:text-4xl font-light text-[#2A2421] leading-tight">
+            Organizations I&apos;ve worked with
+          </h2>
+        </div>
+
+        {/* 4-Column Minimalist Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 lg:gap-16 items-center justify-items-center">
+          {publishedAffiliations.map((org) => (
+            <div key={org.id} className="group relative inline-flex flex-col items-center">
+              {org.href ? (
+                <a
+                  href={org.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-serif text-xl sm:text-2xl font-light tracking-tight text-[#736660] group-hover:text-[#2A2421] transition-colors duration-300 text-center"
+                >
+                  {org.name}
+                </a>
+              ) : (
+                <span className="font-serif text-xl sm:text-2xl font-light tracking-tight text-[#736660] group-hover:text-[#2A2421] transition-colors duration-300 text-center">
                   {org.name}
                 </span>
-              );
+              )}
 
-              return (
-                <div key={org.id} className="group relative py-1">
-                  {org.href ? (
-                    <a
-                      href={org.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block"
-                      aria-label={`${org.name} (opens in a new tab)`}
-                    >
-                      {content}
-                    </a>
-                  ) : (
-                    content
-                  )}
-                  {/* Delicate Terracotta Hover Hairline */}
-                  <div className="h-px w-0 bg-[#C75D38] group-hover:w-full transition-all duration-300 ease-out mt-1" />
-                </div>
-              );
-            })}
-          </div>
+              {/* Delicate Terracotta Hover Hairline */}
+              <div className="h-px w-0 bg-[#C75D38] group-hover:w-full transition-all duration-300 mt-2" />
+            </div>
+          ))}
         </div>
+
       </div>
     </section>
   );
