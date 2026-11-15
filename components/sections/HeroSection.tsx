@@ -3,12 +3,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { profileData } from "@/config/profile";
+import { useLanguage } from "@/context/LanguageContext";
 import { cn } from "@/lib/utils";
 
 export function HeroSection() {
   const [isOver80PercentVisible, setIsOver80PercentVisible] = useState(true);
   const imageContainerRef = useRef<HTMLDivElement>(null);
   const { hero } = profileData;
+  const { t } = useLanguage();
 
   useEffect(() => {
     const target = imageContainerRef.current;
@@ -40,7 +42,7 @@ export function HeroSection() {
           {/* Left: Editorial Headline & Narrative */}
           <div className="md:col-span-6">
             <p className="text-[11px] font-medium tracking-[0.1em] uppercase text-[#736660] mb-8">
-              {hero.eyebrow}
+              {t.hero.eyebrow}
             </p>
 
             <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-[#2A2421] leading-[0.95] mb-10">
@@ -52,7 +54,7 @@ export function HeroSection() {
             </h1>
 
             <p className="max-w-md text-sm md:text-base text-[#736660] leading-relaxed mb-12 font-sans">
-              {hero.bio}
+              {t.hero.bio}
             </p>
 
             <div className="flex flex-wrap gap-6 items-center">
@@ -60,14 +62,14 @@ export function HeroSection() {
                 href={`mailto:${profileData.contact.email.value}?subject=${encodeURIComponent(hero.primaryCta.subject)}`}
                 className="text-xs font-medium tracking-[0.15em] uppercase bg-[#C75D38] text-[#FAF8F5] px-7 py-3.5 hover:opacity-90 transition-opacity"
               >
-                {hero.primaryCta.label}
+                {t.hero.primaryCta}
               </a>
 
               <a
                 href={hero.secondaryCta.href}
                 className="text-xs font-medium tracking-[0.15em] uppercase text-[#736660] hover:text-[#2A2421] transition-colors"
               >
-                {hero.secondaryCta.label} &darr;
+                {t.hero.secondaryCta} &darr;
               </a>
             </div>
           </div>

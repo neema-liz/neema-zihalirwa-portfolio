@@ -1,7 +1,12 @@
+"use client";
+
 import React from "react";
 import { publishedAffiliations } from "@/config/affiliations";
+import { useLanguage } from "@/context/LanguageContext";
 
 export function AffiliationsBar() {
+  const { t } = useLanguage();
+
   return (
     <section className="py-20 border-t border-[#E4DDD6] bg-[#F7F4EE]">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
@@ -9,11 +14,11 @@ export function AffiliationsBar() {
         {/* Section Heading */}
         <div className="text-center mb-14">
           <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-[#736660] mb-3">
-            Involvements &amp; Affiliations
+            {t.affiliations.eyebrow}
           </p>
 
           <h2 className="font-serif text-3xl sm:text-4xl font-light text-[#2A2421] leading-tight">
-            Organizations I&apos;ve worked with
+            {t.affiliations.title}
           </h2>
         </div>
 

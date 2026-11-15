@@ -1,8 +1,12 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { profileData } from "@/config/profile";
+import { useLanguage } from "@/context/LanguageContext";
 
 export function ServicesSection() {
+  const { t } = useLanguage();
   // Select the top 3 core high-value pillars for the minimalist homepage view
   const featuredServices = profileData.services.slice(0, 3);
 
@@ -13,25 +17,23 @@ export function ServicesSection() {
         <div className="grid md:grid-cols-12 gap-8 lg:gap-12 mb-16 items-end">
           <div className="md:col-span-4">
             <p className="text-xs font-medium tracking-[0.3em] uppercase text-[#736660] mb-2">
-              Services &amp; Engagement
+              {t.servicesSection.eyebrow}
             </p>
           </div>
           <div className="md:col-span-8 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
             <div>
               <h2 className="font-serif text-3xl md:text-5xl font-light text-[#2A2421] leading-tight mb-3">
-                How I support organizations &amp; leaders
+                {t.servicesSection.title}
               </h2>
               <p className="text-sm sm:text-base text-[#736660] leading-relaxed max-w-xl font-sans">
-                Bringing structured recruitment, educational pedagogy in onboarding, and dependable 
-                HR administration to every team &mdash; ensuring people operations run with clarity, 
-                care, and accountability.
+                {t.servicesSection.subtitle}
               </p>
             </div>
             <Link
               href="/services"
               className="text-xs font-medium tracking-[0.15em] uppercase border-b border-[#2A2421] pb-1 hover:text-[#C75D38] hover:border-[#C75D38] transition-colors whitespace-nowrap self-start sm:self-auto shrink-0"
             >
-              All services &rarr;
+              {t.servicesSection.viewAll} &rarr;
             </Link>
           </div>
         </div>
@@ -40,6 +42,11 @@ export function ServicesSection() {
         <div className="border-b border-[#E4DDD6]">
           {featuredServices.map((service, index) => {
             const numberStr = String(index + 1).padStart(2, "0");
+            const itemTranslation = t.servicesSection.items[index];
+
+            const title = itemTranslation?.title || service.title;
+            const headline = itemTranslation?.subtitle || service.headline;
+            const desc = itemTranslation?.desc || service.shortDescription;
 
             return (
               <div
@@ -56,30 +63,27 @@ export function ServicesSection() {
                 {/* Title & Core Headline */}
                 <div className="md:col-span-4 pr-4">
                   <h3 className="font-serif text-xl sm:text-2xl text-[#2A2421] font-light leading-snug mb-2 group-hover:text-[#C75D38] transition-colors">
-                    {service.title}
+                    {title}
                   </h3>
                   <p className="text-xs text-[#C75D38] font-sans font-medium leading-relaxed">
-                    {service.headline}
+                    {headline}
                   </p>
                 </div>
 
-                {/* Value Add & Minimalist Deliverables (No Heavy Badges) */}
+                {/* Value Add */}
                 <div className="md:col-span-7 flex flex-col justify-between">
                   <p className="text-xs sm:text-sm text-[#736660] leading-relaxed font-sans mb-4">
-                    {service.shortDescription}
+                    {desc}
                   </p>
 
-                  {/* Minimalist Deliverables as clean inline tags */}
-                  {service.deliverables && (
-                    <div className="pt-2 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs font-mono text-[#736660]">
-                      <span className="text-[10px] uppercase tracking-wider text-[#736660]">Focus:</span>
-                      {service.deliverables.slice(0, 4).map((del, i, arr) => (
-                        <span key={del} className="text-[#2A2421]">
-                          {del}{i < arr.length - 1 && <span className="text-[#E4DDD6] ml-3">&middot;</span>}
-                        </span>
-                      ))}
-                    </div>
-                  )}
+                  <div className="pt-2">
+                    <Link
+                      href={`/services#${service.id}`}
+                      className="text-xs font-mono uppercase tracking-wider text-[#2A2421] group-hover:text-[#C75D38] transition-colors inline-flex items-center"
+                    >
+                      {t.common.readMore} &rarr;
+                    </Link>
+                  </div>
                 </div>
               </div>
             );
@@ -89,13 +93,13 @@ export function ServicesSection() {
         {/* Minimalist Footnote / Invitation to Services Page */}
         <div className="mt-14 pt-8 border-t border-[#E4DDD6] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <p className="text-xs sm:text-sm text-[#736660] font-sans max-w-md">
-            Looking for customized consulting, interview coordination, or end-to-end HR documentation?
+            {t.capabilitiesSection.question}
           </p>
           <Link
             href="/services"
             className="inline-flex items-center text-xs font-medium tracking-[0.15em] uppercase bg-[#2A2421] text-[#FAF8F5] px-6 py-3.5 hover:bg-[#C75D38] transition-colors self-start sm:self-auto shrink-0"
           >
-            View All Services &amp; Capabilities &rarr;
+            {t.common.viewServices} &rarr;
           </Link>
         </div>
       </div>

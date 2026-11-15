@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { JsonLdPerson } from "@/components/seo/JsonLdPerson";
+import { LanguageProvider } from "@/context/LanguageContext";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
 
@@ -18,9 +19,8 @@ export const metadata: Metadata = {
   keywords: [
     "Neema Zihalirwa",
     "Neema Zihalirwa Elisabeth",
-    "Human Resources Kigali",
-    "HR Consultant Rwanda",
-    "Talent Acquisition Africa",
+    "Human Resources Professional",
+    "Talent Acquisition",
     "People Operations",
     "Employee Onboarding",
     "Pedagogical Scaffolding",
@@ -88,10 +88,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className="h-full antialiased scroll-smooth">
       <body className="min-h-full flex flex-col bg-[#F7F4EE] text-[#2A2421]">
-        <JsonLdPerson />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <LanguageProvider>
+          <JsonLdPerson />
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

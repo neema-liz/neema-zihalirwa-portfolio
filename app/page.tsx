@@ -7,8 +7,18 @@ import { ServicesSection } from "@/components/sections/ServicesSection";
 import { ClientStoriesSection } from "@/components/sections/ClientStoriesSection";
 import { WritingSection } from "@/components/sections/WritingSection";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { getAllPosts } from "@/lib/blog";
 
 export default function Home() {
+  const posts = getAllPosts(false)
+    .slice(0, 3)
+    .map((p) => ({
+      slug: p.slug,
+      title: p.title,
+      description: p.description,
+      date: p.date,
+    }));
+
   return (
     <div className="bg-[#F7F4EE] text-[#2A2421] selection:bg-[#E4DDD6] selection:text-[#2A2421]">
       {/* 1. Hero Section */}
@@ -33,7 +43,7 @@ export default function Home() {
       <ClientStoriesSection />
 
       {/* 8. Selected Essays & Writing */}
-      <WritingSection />
+      <WritingSection posts={posts} />
 
       {/* 9. Contact Section */}
       <ContactSection />

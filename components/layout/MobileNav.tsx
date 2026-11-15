@@ -6,10 +6,13 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { profileData } from "@/config/profile";
+import { useLanguage } from "@/context/LanguageContext";
+import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 import { cn } from "@/lib/utils";
 
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useLanguage();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -106,57 +109,60 @@ export function MobileNav() {
               </button>
 
               <nav className="flex flex-col space-y-6 pt-4">
-                <p className="text-[11px] uppercase tracking-[0.25em] text-[#736660]">
-                  Navigation
-                </p>
+                <div className="flex items-center justify-between pb-2 border-b border-[#E4DDD6]">
+                  <p className="text-[11px] uppercase tracking-[0.25em] text-[#736660]">
+                    {t.nav.navigation}
+                  </p>
+                  <LanguageSwitcher />
+                </div>
                 <Link
                   href="/"
                   onClick={() => setIsOpen(false)}
                   className="font-serif text-2xl font-light text-[#2A2421] hover:italic hover:text-[#C75D38] transition-all"
                 >
-                  Home
+                  {t.nav.home}
                 </Link>
                 <Link
                   href="/about"
                   onClick={() => setIsOpen(false)}
                   className="font-serif text-2xl font-light text-[#2A2421] hover:italic hover:text-[#C75D38] transition-all"
                 >
-                  About
+                  {t.nav.about}
                 </Link>
                 <Link
                   href="/experience"
                   onClick={() => setIsOpen(false)}
                   className="font-serif text-2xl font-light text-[#2A2421] hover:italic hover:text-[#C75D38] transition-all"
                 >
-                  Experience
+                  {t.nav.experience}
                 </Link>
                 <Link
                   href="/services"
                   onClick={() => setIsOpen(false)}
                   className="font-serif text-2xl font-light text-[#2A2421] hover:italic hover:text-[#C75D38] transition-all"
                 >
-                  Services
+                  {t.nav.services}
                 </Link>
                 <Link
                   href="/client-stories"
                   onClick={() => setIsOpen(false)}
                   className="font-serif text-2xl font-light text-[#2A2421] hover:italic hover:text-[#C75D38] transition-all"
                 >
-                  Client Stories
+                  {t.nav.clientStories}
                 </Link>
                 <Link
                   href="/blog"
                   onClick={() => setIsOpen(false)}
                   className="font-serif text-2xl font-light text-[#2A2421] hover:italic hover:text-[#C75D38] transition-all"
                 >
-                  Writing
+                  {t.nav.writing}
                 </Link>
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
                   className="font-serif text-2xl font-light text-[#2A2421] hover:italic hover:text-[#C75D38] transition-all"
                 >
-                  Contact
+                  {t.nav.contact}
                 </Link>
               </nav>
 
@@ -166,7 +172,7 @@ export function MobileNav() {
                   onClick={() => setIsOpen(false)}
                   className="block text-center text-xs uppercase tracking-[0.15em] bg-[#2A2421] text-[#FAF8F5] py-3.5 px-6 hover:bg-[#C75D38] transition-colors"
                 >
-                  Get in touch
+                  {t.common.getInTouch}
                 </a>
               </div>
             </div>

@@ -1,12 +1,17 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { profileData } from "@/config/profile";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface CapabilitiesSectionProps {
   overview?: boolean;
 }
 
 export function CapabilitiesSection({ overview = false }: CapabilitiesSectionProps) {
+  const { t } = useLanguage();
+
   // If rendered as an overview on the homepage: show high-level executive pillars
   if (overview) {
     return (
@@ -16,17 +21,16 @@ export function CapabilitiesSection({ overview = false }: CapabilitiesSectionPro
           <div className="grid md:grid-cols-12 gap-8 lg:gap-12 mb-16 items-end">
             <div className="md:col-span-4">
               <p className="text-xs font-medium tracking-[0.3em] uppercase text-[#736660] mb-2">
-                Capabilities &amp; Strengths
+                {t.capabilitiesSection.eyebrow}
               </p>
             </div>
             <div className="md:col-span-8 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
               <div>
                 <h2 className="font-serif text-3xl md:text-5xl font-light text-[#2A2421] leading-tight mb-3">
-                  A multidisciplinary foundation in people operations
+                  {t.capabilitiesSection.title}
                 </h2>
                 <p className="text-sm sm:text-base text-[#736660] leading-relaxed max-w-xl font-sans">
-                  Combining educational pedagogy, structured recruitment workflows, modern HR tech,
-                  and multilingual diplomacy to build healthy, productive teams.
+                  {t.capabilitiesSection.subtitle}
                 </p>
               </div>
             </div>
@@ -34,81 +38,37 @@ export function CapabilitiesSection({ overview = false }: CapabilitiesSectionPro
 
           {/* 4 Clean Minimalist Overview Pillars */}
           <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
-            {/* Pillar 1 */}
-            <div className="p-8 border-none bg-[#EEE9DE]/2 hover:bg-[#EEE9DE]/40 transition-colors flex flex-col justify-between">
-              <div>
-                <span className="font-mono text-xs text-[#C75D38] block mb-2">01 / Talent Acquisition</span>
-                <h3 className="font-serif text-xl sm:text-2xl text-[#2A2421] font-light leading-snug mb-3">
-                  Structured Hiring &amp; Candidate Care
-                </h3>
-                <p className="text-xs sm:text-sm text-[#736660] leading-relaxed font-sans mb-4">
-                  End-to-end recruitment coordination, rigorous CV screening, objective shortlisting, and candidate communication across time zones.
+            {t.capabilitiesSection.pillars.map((pillar, pIdx) => (
+              <div
+                key={pIdx}
+                className="p-8 border-none bg-[#EEE9DE]/2 hover:bg-[#EEE9DE]/40 transition-colors flex flex-col justify-between"
+              >
+                <div>
+                  <span className="font-mono text-xs text-[#C75D38] block mb-2">{pillar.tag}</span>
+                  <h3 className="font-serif text-xl sm:text-2xl text-[#2A2421] font-light leading-snug mb-3">
+                    {pillar.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#736660] leading-relaxed font-sans mb-4">
+                    {pillar.desc}
+                  </p>
+                </div>
+                <p className="text-[11px] font-mono uppercase tracking-wider text-[#736660] pt-4 border-t border-[#E4DDD6]/60">
+                  {pillar.footer}
                 </p>
               </div>
-              <p className="text-[11px] font-mono uppercase tracking-wider text-[#736660] pt-4 border-t border-[#E4DDD6]/60">
-                Screening &middot; Sourcing &middot; Interviewing
-              </p>
-            </div>
-
-            {/* Pillar 2 */}
-            <div className="p-8 border-none bg-[#EEE9DE]/2 hover:bg-[#EEE9DE]/40 transition-colors flex flex-col justify-between">
-              <div>
-                <span className="font-mono text-xs text-[#C75D38] block mb-2">02 / People &amp; Learning</span>
-                <h3 className="font-serif text-xl sm:text-2xl text-[#2A2421] font-light leading-snug mb-3">
-                  Onboarding Pedagogy &amp; Culture
-                </h3>
-                <p className="text-xs sm:text-sm text-[#736660] leading-relaxed font-sans mb-4">
-                  Applying adult learning psychology to scaffold new hire training and volunteer programs, accelerating ramp-up and boosting team retention.
-                </p>
-              </div>
-              <p className="text-[11px] font-mono uppercase tracking-wider text-[#736660] pt-4 border-t border-[#E4DDD6]/60">
-                Adult Learning &middot; Volunteer Ops &middot; Empathy
-              </p>
-            </div>
-
-            {/* Pillar 3 */}
-            <div className="p-8 border-none bg-[#EEE9DE]/2 hover:bg-[#EEE9DE]/40 transition-colors flex flex-col justify-between">
-              <div>
-                <span className="font-mono text-xs text-[#C75D38] block mb-2">03 / Systems &amp; Analytics</span>
-                <h3 className="font-serif text-xl sm:text-2xl text-[#2A2421] font-light leading-snug mb-3">
-                  Modern HR Tech &amp; Data Operations
-                </h3>
-                <p className="text-xs sm:text-sm text-[#736660] leading-relaxed font-sans mb-4">
-                  Proficiency across modern ATS and HRIS platforms (Greenhouse, BambooHR, Deel), Google Workspace, advanced Excel modeling, and SPSS research analytics.
-                </p>
-              </div>
-              <p className="text-[11px] font-mono uppercase tracking-wider text-[#736660] pt-4 border-t border-[#E4DDD6]/60">
-                ATS / HRIS &middot; Google Workspace &middot; Excel &middot; SPSS
-              </p>
-            </div>
-
-            {/* Pillar 4 */}
-            <div className="p-8 border-none bg-[#EEE9DE]/2 hover:bg-[#EEE9DE]/40 transition-colors flex flex-col justify-between">
-              <div>
-                <span className="font-mono text-xs text-[#C75D38] block mb-2">04 / Global Alignment</span>
-                <h3 className="font-serif text-xl sm:text-2xl text-[#2A2421] font-light leading-snug mb-3">
-                  Cross-Cultural &amp; Multilingual Fluency
-                </h3>
-                <p className="text-xs sm:text-sm text-[#736660] leading-relaxed font-sans mb-4">
-                  Academic foundation in International Relations combined with trilingual fluency (English C2, French native/bilingual, Swahili native) for pan-African and international diplomacy.
-                </p>
-              </div>
-              <p className="text-[11px] font-mono uppercase tracking-wider text-[#736660] pt-4 border-t border-[#E4DDD6]/60">
-                English (C2) &middot; French &middot; Swahili
-              </p>
-            </div>
+            ))}
           </div>
 
           {/* Minimalist Footnote Link */}
           <div className="mt-12 text-center sm:text-left pt-6 border-t border-[#E4DDD6] flex flex-col sm:flex-row items-center justify-between gap-4">
             <span className="text-xs text-[#736660] font-sans">
-              Looking for a comprehensive list of all tools, documentation methods, and soft skills?
+              {t.capabilitiesSection.question}
             </span>
             <Link
               href="/services#capabilities"
               className="text-xs font-medium tracking-[0.15em] text-[#2A2421] hover:text-[#C75D38] transition-colors"
             >
-              View More &rarr;
+              {t.capabilitiesSection.viewMore} &rarr;
             </Link>
           </div>
         </div>

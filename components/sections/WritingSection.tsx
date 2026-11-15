@@ -1,27 +1,47 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
-import { getAllPosts } from "@/lib/blog";
+import { useLanguage } from "@/context/LanguageContext";
+
+export interface WritingPostItem {
+  slug: string;
+  title: string;
+  description: string;
+  date: string;
+}
+
+interface WritingSectionProps {
+  posts?: WritingPostItem[];
+}
 
 /**
  * Formats YYYY-MM-DD into a clean, human-readable date for the timeline axis
  */
-function formatShortDate(dateString: string): string {
+function formatShortDate(dateString: string, lang: string): string {
   if (!dateString) return "";
   const parts = dateString.split("-");
   if (parts.length !== 3) return dateString;
   const [yearStr, monthStr, dayStr] = parts;
-  const monthNames = [
+
+  const enMonths = [
     "Jan", "Feb", "Mar", "Apr", "May", "Jun",
     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
   ];
+  const frMonths = [
+    "Jan", "Fév", "Mar", "Avr", "Mai", "Juin",
+    "Juil", "Août", "Sep", "Oct", "Nov", "Déc"
+  ];
+
+  const months = lang === "fr" ? frMonths : enMonths;
   const mIndex = parseInt(monthStr, 10) - 1;
-  const month = monthNames[mIndex] || monthStr;
+  const month = months[mIndex] || monthStr;
   const day = parseInt(dayStr, 10);
-  return `${month} ${day}, ${yearStr}`;
+  return `${day} ${month} ${yearStr}`;
 }
 
-export function WritingSection() {
-  const posts = getAllPosts(false).slice(0, 3);
+export function WritingSection({ posts = [] }: WritingSectionProps) {
+  const { t, language } = useLanguage();
 
   if (posts.length === 0) {
     return null;
@@ -34,33 +54,32 @@ export function WritingSection() {
         <div className="grid md:grid-cols-12 gap-8 lg:gap-12 mb-16 items-end">
           <div className="md:col-span-4">
             <p className="text-xs font-medium tracking-[0.3em] uppercase text-[#736660] mb-2">
-              Writing
+              {t.writingSection.eyebrow}
             </p>
           </div>
           <div className="md:col-span-8 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
             <div>
               <h2 className="font-serif text-3xl md:text-5xl font-light text-[#2A2421] leading-tight mb-3">
-                Some of my ideas in writing
+                {t.writingSection.title}
               </h2>
               <p className="text-sm sm:text-base text-[#736660] leading-relaxed max-w-lg font-sans">
-                I enjoy writing about ideas that inspire me — from people and work, 
-                to personal reflections and thoughts on everyday life.
+                {t.writingSection.subtitle}
               </p>
             </div>
             <Link
               href="/blog"
               className="text-xs font-medium tracking-[0.15em] uppercase border-b border-[#2A2421] pb-1 hover:text-[#C75D38] hover:border-[#C75D38] transition-colors whitespace-nowrap self-start sm:self-auto shrink-0"
             >
-              View all writing &rarr;
+              {t.writingSection.viewAll} &rarr;
             </Link>
           </div>
         </div>
 
-        {/* 3 Boxed Cards with Side Date & Vertical Line Timeline Axis (matches user hand-drawn diagram) */}
+        {/* 3 Boxed Cards with Side Date & Vertical Line Timeline Axis */}
         <div className="space-y-6 sm:space-y-8">
           {posts.map((post, index) => {
             const numberStr = String(index + 1).padStart(2, "0");
-            const formattedDate = formatShortDate(post.date);
+            const formattedDate = formatShortDate(post.date, language);
 
             return (
               <div
@@ -87,7 +106,7 @@ export function WritingSection() {
                           {post.description}
                         </p>
                         <span className="inline-flex items-center text-xs font-medium tracking-[0.15em] uppercase text-[#2A2421] group-hover:text-[#C75D38] transition-colors">
-                          Read thought &rarr;
+                          {t.common.readArticle} &rarr;
                         </span>
                       </Link>
                     </div>

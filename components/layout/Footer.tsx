@@ -5,9 +5,11 @@ import Link from "next/link";
 import { ArrowUp } from "lucide-react";
 import { profileData } from "@/config/profile";
 import { siteConfig } from "@/config/site";
+import { useLanguage } from "@/context/LanguageContext";
 
 export function Footer() {
   const currentYear = 2026;
+  const { t } = useLanguage();
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -24,7 +26,7 @@ export function Footer() {
           {/* Col 1: Navigate */}
           <div>
             <h3 className="font-serif italic text-2xl font-light text-[#2A2421] mb-6">
-              Navigate
+              {t.footer.navigate}
             </h3>
             <ul className="space-y-3.5 text-sm sm:text-base font-sans text-[#2A2421]">
               <li>
@@ -32,7 +34,7 @@ export function Footer() {
                   href="/"
                   className="hover:text-[#C75D38] transition-colors"
                 >
-                  Home
+                  {t.footer.home}
                 </Link>
               </li>
               <li>
@@ -40,7 +42,7 @@ export function Footer() {
                   href="/services"
                   className="hover:text-[#C75D38] transition-colors"
                 >
-                  Services
+                  {t.footer.services}
                 </Link>
               </li>
               <li>
@@ -48,7 +50,7 @@ export function Footer() {
                   href="/experience"
                   className="hover:text-[#C75D38] transition-colors"
                 >
-                  Experience
+                  {t.footer.experience}
                 </Link>
               </li>
               <li>
@@ -56,7 +58,7 @@ export function Footer() {
                   href="/blog"
                   className="hover:text-[#C75D38] transition-colors"
                 >
-                  Writing
+                  {t.footer.writing}
                 </Link>
               </li>
             </ul>
@@ -71,7 +73,7 @@ export function Footer() {
                   href="/client-stories"
                   className="hover:text-[#C75D38] transition-colors"
                 >
-                  Client Stories
+                  {t.footer.clientStories}
                 </Link>
               </li>
               <li>
@@ -79,7 +81,7 @@ export function Footer() {
                   href="/about"
                   className="hover:text-[#C75D38] transition-colors"
                 >
-                  About Me
+                  {t.footer.about}
                 </Link>
               </li>
               <li>
@@ -87,7 +89,7 @@ export function Footer() {
                   href="/contact"
                   className="hover:text-[#C75D38] transition-colors"
                 >
-                  Contact
+                  {t.footer.contact}
                 </Link>
               </li>
             </ul>
@@ -96,7 +98,7 @@ export function Footer() {
           {/* Col 3: Socials */}
           <div>
             <h3 className="font-serif italic text-2xl font-light text-[#2A2421] mb-6">
-              Socials
+              {t.footer.socials}
             </h3>
             <ul className="space-y-3 text-sm sm:text-base font-sans text-[#2A2421]">
               {siteConfig.socialLinks
@@ -134,7 +136,7 @@ export function Footer() {
           {/* Col 4: Legal */}
           <div>
             <h3 className="font-serif italic text-2xl font-light text-[#2A2421] mb-6">
-              Legal
+              {t.footer.legal}
             </h3>
             <ul className="space-y-3.5 text-sm sm:text-base font-sans text-[#2A2421]">
               <li>
@@ -142,7 +144,7 @@ export function Footer() {
                   href="/privacy"
                   className="hover:text-[#C75D38] transition-colors"
                 >
-                  Privacy Policy
+                  {t.footer.privacy}
                 </Link>
               </li>
               <li>
@@ -150,7 +152,7 @@ export function Footer() {
                   href="/imprint"
                   className="hover:text-[#C75D38] transition-colors"
                 >
-                  Imprint
+                  {t.footer.imprint}
                 </Link>
               </li>
               <li>
@@ -158,7 +160,7 @@ export function Footer() {
                   href="/legal-notice"
                   className="hover:text-[#C75D38] transition-colors"
                 >
-                  Legal Notice
+                  {t.footer.legalNotice}
                 </Link>
               </li>
             </ul>
