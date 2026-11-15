@@ -53,7 +53,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   const booking = profileData.contact.booking;
 
   return (
-    <div className="pt-12 pb-24">
+    <div className="pt-16 pb-28 bg-[#F7F4EE]">
       <JsonLdBlogPost post={post} />
       <article className="max-w-3xl mx-auto px-6 sm:px-8">
         {/* Breadcrumb Back Link */}
@@ -62,7 +62,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             href="/blog"
             className="inline-flex items-center text-xs font-medium tracking-[0.15em] uppercase text-[#736660] hover:text-[#2A2421] transition-colors"
           >
-            &larr; Back to all essays
+            &larr; Back to all writing
           </Link>
         </div>
 
@@ -84,13 +84,17 @@ export default async function BlogPostPage({ params }: PageProps) {
             {post.description}
           </p>
 
-          <div className="flex flex-wrap gap-2 pt-2">
-            {post.tags.map((tag) => (
-              <span
-                key={tag}
-                className="text-[11px] uppercase tracking-wider px-2.5 py-1 bg-[#FAF8F5] border border-[#E4DDD6] text-[#736660]"
-              >
+          {/* Minimalist topics line without bulky pill borders */}
+          <div className="flex flex-wrap items-center gap-2 pt-2 text-xs font-mono">
+            <span className="text-[10px] uppercase tracking-[0.2em] text-[#736660]">
+              Topics:
+            </span>
+            {post.tags.map((tag, i) => (
+              <span key={tag} className="text-[#C75D38] uppercase tracking-wider">
                 {tag}
+                {i < post.tags.length - 1 && (
+                  <span className="text-[#E4DDD6] ml-2">&middot;</span>
+                )}
               </span>
             ))}
           </div>
@@ -102,15 +106,15 @@ export default async function BlogPostPage({ params }: PageProps) {
         </div>
 
         {/* Consultation Callout */}
-        <div className="p-8 bg-[#EEE9DE]/40 border-t border-b border-[#E4DDD6] my-16">
+        <div className="p-8 sm:p-10 bg-[#EEE9DE]/30 border border-[#E4DDD6] my-16">
           <p className="text-[11px] uppercase tracking-[0.25em] text-[#736660] mb-2 font-medium">
             Continue the Conversation
           </p>
           <h3 className="font-serif text-xl sm:text-2xl text-[#2A2421] font-normal mb-3">
-            Interested in discussing people operations or organizational strategy?
+            Interested in discussing people operations or team culture?
           </h3>
           <p className="text-xs sm:text-sm text-[#736660] leading-relaxed font-sans max-w-xl mb-6">
-            Schedule a 30-minute discovery call directly on my calendar or reach out via email.
+            Schedule a 30-minute discovery conversation directly on my calendar or reach out via email.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -143,14 +147,14 @@ export default async function BlogPostPage({ params }: PageProps) {
             {prev ? (
               <Link href={`/blog/${prev.slug}`} className="block group">
                 <span className="text-[11px] uppercase tracking-[0.2em] text-[#736660] block mb-1">
-                  &larr; Older Essay
+                  &larr; Older Thought
                 </span>
                 <span className="font-serif text-base text-[#2A2421] group-hover:text-[#C75D38] transition-colors leading-snug">
                   {prev.title}
                 </span>
               </Link>
             ) : (
-              <span className="text-xs text-[#736660] italic">First essay in the archive</span>
+              <span className="text-xs text-[#736660] italic">First article in the archive</span>
             )}
           </div>
 
@@ -158,14 +162,14 @@ export default async function BlogPostPage({ params }: PageProps) {
             {next ? (
               <Link href={`/blog/${next.slug}`} className="block group">
                 <span className="text-[11px] uppercase tracking-[0.2em] text-[#736660] block mb-1">
-                  Newer Essay &rarr;
+                  Newer Thought &rarr;
                 </span>
                 <span className="font-serif text-base text-[#2A2421] group-hover:text-[#C75D38] transition-colors leading-snug">
                   {next.title}
                 </span>
               </Link>
             ) : (
-              <span className="text-xs text-[#736660] italic">Latest essay published</span>
+              <span className="text-xs text-[#736660] italic">Latest article published</span>
             )}
           </div>
         </div>

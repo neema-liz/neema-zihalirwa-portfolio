@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts, getAllTags } from "@/lib/blog";
-import { BlogCard } from "@/components/blog/BlogCard";
+import { BlogListClient } from "@/components/blog/BlogListClient";
 
 export const metadata: Metadata = {
-  title: "Essays & Insights — Neema Zihalirwa Elisabeth",
+  title: "Writing & Thoughts — Neema Zihalirwa Elisabeth",
   description:
-    "Reflections and practical analysis on human resources, organizational design, pedagogical frameworks, and talent acquisition across emerging African markets.",
+    "Ideas, notes, and practical thoughts on people operations, workplace culture, talent, and organizational growth.",
 };
 
 export default function BlogIndexPage() {
@@ -14,13 +14,13 @@ export default function BlogIndexPage() {
   const tags = getAllTags();
 
   return (
-    <div className="pt-16 pb-28">
+    <div className="pt-20 md:pt-28 pb-28 md:pb-36 bg-[#F7F4EE]">
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         {/* Section Header: 12-Column Split */}
-        <div className="grid md:grid-cols-12 gap-12 mb-16">
-          <div className="md:col-span-4 space-y-4">
+        <div className="grid md:grid-cols-12 gap-8 lg:gap-12 mb-16 items-end">
+          <div className="md:col-span-4 space-y-3">
             <p className="text-xs font-medium tracking-[0.3em] uppercase text-[#736660]">
-              Essays &amp; Insights
+              Writing &amp; Thoughts
             </p>
             <div>
               <Link
@@ -34,47 +34,18 @@ export default function BlogIndexPage() {
           </div>
 
           <div className="md:col-span-8">
-            <h1 className="font-serif text-3xl md:text-5xl font-light text-[#2A2421] leading-snug mb-6">
-              Reflections on people operations, educational pedagogy, and organizational culture.
+            <h1 className="font-serif text-3xl md:text-5xl font-light text-[#2A2421] leading-tight mb-4">
+              Ideas, notes &amp; reflections on people at work.
             </h1>
-            <p className="text-sm text-[#736660] leading-relaxed max-w-xl font-sans">
-              Practical field notes and strategic frameworks examining how structured recruitment,
-              adult learning theory, and cross-cultural coordination empower growing teams.
+            <p className="text-sm sm:text-base text-[#736660] leading-relaxed max-w-xl font-sans">
+              I write about what I observe and learn in human resources — how teams communicate,
+              how people grow in their roles, and what helps organizations build a healthy, supportive culture.
             </p>
           </div>
         </div>
 
-        {/* Topics Filter Bar */}
-        {tags.length > 0 && (
-          <div className="py-4 border-y border-[#E4DDD6] mb-12 flex flex-wrap items-center gap-2">
-            <span className="text-[11px] uppercase tracking-[0.2em] text-[#736660] mr-2">
-              Topics:
-            </span>
-            {tags.map(({ tag, count }) => (
-              <span
-                key={tag}
-                className="text-xs px-3 py-1 bg-[#EEE9DE]/60 border border-[#E4DDD6] text-[#2A2421] font-sans"
-              >
-                {tag} <span className="text-[#736660] text-[10px] ml-1">({count})</span>
-              </span>
-            ))}
-          </div>
-        )}
-
-        {/* Article Listing */}
-        {posts.length > 0 ? (
-          <div className="border-b border-[#E4DDD6]">
-            {posts.map((post, index) => (
-              <BlogCard key={post.slug} post={post} index={index} />
-            ))}
-          </div>
-        ) : (
-          <div className="py-20 text-center border-t border-b border-[#E4DDD6]">
-            <p className="text-sm text-[#736660] font-sans">
-              No published essays available at the moment. New articles will appear here.
-            </p>
-          </div>
-        )}
+        {/* Client-Side Minimalist Filter & Paginated List */}
+        <BlogListClient posts={posts} tags={tags} />
       </div>
     </div>
   );

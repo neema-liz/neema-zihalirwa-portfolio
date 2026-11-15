@@ -51,7 +51,7 @@ export function WritingSection() {
               href="/blog"
               className="text-xs font-medium tracking-[0.15em] uppercase border-b border-[#2A2421] pb-1 hover:text-[#C75D38] hover:border-[#C75D38] transition-colors whitespace-nowrap self-start sm:self-auto shrink-0"
             >
-              View all essays &rarr;
+              View all writing &rarr;
             </Link>
           </div>
         </div>
@@ -68,7 +68,7 @@ export function WritingSection() {
                 className="group grid grid-cols-12 gap-4 sm:gap-6 lg:gap-8 items-stretch"
               >
                 {/* Left: Boxed Card */}
-                <article className="col-span-9 sm:col-span-10 lg:col-span-11 p-6 sm:p-8 md:p-10 border border-[#E4DDD6] bg-[#EEE9DE]/25 hover:bg-[#EEE9DE]/50 hover:border-[#2A2421]/40 transition-all duration-300 flex flex-col justify-between">
+                <article className="col-span-9 sm:col-span-10 lg:col-span-11 p-6 sm:p-8 md:p-10 border border-none bg-transparent hover:bg-[#EEE9DE]/10 hover:border-none transition-all duration-300 flex flex-col justify-between">
                   <div className="grid sm:grid-cols-12 gap-4 sm:gap-6 items-start">
                     {/* Number Ledger */}
                     <div className="sm:col-span-1">
@@ -87,7 +87,7 @@ export function WritingSection() {
                           {post.description}
                         </p>
                         <span className="inline-flex items-center text-xs font-medium tracking-[0.15em] uppercase text-[#2A2421] group-hover:text-[#C75D38] transition-colors">
-                          Read essay &rarr;
+                          Read thought &rarr;
                         </span>
                       </Link>
                     </div>
