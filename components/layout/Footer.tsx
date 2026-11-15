@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowUp } from "lucide-react";
 import { profileData } from "@/config/profile";
+import { siteConfig } from "@/config/site";
 
 export function Footer() {
   const currentYear = 2026;
@@ -89,24 +90,30 @@ export function Footer() {
             <h3 className="font-serif italic text-2xl font-light text-[#2A2421] mb-6">
               Socials
             </h3>
-            <ul className="space-y-3.5 text-sm sm:text-base font-sans text-[#2A2421]">
-              <li>
-                <a
-                  href={profileData.contact.linkedin.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-[#C75D38] transition-colors"
-                >
-                  LinkedIn
-                </a>
-              </li>
+            <ul className="space-y-3 text-sm sm:text-base font-sans text-[#2A2421]">
+              {siteConfig.socialLinks
+                .filter((s) => s.status === "confirmed")
+                .map((social) => (
+                  <li key={social.platform}>
+                    <a
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-[#C75D38] transition-colors inline-block"
+                      aria-label={`${social.label} (opens in a new tab)`}
+                    >
+                      {social.platform}
+                    </a>
+                  </li>
+                ))}
               {profileData.contact.whatsapp.phoneNumber && (
                 <li>
                   <a
                     href={`https://wa.me/${profileData.contact.whatsapp.phoneNumber.replace(/[^0-9]/g, "")}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-[#C75D38] transition-colors"
+                    className="hover:text-[#C75D38] transition-colors inline-block"
+                    aria-label="Chat on WhatsApp (opens in a new tab)"
                   >
                     WhatsApp
                   </a>
