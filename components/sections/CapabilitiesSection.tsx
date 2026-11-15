@@ -29,19 +29,13 @@ export function CapabilitiesSection({ overview = false }: CapabilitiesSectionPro
                   and multilingual diplomacy to build healthy, productive teams.
                 </p>
               </div>
-              <Link
-                href="/services#capabilities"
-                className="text-xs font-medium tracking-[0.15em] uppercase border-b border-[#2A2421] pb-1 hover:text-[#C75D38] hover:border-[#C75D38] transition-colors whitespace-nowrap self-start sm:self-auto shrink-0"
-              >
-                All tools &amp; skills &rarr;
-              </Link>
             </div>
           </div>
 
           {/* 4 Clean Minimalist Overview Pillars */}
           <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
             {/* Pillar 1 */}
-            <div className="p-8 border border-[#E4DDD6] bg-[#EEE9DE]/25 hover:bg-[#EEE9DE]/40 transition-colors flex flex-col justify-between">
+            <div className="p-8 border-none bg-[#EEE9DE]/2 hover:bg-[#EEE9DE]/40 transition-colors flex flex-col justify-between">
               <div>
                 <span className="font-mono text-xs text-[#C75D38] block mb-2">01 / Talent Acquisition</span>
                 <h3 className="font-serif text-xl sm:text-2xl text-[#2A2421] font-light leading-snug mb-3">
@@ -57,7 +51,7 @@ export function CapabilitiesSection({ overview = false }: CapabilitiesSectionPro
             </div>
 
             {/* Pillar 2 */}
-            <div className="p-8 border border-[#E4DDD6] bg-[#EEE9DE]/25 hover:bg-[#EEE9DE]/40 transition-colors flex flex-col justify-between">
+            <div className="p-8 border-none bg-[#EEE9DE]/2 hover:bg-[#EEE9DE]/40 transition-colors flex flex-col justify-between">
               <div>
                 <span className="font-mono text-xs text-[#C75D38] block mb-2">02 / People &amp; Learning</span>
                 <h3 className="font-serif text-xl sm:text-2xl text-[#2A2421] font-light leading-snug mb-3">
@@ -73,7 +67,7 @@ export function CapabilitiesSection({ overview = false }: CapabilitiesSectionPro
             </div>
 
             {/* Pillar 3 */}
-            <div className="p-8 border border-[#E4DDD6] bg-[#EEE9DE]/25 hover:bg-[#EEE9DE]/40 transition-colors flex flex-col justify-between">
+            <div className="p-8 border-none bg-[#EEE9DE]/2 hover:bg-[#EEE9DE]/40 transition-colors flex flex-col justify-between">
               <div>
                 <span className="font-mono text-xs text-[#C75D38] block mb-2">03 / Systems &amp; Analytics</span>
                 <h3 className="font-serif text-xl sm:text-2xl text-[#2A2421] font-light leading-snug mb-3">
@@ -89,7 +83,7 @@ export function CapabilitiesSection({ overview = false }: CapabilitiesSectionPro
             </div>
 
             {/* Pillar 4 */}
-            <div className="p-8 border border-[#E4DDD6] bg-[#EEE9DE]/25 hover:bg-[#EEE9DE]/40 transition-colors flex flex-col justify-between">
+            <div className="p-8 border-none bg-[#EEE9DE]/2 hover:bg-[#EEE9DE]/40 transition-colors flex flex-col justify-between">
               <div>
                 <span className="font-mono text-xs text-[#C75D38] block mb-2">04 / Global Alignment</span>
                 <h3 className="font-serif text-xl sm:text-2xl text-[#2A2421] font-light leading-snug mb-3">
@@ -112,9 +106,9 @@ export function CapabilitiesSection({ overview = false }: CapabilitiesSectionPro
             </span>
             <Link
               href="/services#capabilities"
-              className="text-xs font-medium tracking-[0.15em] uppercase text-[#2A2421] hover:text-[#C75D38] transition-colors"
+              className="text-xs font-medium tracking-[0.15em] text-[#2A2421] hover:text-[#C75D38] transition-colors"
             >
-              View Full Competencies on Services Page &rarr;
+              View More &rarr;
             </Link>
           </div>
         </div>
