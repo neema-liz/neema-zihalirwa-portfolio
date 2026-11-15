@@ -184,4 +184,101 @@ export const fr = {
     legalNotice: "Avis juridique",
     rights: "Tous droits réservés.",
   },
+  aboutPage: {
+    header: {
+      eyebrow: "À propos de Neema Zihalirwa Elisabeth",
+      title: "Humain, pédagogie et rigueur au cœur des organisations.",
+      portraitAlt: "Neema Zihalirwa Elisabeth — Professionnelle RH",
+      caption: "Neema Zihalirwa Elisabeth",
+      p1: "Originaire de RD Congo (Goma), mon engagement repose sur une certitude : une organisation ne vaut que par la clarté, le respect et l'attention portés à ses équipes.",
+      p2: "Entre ressources humaines, pédagogie des adultes et dialogue interculturel, je structure des opérations RH fiables, transparentes et profondément humaines.",
+    },
+    origins: {
+      eyebrow: "Origines · Parcours",
+      title: "De la pédagogie aux relations internationales et aux RH",
+      p1: "Mon parcours débute par un Diplôme d'État en Pédagogie Générale à l'Institut Himbi de Goma (RDC). J'y étudie la psychologie de l'apprentissage : comment transmettre, rassurer et accompagner l'adulte face à la nouveauté.",
+      p2: "Désireuse d'élargir mes horizons, j'obtiens une Licence en Relations Internationales à l'Université Libre de Kigali (ULK). Mon rôle de conseillère de promotion et mes recherches sur l'action de l'UNICEF renforcent mes compétences en médiation, diplomatie et analyse.",
+      p3: "Ces acquis mènent tout naturellement aux RH : chaque recrutement devient un dialogue respectueux, et chaque intégration un apprentissage structuré.",
+    },
+    umoja: {
+      eyebrow: "Communauté · Engagement",
+      title: "Cofondation d'Umoja : une solidarité concrète et responsable",
+      p1: "En parallèle, j'ai cofondé Umoja : une initiative d'entraide communautaire fondée sur la transparence et la responsabilité collective.",
+      p2: "En swahili, Umoja signifie unité. Nous avons bâti un cadre où l'aide repose sur l'intégrité, le suivi rigoureux et le respect absolu de la dignité humaine.",
+      p3: "Cette action citoyenne nourrit directement ma vision des RH : la transparence crée la confiance, et la méthode permet d'agir efficacement ensemble.",
+    },
+    philosophy: {
+      eyebrow: "Philosophie",
+      title: "Ma vision des Ressources Humaines",
+      intro1: "Les RH ne se résument pas à des formulaires administratifs ou à des chiffres dans un tableau.",
+      intro2: "Pour moi, les RH reposent sur l'écoute active et un cadre pédagogique clair :",
+      pillars: [
+        {
+          title: "Dignité des Candidats",
+          desc: "Chaque candidat mérite un retour rapide, courtois et transparent. La qualité du recrutement reflète les vraies valeurs d'une organisation.",
+        },
+        {
+          title: "Accompagnement Pédagogique",
+          desc: "Un nouveau collaborateur ne doit pas être livré à lui-même. Un accueil structuré sur 90 jours bâtit confiance et autonomie.",
+        },
+        {
+          title: "Sérénité Opérationnelle",
+          desc: "Dossiers soignés, politiques claires et conformité ne sont pas des freins : ils préviennent le désordre et l'épuisement.",
+        },
+      ],
+      quote: "Un recrutement réussi ne se mesure pas à sa rapidité, mais à l'alignement réel entre le rôle, les talents et la culture.",
+    },
+    principles: {
+      eyebrow: "Principes Directeurs",
+      title: "Les valeurs qui guident chaque mission",
+      items: [
+        {
+          number: "01",
+          title: "Transparence & Intégrité",
+          desc: "Une communication claire évite les frictions. De la gestion financière au recrutement, l'intégrité est non négociable.",
+        },
+        {
+          number: "02",
+          title: "Empathie Pédagogique",
+          desc: "Considérer chaque membre comme un apprenant : faire progresser par l'écoute, les repères et des retours constructifs.",
+        },
+        {
+          number: "03",
+          title: "Diplomatie Multiculturelle",
+          desc: "Trilingue (français, anglais, swahili) et formée aux relations internationales, je fais le pont entre équipes locales et globales.",
+        },
+        {
+          number: "04",
+          title: "Rigueur & Discrétion",
+          desc: "Exécution soignée, tenue rigoureuse des dossiers et confidentialité absolue pour rassurer dirigeants et collaborateurs.",
+        },
+      ],
+    },
+    education: {
+      eyebrow: "Formation",
+      title: "Parcours académique",
+      items: [
+        {
+          period: "2023 – 2026",
+          degree: "Licence en Sciences Sociales, Relations Internationales",
+          institution: "Université Libre de Kigali (ULK)",
+          desc: "Diplomatie, gouvernance et coopération. Conseillère de promotion et recherche académique sur la protection de l'enfance avec l'UNICEF.",
+        },
+        {
+          period: "2017 – 2020 · Goma, RDC",
+          degree: "Diplôme d'État en Pédagogie Générale",
+          institution: "Institut Himbi",
+          desc: "Psychologie de l'éducation, dynamiques de communication et méthodes pédagogiques d'apprentissage.",
+        },
+      ],
+    },
+    cta: {
+      eyebrow: "Contact",
+      title: "Échangeons ensemble.",
+      subtitle: "Poste RH, conseil ou initiative d'équipe : parlons de vos projets avec grand plaisir.",
+      googleMeet: "Appel Google Meet →",
+      calendly: "Calendly →",
+      email: "Envoyer un e-mail",
+    },
+  },
 };

@@ -184,4 +184,101 @@ export const en = {
     legalNotice: "Legal Notice",
     rights: "All rights reserved.",
   },
+  aboutPage: {
+    header: {
+      eyebrow: "About Neema Zihalirwa Elisabeth",
+      title: "People, pedagogy, and purpose in modern organizations.",
+      portraitAlt: "Neema Zihalirwa Elisabeth — Human Resources Professional",
+      caption: "Neema Zihalirwa Elisabeth",
+      p1: "Born and raised in the Democratic Republic of Congo (Goma), my journey has been shaped by an enduring conviction: organizations are only as strong as the clarity, care, and dignity they offer to the people who build them.",
+      p2: "Working across human resources, adult pedagogy, and cross-cultural initiatives, I help teams build structured, transparent, and dependable people operations where every individual is met with clear expectations and genuine respect.",
+    },
+    origins: {
+      eyebrow: "Origins · Path",
+      title: "An interdisciplinary path from pedagogy to diplomacy and HR",
+      p1: "My professional foundation began with a State Diploma in General Pedagogy from Himbi Institute in Goma, DRC. There, I studied educational psychology and adult learning theory — understanding how people absorb new information, gain confidence, and overcome fear in unfamiliar environments.",
+      p2: "Seeking a broader continental and global perspective, I pursued my Bachelor's Honours degree in International Relations at Kigali Independent University (ULK). Serving as Class Advisor during my final year and researching UNICEF's contributions to child welfare in conflict zones sharpened my skills in cross-cultural mediation, diplomacy, and analytical synthesis.",
+      p3: "This combination led me naturally into Human Resources. In HR, I found the exact intersection of pedagogy and diplomacy: treating every recruitment as an empathetic diplomatic dialogue, and every onboarding journey as an intentional learning process.",
+    },
+    umoja: {
+      eyebrow: "Community · Initiative",
+      title: "Co-Founding Umoja: Accountable solidarity for those in need",
+      p1: "Beyond my institutional HR practice, I co-founded Umoja — an initiative created to assist individuals and families in need through a transparent, serious, and dependable way for Africans to support one another.",
+      p2: "In Swahili, Umoja means unity. We built the organization on the belief that genuine community assistance must be grounded in integrity, accountability, and respect for human dignity. Too often, mutual aid lacks follow-through or transparent record-keeping; Umoja was created to set a serious, trustworthy precedent.",
+      p3: "This experience in community leadership directly informs my professional HR work: transparency builds deep trust, and reliable, organized systems empower people to do their best work together.",
+    },
+    philosophy: {
+      eyebrow: "Philosophy",
+      title: "My vision of Human Resources",
+      intro1: "I reject the notion that human resources exists merely to enforce corporate paperwork or treat colleagues as interchangeable units on a headcount spreadsheet.",
+      intro2: "To me, HR is about intentional alignment and pedagogical support:",
+      pillars: [
+        {
+          title: "Candidate Dignity",
+          desc: "Every applicant deserves prompt, courteous, and transparent communication — whether they are selected or not. A respectful recruitment process speaks volumes about an organization's true values.",
+        },
+        {
+          title: "Pedagogical Scaffolding",
+          desc: "New hires and volunteers should not be thrown into the deep end. They need structured, progressive support that builds confidence and clarity during their first 90 days.",
+        },
+        {
+          title: "Operational Calm",
+          desc: "Meticulous HR record-keeping, policy documentation, and clear compliance aren't bureaucratic obstacles — they are the foundation that prevents chaos, burnout, and confusion.",
+        },
+      ],
+      quote: "Great hires don't happen through speed alone. They happen when role requirements, human capability, and organizational culture actually align.",
+    },
+    principles: {
+      eyebrow: "Guiding Principles",
+      title: "The values that guide every engagement",
+      items: [
+        {
+          number: "01",
+          title: "Radical Transparency & Integrity",
+          desc: "Open communication and honest expectation-setting prevent friction before it begins. Whether managing volunteer funds or candidate pipelines, integrity is non-negotiable.",
+        },
+        {
+          number: "02",
+          title: "Pedagogical Empathy",
+          desc: "Viewing team members as active adult learners. We facilitate growth not through rigid criticism, but through structured feedback loops, supportive scaffolding, and active listening.",
+        },
+        {
+          number: "03",
+          title: "Cross-Cultural Diplomacy",
+          desc: "Fluent across French, English, and Swahili, with formal academic training in International Relations. I bridge regional and international perspectives with cultural tact and ease.",
+        },
+        {
+          number: "04",
+          title: "Quiet Operational Excellence",
+          desc: "Dependable execution, meticulous documentation, and strict confidentiality. Delivering consistent quality that leaders and candidates can count on.",
+        },
+      ],
+    },
+    education: {
+      eyebrow: "Education",
+      title: "Academic foundations",
+      items: [
+        {
+          period: "2023 – 2026",
+          degree: "Bachelor of Social Sciences in International Relations",
+          institution: "Kigali Independent University (ULK)",
+          desc: "Focus on diplomacy, international cooperation, and governance. Served as International Relations Class Advisor and completed academic research examining UNICEF's contribution to child welfare.",
+        },
+        {
+          period: "2017 – 2020 · Goma, DRC",
+          degree: "State Diploma in General Pedagogy",
+          institution: "Himbi Institute",
+          desc: "Foundational study in education psychology, learning processes, communication dynamics, and instructional methods.",
+        },
+      ],
+    },
+    cta: {
+      eyebrow: "Connect",
+      title: "Let's connect and start a conversation.",
+      subtitle: "Whether you want to discuss a human resources role, operational collaboration, or community initiatives — I look forward to hearing from you.",
+      googleMeet: "Schedule via Google Meet →",
+      calendly: "Book via Calendly →",
+      email: "Send an Email",
+    },
+  },
 };
