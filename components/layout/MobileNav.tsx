@@ -124,6 +124,13 @@ export function MobileNav() {
                   About
                 </Link>
                 <Link
+                  href="/experience"
+                  onClick={() => setIsOpen(false)}
+                  className="font-serif text-2xl font-light text-[#2A2421] hover:italic hover:text-[#C75D38] transition-all"
+                >
+                  Experience
+                </Link>
+                <Link
                   href="/services"
                   onClick={() => setIsOpen(false)}
                   className="font-serif text-2xl font-light text-[#2A2421] hover:italic hover:text-[#C75D38] transition-all"
