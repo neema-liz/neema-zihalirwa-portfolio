@@ -34,7 +34,7 @@ export default function ImprintPage() {
             <div className="space-y-1.5 text-[#2A2421]">
               <p className="font-medium">{profileData.fullName}</p>
               <p className="text-[#736660]">{profileData.professionalTitle}</p>
-              <p className="text-[#736660]">Location: Kigali, Rwanda</p>
+              <p className="text-[#736660]">Professional Focus: Human Resources &amp; People Operations</p>
             </div>
           </section>
 
@@ -85,7 +85,7 @@ export default function ImprintPage() {
               Responsible for editorial content, essays, and published perspectives on this website:
             </p>
             <p className="mt-2 text-[#2A2421] font-medium">
-              Neema Zihalirwa Elisabeth &middot; Kigali, Rwanda
+              Neema Zihalirwa Elisabeth
             </p>
           </section>
 

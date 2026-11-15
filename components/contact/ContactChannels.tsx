@@ -106,8 +106,8 @@ export function ContactChannels() {
         <div className="flex items-start gap-2">
           <MapPin className="w-4 h-4 text-[#736660] shrink-0 mt-0.5" />
           <div>
-            <span className="font-medium text-[#2A2421] block">Location</span>
-            <span>Kigali, Rwanda &middot; Available for remote &amp; regional travel</span>
+            <span className="font-medium text-[#2A2421] block">Availability</span>
+            <span>Available for remote &amp; international engagements</span>
           </div>
         </div>
 

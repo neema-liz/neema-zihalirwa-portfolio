@@ -20,7 +20,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-sm text-[#736660] font-sans">
-            Last updated: February 2026 &middot; Kigali, Rwanda
+            Last updated: February 2026
           </p>
         </div>
 
@@ -32,7 +32,7 @@ export default function PrivacyPage() {
             </h2>
             <p>
               This website serves as the personal professional portfolio of <strong>Neema Zihalirwa Elisabeth</strong>, 
-              a Human Resources and People Operations professional based in Kigali, Rwanda. I am committed to respecting 
+              a Human Resources and People Operations professional. I am committed to respecting 
               your privacy, practicing data minimization, and handling any personal information shared with ethical care.
             </p>
           </section>
@@ -89,7 +89,6 @@ export default function PrivacyPage() {
             </p>
             <p className="mt-2 text-[#2A2421]">
               <strong>Neema Zihalirwa Elisabeth</strong><br />
-              Kigali, Rwanda<br />
               Email: <a href="mailto:lucianna.neema@gmail.com" className="text-[#C75D38] underline">lucianna.neema@gmail.com</a>
             </p>
           </section>

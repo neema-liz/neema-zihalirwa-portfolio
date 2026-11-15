@@ -21,11 +21,6 @@ export function JsonLdPerson() {
         url: baseUrl,
         image: `${baseUrl}/images/portraits/neema-portrait-01.jpg`,
         sameAs: sameAsLinks,
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Kigali",
-          addressCountry: "Rwanda",
-        },
         knowsLanguage: ["English", "French", "Swahili"],
         alumniOf: profileData.education.map((edu) => ({
           "@type": "EducationalOrganization",
@@ -34,7 +29,7 @@ export function JsonLdPerson() {
         worksFor: profileData.experience.map((exp) => ({
           "@type": "Organization",
           name: exp.organization,
-          location: exp.location || "Kigali, Rwanda",
+          location: exp.location || "Remote",
         })),
       },
       {
