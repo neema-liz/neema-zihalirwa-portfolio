@@ -1,11 +1,21 @@
 import type { SiteConfig } from "@/types/site";
 
+const resolvedUrl = (() => {
+  if (process.env.NEXT_PUBLIC_SITE_URL && !process.env.NEXT_PUBLIC_SITE_URL.includes("localhost")) {
+    return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, "");
+  }
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  }
+  return "https://neema-zihalirwa.vercel.app";
+})();
+
 export const siteConfig: SiteConfig = {
   name: "Neema Zihalirwa Elisabeth",
   title: "Neema Zihalirwa Elisabeth — Human Resources Professional",
   description:
     "Personal portfolio and professional insights of Neema Zihalirwa Elisabeth, an HR professional specializing in talent development, people operations, and organizational growth.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://neemazihalirwa.com",
+  url: resolvedUrl,
   author: {
     name: "Neema Zihalirwa Elisabeth",
     role: "Human Resources Professional",
@@ -31,7 +41,7 @@ export const siteConfig: SiteConfig = {
   socialLinks: [
     {
       platform: "LinkedIn",
-      url: "https://www.linkedin.com/in/elisabeth-zihal/",
+      url: "www.linkedin.com/in/elisabeth-zihalirwa",
       label: "LinkedIn Profile",
       status: "confirmed",
     },
