@@ -9,7 +9,7 @@ tags:
   - TVET
   - People Operations
   - DRC
-coverImage: "/images/blog/africas-biggest-problem-employability.png"
+coverImage: "/images/blog/africas-biggest-problem-employability.jpg"
 published: true
 ---
 

@@ -8,6 +8,7 @@ tags:
   - Youth Empowerment
   - Social Impact
   - Community Building
+coverImage: "/images/blog/why-african-students-need-more-than-education.jpg"
 published: true
 ---
 

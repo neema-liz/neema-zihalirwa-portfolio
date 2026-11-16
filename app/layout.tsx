@@ -45,10 +45,18 @@ export const metadata: Metadata = {
     siteName: "Neema Zihalirwa Elisabeth",
     images: [
       {
-        url: "/images/portraits/neema-portrait-01.jpg",
+        url: `${siteUrl}/og-image.jpg`,
         width: 1200,
-        height: 1600,
-        alt: "Neema Zihalirwa Elisabeth",
+        height: 630,
+        type: "image/jpeg",
+        alt: "Neema Zihalirwa Elisabeth — Human Resources Professional",
+      },
+      {
+        url: `${siteUrl}/og-image.png`,
+        width: 1200,
+        height: 630,
+        type: "image/png",
+        alt: "Neema Zihalirwa Elisabeth — Human Resources Professional",
       },
     ],
   },
@@ -58,7 +66,7 @@ export const metadata: Metadata = {
     description:
       "Personal portfolio and professional insights of Neema Zihalirwa Elisabeth, an HR professional specializing in talent development, people operations, and organizational coordination.",
     creator: "@Elisabeth_Neema",
-    images: ["/images/portraits/neema-portrait-01.jpg"],
+    images: [`${siteUrl}/og-image.jpg`],
   },
   icons: {
     icon: [

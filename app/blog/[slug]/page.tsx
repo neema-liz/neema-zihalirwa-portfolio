@@ -5,6 +5,7 @@ import { ProseContent } from "@/components/blog/ProseContent";
 import { JsonLdBlogPost } from "@/components/seo/JsonLdBlogPost";
 import { BlogPostClientWrapper } from "@/components/blog/BlogPostClientWrapper";
 import { profileData } from "@/config/profile";
+import { siteConfig } from "@/config/site";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -27,16 +28,41 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  const siteUrl = siteConfig.url.replace(/\/$/, "");
+  const postUrl = `${siteUrl}/blog/${post.slug}`;
+  const imageUrl = post.coverImage
+    ? (post.coverImage.startsWith("http") ? post.coverImage : `${siteUrl}${post.coverImage}`)
+    : `${siteUrl}/og-image.jpg`;
+
   return {
     title: `${post.title} — Neema Zihalirwa Elisabeth`,
     description: post.description,
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.description,
       type: "article",
+      url: postUrl,
       publishedTime: post.date,
       authors: [post.author],
       tags: post.tags,
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      creator: "@Elisabeth_Neema",
+      images: [imageUrl],
     },
   };
 }
