@@ -31,7 +31,7 @@ export function ContactSection() {
             <div className="flex flex-col sm:flex-row flex-wrap gap-8 font-sans mb-12">
               <a
                 href={`mailto:${profileData.contact.email.value}?subject=Professional%20Enquiry`}
-                className="text-xs font-medium tracking-[0.15em] uppercase border-b border-[#2A2421] pb-1 hover:opacity-60 transition-opacity"
+                className="text-xs font-medium tracking-[0.15em] border-b border-[#2A2421] pb-1 hover:opacity-60 transition-opacity"
               >
                 {profileData.contact.email.value}
               </a>
@@ -41,7 +41,7 @@ export function ContactSection() {
                   href={`https://wa.me/${profileData.contact.whatsapp.phoneNumber.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(profileData.contact.whatsapp.defaultPrefilledMessage)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs font-medium tracking-[0.15em] uppercase text-[#736660] border-b border-[#736660] pb-1 hover:text-[#2A2421] hover:border-[#2A2421] transition-colors"
+                  className="text-xs font-medium tracking-[0.15em] text-[#736660] border-b border-[#736660] pb-1 hover:text-[#2A2421] hover:border-[#2A2421] transition-colors"
                 >
                   WhatsApp
                 </a>
@@ -51,7 +51,7 @@ export function ContactSection() {
                 href={profileData.contact.linkedin.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-medium tracking-[0.15em] uppercase text-[#736660] border-b border-[#736660] pb-1 hover:text-[#2A2421] hover:border-[#2A2421] transition-colors"
+                className="text-xs font-medium tracking-[0.15em] text-[#736660] border-b border-[#736660] pb-1 hover:text-[#2A2421] hover:border-[#2A2421] transition-colors"
               >
                 LinkedIn &rarr;
               </a>

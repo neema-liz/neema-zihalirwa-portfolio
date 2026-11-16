@@ -789,4 +789,71 @@ export const en = {
       email: "Send an Email",
     },
   },
+  imprintPage: {
+    eyebrow: "Legal & Disclosure",
+    title: "Imprint",
+    subtitle: "Legal disclosure and editorial responsibility",
+    identificationTitle: "Information Pursuant to Identification Requirements",
+    focus: "Professional Focus: Human Resources & People Operations",
+    contactTitle: "Direct Contact",
+    editorialTitle: "Editorial Responsibility",
+    editorialDesc: "Responsible for editorial content, essays, and published perspectives on this website:",
+    engagementsTitle: "Nature of Engagements",
+    engagementsDesc: "This website presents the professional credentials, services, and independent human resources consulting capabilities of Neema Zihalirwa Elisabeth. Engagements are contracted individually based on agreed scope of work and deliverables.",
+    backToHome: "← Back to Home",
+  },
+  legalNoticePage: {
+    eyebrow: "Legal & Terms",
+    title: "Legal Notice",
+    subtitle: "Terms of use, professional disclaimers, and intellectual property",
+    sections: [
+      {
+        title: "1. Professional Advice Disclaimer",
+        desc: "The essays, field notes, and perspectives shared on this portfolio website are provided for informational, educational, and discussion purposes. While informed by practical human resources experience, adult learning pedagogy, and organizational development principles, content on this website does not constitute formal legal counsel or statutory employment advice. Organizations should consult qualified labor law attorneys for formal compliance matters specific to their jurisdiction.",
+      },
+      {
+        title: "2. Intellectual Property & Copyright",
+        desc: "Unless otherwise indicated, all original written essays, framework diagrams, layout structures, and biographical texts on this website are the intellectual property of Neema Zihalirwa Elisabeth © 2026. Excerpts and brief quotations may be shared provided clear attribution and a direct link to the original page are included. Commercial reproduction or systematic harvesting without prior written permission is prohibited.",
+      },
+      {
+        title: "3. External Links & Third-Party Content",
+        desc: "This website includes links to external third-party platforms (e.g., Google Calendar, Calendly, LinkedIn, WhatsApp, and institutional partner websites). While these links are curated in good faith, I have no ongoing control over third-party content or privacy practices and assume no responsibility for external sites.",
+      },
+      {
+        title: "4. Accuracy of Information",
+        desc: "Reasonable efforts are taken to keep published information, service descriptions, and contact pathways accurate and up to date. However, service offerings, availability, and engagement terms are subject to adjustment based on individual client agreements.",
+      },
+    ],
+    backToHome: "← Back to Home",
+  },
+  privacyPage: {
+    eyebrow: "Legal & Transparency",
+    title: "Privacy Policy",
+    updated: "Last updated: February 2026",
+    overviewTitle: "1. Overview & Commitment",
+    overviewDesc: "This website serves as the personal professional portfolio of Neema Zihalirwa Elisabeth, a Human Resources and People Operations professional. I am committed to respecting your privacy, practicing data minimization, and handling any personal information shared with ethical care.",
+    collectionTitle: "2. Data Collection & Purpose",
+    collectionDesc: "This website does not use tracking cookies, behavioral tracking pixels, or third-party marketing trackers. The only personal information processed is that which you voluntarily provide when initiating contact:",
+    items: [
+      {
+        label: "Direct Email:",
+        text: "When you send an enquiry via email, your email address, name, and message content are processed solely to respond to your professional enquiry.",
+      },
+      {
+        label: "WhatsApp Messaging:",
+        text: "When you choose to initiate a chat via WhatsApp, interactions are governed by WhatsApp's standard privacy terms.",
+      },
+      {
+        label: "Consultation Scheduling:",
+        text: "If you book a consultation via Google Calendar or Calendly, your name and email are used exclusively to coordinate the scheduled meeting.",
+      },
+    ],
+    retentionTitle: "3. Data Retention & Security",
+    retentionDesc: "Correspondence received is retained only for the duration required to address your enquiry, fulfill professional engagements, or comply with legal record-keeping obligations. Personal information is never sold, leased, or shared with third parties for commercial or promotional purposes.",
+    rightsTitle: "4. Your Rights",
+    rightsDesc: "You may request access to, correction of, or deletion of any email correspondence and contact records by writing directly to:",
+    contactTitle: "5. Contact Information",
+    contactDesc: "If you have any questions regarding this privacy statement, please contact:",
+    backToHome: "← Back to Home",
+  },
 };

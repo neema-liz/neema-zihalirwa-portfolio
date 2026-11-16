@@ -789,4 +789,71 @@ export const fr = {
       email: "Envoyer un e-mail",
     },
   },
+  imprintPage: {
+    eyebrow: "Cadre Légal",
+    title: "Mentions Légales",
+    subtitle: "Informations légales et responsabilité éditoriale",
+    identificationTitle: "Identification de l'Éditeur",
+    focus: "Activité : Ressources Humaines & Opérations RH",
+    contactTitle: "Contact Direct",
+    editorialTitle: "Responsabilité Éditoriale",
+    editorialDesc: "Responsable des contenus éditoriaux et publications sur ce site :",
+    engagementsTitle: "Nature des Missions",
+    engagementsDesc: "Ce site présente les compétences et services de conseil RH indépendant de Neema Zihalirwa Elisabeth. Chaque mission fait l'objet d'un accord spécifique selon les besoins convenus.",
+    backToHome: "← Retour à l'accueil",
+  },
+  legalNoticePage: {
+    eyebrow: "Conditions & Droits",
+    title: "Avis Juridique",
+    subtitle: "Conditions d'utilisation et propriété intellectuelle",
+    sections: [
+      {
+        title: "1. Nature des Contenus & Conseils",
+        desc: "Les articles et réflexions partagés sur ce site sont fournis à titre informatif et pédagogique. Bien qu'ancrés dans une pratique RH concrète, ils ne constituent pas un conseil juridique formel en droit du travail. Chaque organisation doit se référer aux professionnels compétents selon sa juridiction.",
+      },
+      {
+        title: "2. Propriété Intellectuelle & Droits d'Auteur",
+        desc: "L'ensemble des textes, structures et méthodes présentés sur ce site sont la propriété intellectuelle de Neema Zihalirwa Elisabeth © 2026. Toute citation courte est autorisée avec mention claire de la source et lien direct. Toute reproduction commerciale non autorisée est interdite.",
+      },
+      {
+        title: "3. Liens Externes & Services Tiers",
+        desc: "Ce site propose des liens vers des services externes (Google Calendar, Calendly, WhatsApp, LinkedIn). Ne disposant d'aucun contrôle sur ces plateformes tierces, je décline toute responsabilité quant à leurs contenus et pratiques de confidentialité.",
+      },
+      {
+        title: "4. Exactitude des Informations",
+        desc: "Les informations et descriptifs de services sont tenus à jour avec soin. Les disponibilités et modalités d'intervention restent soumises aux accords convenus lors de chaque collaboration.",
+      },
+    ],
+    backToHome: "← Retour à l'accueil",
+  },
+  privacyPage: {
+    eyebrow: "Protection des Données",
+    title: "Politique de Confidentialité",
+    updated: "Dernière mise à jour : Février 2026",
+    overviewTitle: "1. Engagement & Principes",
+    overviewDesc: "Ce site constitue le portfolio professionnel de Neema Zihalirwa Elisabeth, spécialiste en Ressources Humaines. Je m'engage à respecter votre vie privée, à limiter la collecte de données au strict nécessaire et à traiter vos échanges avec éthique et rigueur.",
+    collectionTitle: "2. Collecte & Utilisation des Données",
+    collectionDesc: "Ce site n'utilise aucun traceur publicitaire ni cookie tiers de profilage. Seules les données transmises volontairement lors d'une prise de contact sont traitées :",
+    items: [
+      {
+        label: "E-mail direct :",
+        text: "Lorsque vous envoyez un message par e-mail, votre adresse et vos coordonnées servent exclusivement à répondre à votre demande.",
+      },
+      {
+        label: "Messagerie WhatsApp :",
+        text: "Si vous engagez un échange sur WhatsApp, les conditions d'utilisation standard de WhatsApp s'appliquent.",
+      },
+      {
+        label: "Prise de rendez-vous :",
+        text: "La planification via Google Calendar ou Calendly utilise votre nom et e-mail uniquement pour organiser notre appel.",
+      },
+    ],
+    retentionTitle: "3. Conservation & Sécurité",
+    retentionDesc: "Vos messages sont conservés uniquement le temps nécessaire au traitement de votre demande ou de notre collaboration. Vos informations ne sont jamais vendues, louées ni cédées à des tiers.",
+    rightsTitle: "4. Vos Droits",
+    rightsDesc: "Vous pouvez à tout moment demander l'accès, la modification ou la suppression de vos coordonnées en écrivant à :",
+    contactTitle: "5. Contact & Délégué",
+    contactDesc: "Pour toute question relative à vos données personnelles, vous pouvez me joindre directement :",
+    backToHome: "← Retour à l'accueil",
+  },
 };
