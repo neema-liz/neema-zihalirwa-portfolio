@@ -87,6 +87,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className="h-full antialiased scroll-smooth">
+      <head>
+        <meta name="google-site-verification" content="N7JKtFUP54pYdJHStz5xzPqLyqkCF9jWcTxUKqBOAdw" />
+      </head>
       <body className="min-h-full flex flex-col bg-[#F7F4EE] text-[#2A2421]">
         <LanguageProvider>
           <JsonLdPerson />
