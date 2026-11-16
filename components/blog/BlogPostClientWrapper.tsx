@@ -96,6 +96,18 @@ export function BlogPostClientWrapper({
         </div>
       </header>
 
+      {/* Cover Image if present */}
+      {post.coverImage && (
+        <div className="mb-12 overflow-hidden border border-[#E4DDD6] bg-[#EEE9DE]/20">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={post.coverImage}
+            alt={post.title}
+            className="w-full h-auto max-h-[500px] object-cover"
+          />
+        </div>
+      )}
+
       {/* Article Body */}
       <div className="mb-16">{children}</div>
 

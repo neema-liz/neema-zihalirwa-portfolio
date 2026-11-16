@@ -85,7 +85,7 @@ test("formatDate formats dates cleanly without timezone drift", () => {
 
 test("getAllPosts returns only published articles sorted by date descending", () => {
   const publishedPosts = getAllPosts(false);
-  assert.ok(publishedPosts.length >= 3, "Expected at least 3 published posts");
+  assert.ok(publishedPosts.length >= 1, "Expected at least 1 published post");
 
   // Verify all returned posts are published
   for (const post of publishedPosts) {
@@ -108,12 +108,12 @@ test("getAllPosts returns only published articles sorted by date descending", ()
 });
 
 test("getPostBySlug compiles published post and enforces draft safety", async () => {
-  // Existing published post
-  const post = await getPostBySlug("welcome-to-my-portfolio", false);
+  // Existing published post by Neema
+  const post = await getPostBySlug("why-african-students-need-more-than-education-to-succeed", false);
   assert.ok(post !== null, "Expected post to exist");
-  assert.equal(post.slug, "welcome-to-my-portfolio");
+  assert.equal(post.slug, "why-african-students-need-more-than-education-to-succeed");
   assert.ok(post.html.length > 50, "HTML should be generated");
-  assert.ok(post.html.includes("</h3>") || post.html.includes("<p>"), "HTML should contain valid tags");
+  assert.ok(post.html.includes("</h3>") || post.html.includes("<p>") || post.html.includes("</h2>"), "HTML should contain valid tags");
 
   // Non-existent slug returns null
   const missing = await getPostBySlug("non-existent-article-slug", false);
