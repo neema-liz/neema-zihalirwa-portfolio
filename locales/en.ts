@@ -57,7 +57,7 @@ export const en = {
     readDetails: "Read full role details",
     roles: {
       dttasa: {
-        role: "HR Officer (Volunteer)",
+        role: "HR Officer",
         org: "DTTASA",
         location: "Remote",
         period: "2026 – Present",
@@ -206,6 +206,15 @@ export const en = {
       p1: "Beyond my institutional HR practice, I co-founded Umoja — an initiative created to assist individuals and families in need through a transparent, serious, and dependable way for Africans to support one another.",
       p2: "In Swahili, Umoja means unity. We built the organization on the belief that genuine community assistance must be grounded in integrity, accountability, and respect for human dignity. Too often, mutual aid lacks follow-through or transparent record-keeping; Umoja was created to set a serious, trustworthy precedent.",
       p3: "This experience in community leadership directly informs my professional HR work: transparency builds deep trust, and reliable, organized systems empower people to do their best work together.",
+    },
+    fellowships: {
+      eyebrow: "Fellowships · Thought Leadership",
+      title: "African Liberty Writing Fellow: Public Policy & Economic Freedom",
+      p1: "As an African Liberty Writing Fellow, I contribute research-driven commentary and analytical essays on governance, labor market economics, and youth employability across Africa.",
+      p2: "African Liberty (affiliated with Atlas Network and Students For Liberty) trains emerging African scholars and leaders to advance economic freedom, public policy reform, and evidence-based governance.",
+      p3: "Through this platform, I examine structural bottlenecks in African education, TVET vocational training, and informal employment — arguing for pragmatic, skills-based solutions that transform talent into sustainable livelihoods.",
+      linkLabel: "Explore my profile on African Liberty →",
+      linkUrl: "https://www.africanliberty.org/author/lucianna-neema/",
     },
     philosophy: {
       eyebrow: "Philosophy",
@@ -570,7 +579,7 @@ export const en = {
       roles: [
         {
           id: "exp-1",
-          role: "Human Resources Officer (Volunteer)",
+          role: "Human Resources Officer",
           org: "Diaspora Together Trust and Support Association (DTTASA)",
           period: "2025 – Present",
           location: "Remote",
@@ -606,6 +615,41 @@ export const en = {
             "Supporting coordination between business priorities and operational activities.",
           ],
           milestones: [],
+        },
+        {
+          id: "exp-3",
+          role: "Co-Founder & Initiative Lead",
+          org: "Umoja",
+          period: "2024 – Present",
+          location: "Community / DRC",
+          desc: "Co-founded and leading a community mutual aid initiative providing transparent, accountable assistance for school tuition, emergency medical support, and student welfare.",
+          responsibilities: [
+            "Designing community support frameworks grounded in radical transparency and verifiable records.",
+            "Mobilizing collective contributions to cover urgent student tuition fees, exam dues, and healthcare needs.",
+            "Mentoring young scholars and building accessible, dignified channels to voice student needs.",
+            "Ensuring transparent stakeholder reporting and ethical accountability for every contribution.",
+          ],
+          milestones: [
+            "Established an accountable community solidarity network supporting students at risk of academic exclusion.",
+            "Created an active advocacy platform on LinkedIn promoting educational safety nets across the Great Lakes.",
+          ],
+        },
+        {
+          id: "exp-4",
+          role: "Writing Fellow & Policy Columnist",
+          org: "African Liberty",
+          period: "2024 – Present",
+          location: "Pan-African / Remote",
+          desc: "Conducting labor market research and authoring syndicated opinion columns on youth employability, TVET vocational training, informal labor markets, and governance across Africa.",
+          responsibilities: [
+            "Researching structural labor mismatches and youth underemployment dynamics across Sub-Saharan Africa.",
+            "Drafting policy-focused essays on vocational education (e.g., INPP in DRC) and dual training systems.",
+            "Translating complex labor economic data into accessible, actionable insights for public audiences.",
+          ],
+          milestones: [
+            "Selected for the competitive African Liberty Writing Fellowship cohort.",
+            "Published author profile and syndicated analysis on African economic policy and workforce readiness.",
+          ],
         },
       ],
     },
@@ -652,6 +696,8 @@ export const en = {
     header: {
       eyebrow: "Writing & Thoughts",
       rss: "RSS Feed →",
+      fellowshipBadge: "African Liberty Writing Fellow ↗",
+      fellowshipUrl: "https://www.africanliberty.org/author/lucianna-neema/",
       title: "Thoughts, ideas & reflections.",
       subtitle: "A personal space where I share what I'm learning, observing, and thinking about — from people and work, to personal growth, curious ideas, and reflections on life.",
     },
@@ -668,6 +714,8 @@ export const en = {
     post: {
       backToAll: "← Back to all writing",
       topics: "Topics:",
+      bylineBadge: "African Liberty Writing Fellow",
+      bylineUrl: "https://www.africanliberty.org/author/lucianna-neema/",
       calloutEyebrow: "Continue the Conversation",
       calloutTitle: "Interested in discussing people operations or team culture?",
       calloutSubtitle: "Schedule a 30-minute discovery conversation directly on my calendar or reach out via email.",

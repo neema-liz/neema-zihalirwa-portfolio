@@ -207,6 +207,15 @@ export const fr = {
       p2: "En swahili, Umoja signifie unité. Nous avons bâti un cadre où l'aide repose sur l'intégrité, le suivi rigoureux et le respect absolu de la dignité humaine.",
       p3: "Cette action citoyenne nourrit directement ma vision des RH : la transparence crée la confiance, et la méthode permet d'agir efficacement ensemble.",
     },
+    fellowships: {
+      eyebrow: "Bourses · Leadership",
+      title: "African Liberty Writing Fellow : Politiques Publiques & Économie",
+      p1: "En tant que Writing Fellow chez African Liberty, je publie des analyses sur l'employabilité des jeunes, la gouvernance et l'économie du travail en Afrique.",
+      p2: "African Liberty forme les jeunes chercheurs africains aux politiques publiques et aux réformes économiques créatrices d'opportunités.",
+      p3: "Mes écrits ciblent la formation technique (TVET), l'inadéquation formation-emploi et les compétences concrètes pour notre génération.",
+      linkLabel: "Consulter mon profil sur African Liberty →",
+      linkUrl: "https://www.africanliberty.org/author/lucianna-neema/",
+    },
     philosophy: {
       eyebrow: "Philosophie",
       title: "Ma vision des Ressources Humaines",
@@ -570,7 +579,7 @@ export const fr = {
       roles: [
         {
           id: "exp-1",
-          role: "Chargée des Ressources Humaines (Bénévole)",
+          role: "Chargée des Ressources Humaines",
           org: "DTTASA",
           period: "2025 – Présent",
           location: "À distance",
@@ -606,6 +615,41 @@ export const fr = {
             "Alignement entre priorités stratégiques et actions terrain.",
           ],
           milestones: [],
+        },
+        {
+          id: "exp-3",
+          role: "Cofondatrice & Responsable",
+          org: "Umoja",
+          period: "2024 – Présent",
+          location: "Communautaire / RDC",
+          desc: "Cofondation et pilotage d'une initiative d'entraide pour soutenir les frais de scolarité, les soins d'urgence et la dignité des étudiants.",
+          responsibilities: [
+            "Conception d'un modèle d'aide basé sur la transparence intégrale.",
+            "Mobilisation de cotisations solidaires pour les frais d'examen et soins médicaux.",
+            "Écoute et mentorat d'étudiants confrontés à des urgences matérielles.",
+            "Comptabilité claire et rapports d'impact directs auprès des contributeurs.",
+          ],
+          milestones: [
+            "Mise en place d'un réseau solidaire évitant le décrochage scolaire de jeunes talents.",
+            "Présence active sur LinkedIn promouvant des filets de sécurité éducatifs.",
+          ],
+        },
+        {
+          id: "exp-4",
+          role: "Writing Fellow & Chroniqueuse",
+          org: "African Liberty",
+          period: "2024 – Présent",
+          location: "Panafricain / En ligne",
+          desc: "Recherche et rédaction d'analyses sur l'employabilité des jeunes, la formation technique (TVET), le secteur informel et la gouvernance en Afrique.",
+          responsibilities: [
+            "Analyse de l'inadéquation entre diplômes universitaires et besoins du marché du travail.",
+            "Rédaction d'essais sur les centres professionnels (ex. INPP en RDC) et la formation en alternance.",
+            "Vulgarisation des données économiques pour décideurs et jeunes diplômés.",
+          ],
+          milestones: [
+            "Sélectionnée dans la cohorte compétitive du Writing Fellowship d'African Liberty.",
+            "Publication d'analyses économiques et de chroniques de référence.",
+          ],
         },
       ],
     },
@@ -652,6 +696,8 @@ export const fr = {
     header: {
       eyebrow: "Écrits & Réflexions",
       rss: "Flux RSS →",
+      fellowshipBadge: "Fellow African Liberty ↗",
+      fellowshipUrl: "https://www.africanliberty.org/author/lucianna-neema/",
       title: "Idées, méthodes et réflexions.",
       subtitle: "Un espace pour partager mes apprentissages et réflexions : gestion humaine, pédagogie, culture d'équipe et notes du quotidien.",
     },
@@ -668,6 +714,8 @@ export const fr = {
     post: {
       backToAll: "← Tous les écrits",
       topics: "Thèmes :",
+      bylineBadge: "Fellow African Liberty",
+      bylineUrl: "https://www.africanliberty.org/author/lucianna-neema/",
       calloutEyebrow: "Poursuivre l'Échange",
       calloutTitle: "Envie d'échanger sur la culture d'équipe ou les RH ?",
       calloutSubtitle: "Planifions un créneau de 30 minutes sur mon calendrier ou écrivez-moi directement.",

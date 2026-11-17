@@ -64,9 +64,21 @@ export const siteConfig: SiteConfig = {
       status: "confirmed",
     },
     {
+      platform: "African Liberty",
+      url: "https://www.africanliberty.org/author/lucianna-neema/",
+      label: "African Liberty Author Profile",
+      status: "confirmed",
+    },
+    {
       platform: "Medium",
       url: "https://medium.com/@lucianna.neema/",
       label: "Medium Profile",
+      status: "confirmed",
+    },
+    {
+      platform: "Umoja",
+      url: "https://www.linkedin.com/company/umoja-drc/",
+      label: "Umoja Initiative",
       status: "confirmed",
     },
     {

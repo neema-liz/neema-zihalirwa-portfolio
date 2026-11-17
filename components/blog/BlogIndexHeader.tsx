@@ -14,7 +14,7 @@ export function BlogIndexHeader() {
         <p className="text-xs font-medium tracking-[0.3em] uppercase text-[#736660]">
           {header.eyebrow}
         </p>
-        <div>
+        <div className="flex flex-col gap-1.5">
           <Link
             href="/rss.xml"
             target="_blank"
@@ -22,6 +22,16 @@ export function BlogIndexHeader() {
           >
             {header.rss}
           </Link>
+          {header.fellowshipBadge && header.fellowshipUrl && (
+            <a
+              href={header.fellowshipUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-[11px] uppercase tracking-wider text-[#C75D38] hover:text-[#2A2421] transition-colors"
+            >
+              {header.fellowshipBadge}
+            </a>
+          )}
         </div>
       </div>
 

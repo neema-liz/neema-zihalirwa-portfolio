@@ -154,6 +154,45 @@ export const profileData: ProfileData = {
         "Supporting coordination between business priorities and operational activities."
       ],
       status: "confirmed"
+    },
+    {
+      id: "exp-3",
+      role: "Co-Founder & Initiative Lead",
+      organization: "Umoja",
+      period: "2024 – Present",
+      location: "Community / DRC",
+      description:
+        "Co-founded and leading a community mutual aid and youth welfare initiative designed to provide transparent, accountable assistance for school fees, emergency medical support, and student welfare.",
+      responsibilities: [
+        "Designing community support frameworks grounded in radical transparency and verifiable records.",
+        "Mobilizing collective contributions to cover urgent student tuition fees and essential healthcare.",
+        "Mentoring young scholars and building accessible, dignified channels to voice student needs.",
+        "Ensuring transparent stakeholder reporting and ethical accountability for every contribution."
+      ],
+      achievements: [
+        "Established an accountable community solidarity network supporting students at risk of academic exclusion.",
+        "Created an active advocacy platform on LinkedIn promoting educational safety nets across the Great Lakes."
+      ],
+      status: "confirmed"
+    },
+    {
+      id: "exp-4",
+      role: "Writing Fellow & Policy Columnist",
+      organization: "African Liberty",
+      period: "2024 – Present",
+      location: "Pan-African / Remote",
+      description:
+        "Conducting research and authoring syndicated opinion columns on youth employability, TVET vocational training, informal labor markets, and governance across Africa.",
+      responsibilities: [
+        "Researching labor market mismatches and youth underemployment dynamics across Sub-Saharan Africa.",
+        "Drafting policy-focused essays on vocational education (e.g., INPP in DRC) and dual training systems.",
+        "Translating complex labor economic data into accessible, actionable insights for public audiences."
+      ],
+      achievements: [
+        "Selected for the competitive African Liberty Writing Fellowship cohort.",
+        "Published author profile and syndicated analysis on African economic policy and workforce readiness."
+      ],
+      status: "confirmed"
     }
   ],
 

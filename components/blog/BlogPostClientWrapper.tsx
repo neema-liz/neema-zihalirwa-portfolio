@@ -64,12 +64,25 @@ export function BlogPostClientWrapper({
 
       {/* Article Header */}
       <header className="mb-12 pb-10 border-b border-[#E4DDD6]">
-        <div className="flex items-center gap-3 text-xs text-[#736660] font-sans mb-4">
+        <div className="flex flex-wrap items-center gap-3 text-xs text-[#736660] font-sans mb-4">
           <time dateTime={post.date}>{formattedDate}</time>
           <span>&middot;</span>
           <span>{post.readingTime}</span>
           <span>&middot;</span>
           <span className="text-[#C75D38] font-medium">{post.author}</span>
+          {p.bylineBadge && p.bylineUrl && (
+            <>
+              <span>&middot;</span>
+              <a
+                href={p.bylineUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#736660] hover:text-[#C75D38] transition-colors underline decoration-[#E4DDD6] underline-offset-4"
+              >
+                {p.bylineBadge} ↗
+              </a>
+            </>
+          )}
         </div>
 
         <h1 className="font-serif text-3xl sm:text-5xl font-light text-[#2A2421] leading-[1.15] mb-6">

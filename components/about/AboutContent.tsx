@@ -93,7 +93,43 @@ export function AboutContent() {
         </div>
       </section>
 
-      {/* 4. My Vision of HR & Philosophy */}
+      {/* 4. Fellowships & Thought Leadership */}
+      {page.fellowships && (
+        <section className="mb-24 md:mb-32 border-b border-[#E4DDD6] pb-16 md:pb-24 space-y-6">
+          <div>
+            <p className="text-xs font-mono uppercase tracking-[0.3em] text-[#C75D38]">
+              {page.fellowships.eyebrow}
+            </p>
+          </div>
+
+          <div className="md:ml-16 lg:ml-24 max-w-4xl space-y-6">
+            <h2 className="font-serif text-3xl sm:text-4xl text-[#2A2421] font-light leading-snug">
+              {page.fellowships.title}
+            </h2>
+
+            <div className="space-y-6 text-base sm:text-lg text-[#3D3531] font-sans leading-[1.9]">
+              <p>{page.fellowships.p1}</p>
+              <p>{page.fellowships.p2}</p>
+              <p>{page.fellowships.p3}</p>
+
+              {page.fellowships.linkUrl && (
+                <div className="pt-2">
+                  <a
+                    href={page.fellowships.linkUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-xs font-mono tracking-[0.15em] uppercase text-[#C75D38] hover:text-[#2A2421] transition-colors"
+                  >
+                    {page.fellowships.linkLabel}
+                  </a>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* 5. My Vision of HR & Philosophy */}
       <section className="mb-24 md:mb-32 border-b border-[#E4DDD6] pb-16 md:pb-24 space-y-6">
         <div>
           <p className="text-xs font-mono uppercase tracking-[0.3em] text-[#C75D38]">
@@ -129,7 +165,7 @@ export function AboutContent() {
         </div>
       </section>
 
-      {/* 5. Values & Principles (Cardless, Badge-Free, Dynamic Offset) */}
+      {/* 6. Values & Principles (Cardless, Badge-Free, Dynamic Offset) */}
       <section className="mb-24 md:mb-32 border-b border-[#E4DDD6] pb-16 md:pb-24 space-y-6">
         <div>
           <p className="text-xs font-mono uppercase tracking-[0.3em] text-[#C75D38]">
@@ -160,7 +196,7 @@ export function AboutContent() {
         </div>
       </section>
 
-      {/* 6. Academic Background (Dynamic Offset) */}
+      {/* 7. Academic Background (Dynamic Offset) */}
       <section className="mb-24 md:mb-32 border-b border-[#E4DDD6] pb-16 md:pb-24 space-y-6">
         <div>
           <p className="text-xs font-mono tracking-[0.3em] uppercase text-[#736660]">
@@ -192,7 +228,7 @@ export function AboutContent() {
         </div>
       </section>
 
-      {/* 7. Closing Invitation */}
+      {/* 8. Closing Invitation */}
       <section className="pt-12 text-center max-w-3xl mx-auto">
         <p className="text-xs font-mono tracking-[0.25em] uppercase text-[#736660] mb-4">
           {page.cta.eyebrow}

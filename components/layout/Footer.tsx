@@ -102,7 +102,6 @@ export function Footer() {
             </h3>
             <ul className="space-y-3 text-sm sm:text-base font-sans text-[#2A2421]">
               {siteConfig.socialLinks
-                .slice(0,-1)
                 .filter((s) => s.status === "confirmed")
                 .map((social) => (
                   <li key={social.platform}>
